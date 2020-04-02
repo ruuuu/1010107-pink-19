@@ -3,176 +3,179 @@
 
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Пинк</title>
+        <link href="css/style.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
     </head>
 
     <body>
+        <div class="container">
+            <header class="page-header">
+                <!-- шапка — независимый блок.-->
+                <a class="page-header__logo">
+                    <img src="page-header__logo-image" alt="" src="img/logotype-white-mobile-svg.svg" width="74" height="23" alt="Пинк-лого"><!-- контентное изображение, поэтому используем тег img-->
+                </a>
 
-        <header class="page-header">
-            <!-- шапка — независимый блок.-->
-            <a class="page-header__logo">
-                <img src="page-header__logo-image" alt="" src="img/logotype-white-mobile-svg.svg" width="74" height="23" alt="Пинк-лого"><!-- контентное изображение, поэтому используем тег img-->
-            </a>
+                <nav class="main-nav">
+                    <!-- независимый  компонент страницы.который можно переиспользовать.-->
+                    <button class="main-nav__toggle" type="button">Открыть меню</button><!-- бургер это кнопка-->
+                    <div class="main-nav__wrapper">
+                        <!--чтобы потом спозиционировтьь меню зададим обертку -->
+                        <ul class="main-nav__list site-list">
+                            <!--меню-независимый блок -->
+                            <li class="site-list__item site-list__item--active">
+                                <a>Главная</a>
+                            </li>
+                            <li class="site-list__item">
+                                <a href="photo.html">Фотографии</a>
+                            </li>
+                            <li class="site-list__item">
+                                <a href="form.html">Конкурс</a>
+                            </li>
+                            <li class="site-list__item">
+                                <a href="#">HTML Academy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
 
-            <nav class="main-nav">
-                <!-- независимый  компонент страницы.который можно переиспользовать.-->
-                <button class="main-nav__toggle" type="button">Открыть меню</button><!-- бургер это кнопка-->
-                <div class="main-nav__wrapper">
-                    <!--чтобы потом спозиционировтьь меню зададим обертку -->
-                    <ul class="main-nav__list site-list">
-                        <!--меню-независимый блок -->
-                        <li class="site-list__item site-list__item--active">
-                            <a>Главная</a>
+                <div class="banner">
+                    <h2 class="banner__title">Взгляните на жизнь иначе!</h2>
+                    <a href="">Скачать приложение</a><!-- кнопка-->
+                    <ul class="banner__linksapp">
+                        <li class="linksapp__link-item">
+                            <img src="" alt="apple" width="47" height="56">
                         </li>
-                        <li class="site-list__item">
-                            <a href="photo.html">Фотографии</a>
+                        <li class="linksapp__link-item">
+                            <img src="" alt="android" width="43" height="47">
                         </li>
-                        <li class="site-list__item">
-                            <a href="form.html">Конкурс</a>
-                        </li>
-                        <li class="site-list__item">
-                            <a href="#">HTML Academy</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
-            <div class="banner">
-                <h2 class="banner__title">Взгляните на жизнь иначе!</h2>
-                <a href="">Скачать приложение</a><!-- кнопка-->
-                <ul class="banner__linksapp">
-                    <li class="linksapp__link-item">
-                        <img src="" alt="apple" width="47" height="56">
-                    </li>
-                    <li class="linksapp__link-item">
-                        <img src="" alt="android" width="43" height="47">
-                    </li>
-                    <li class="linksapp__link-item">
-                        <img src="" alt="windows8" width="44" height="41">
-                    </li>
-                </ul>
-
-                <p class="links__information">
-                    Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-                </p>
-            </div>
-        </header>
-
-        <main class="page-main">
-            <div class="offer-information">
-                <h2 class="offer-information-title">Устали от серости мегаполиса?</h2>
-                <h2 class="offer-information-title">Нам есть, что вам предложить!</h2>
-            </div>
-
-            <section class="advantages">
-                <!-- ПРЕИМУЩЕСТВА-->
-                <ul class="advantages__list">
-                    <li class="advantages__item">
-                        <h3>Поднимает настроение</h3>
-                        <p>
-                            Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-                        </p>
-                    </li>
-                    <li class="advantages__item">
-                        <h3>Меняет мир вокруг</h3>
-                        <p>
-                            Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-                        </p>
-                    </li>
-                    <li class="advantages__item">
-                        <h3>Заводит новых друзей</h3>
-                        <p>
-                            Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
-                        </p>
-                    </li>
-                </ul>
-                <div class="advantages__image">
-                    <!--иконка телефона -->
-                    <img src="" alt="" width="157" height="320">
-                </div>
-            </section>
-
-            <section class="reviews">
-                <!-- блок ОТЗЫВЫЫ-->
-                <div class="reviews__wrapper slider">
-                    <!-- обертка где будет слайдер-->
-                    <ul class="reviews__list slider__list">
-                        <!-- обертка для блока оТзывов, slider__list -cписок отзывов это часть слайдера.-->
-                        <li class="reviews__item slider__item">
-                            <!-- slider__item элемент слайдера-->
-                            <h3 class="reviews__title">Николай Петров</h3>
-                            <p class="reviews__description">
-                                «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-                            </p>
-                        </li>
-                        <li class="reviews__item slider__item">
-                            <!-- slider__item элемент слайдера-->
-                            <h3 class="reviews__title">Иванов Иван</h3>
-                            <p class="reviews__description">
-                                Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки
-                            </p>
-                        </li>
-                        <li class="reviews__item slider__item">
-                            <!-- slider__item элемент слайдера-->
-                            <h3 class="reviews__title">Петров Арсений</h3>
-                            <p class="reviews__description">
-                                Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки
-                            </p>
+                        <li class="linksapp__link-item">
+                            <img src="" alt="windows8" width="44" height="41">
                         </li>
                     </ul>
-                    <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-                    <!--для декстопа отображаются  кнпоки стрелочки-->
-                    <button class="reviews__next" type="button">Следующий отзыв</button>
-                    <!--для декстопа отображаются кнопки стрелочки-->
-                    <p class="reviews__toggles slider-toggles">
-                        <!-- кнпоки слайдера-->
-                        <button class="slider-toggle" type="button">1</button>
-                        <button class="slider-toggle" type="button">2</button>
-                        <button class="slider-toggle" type="button">3</button>
+
+                    <p class="links__information">
+                        Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
                     </p>
                 </div>
-            </section>
+            </header>
 
-            <!--<table class="prices__list">
-                <tr>
-                    <td class="stats__value">
-                        1 500<sup>*</sup>
-                    </td>
-                    <td class="stats__field">
-                        рублей<br> вложений
-                    </td>
-                </tr>
-
-
-            </table>-->
-        </main>
-
-        <footer class="page-footer">
-            <div class="page-footer__wrapper">
-                <!-- обертка для подвала-->
-                <h2>Остались вопросы?Свяжитесь с нами!</h2>
-                <ul class="page-footer__contacts">
-                    <li class="contacts-item">
-                        <p class="contacts__title">Звоните:</p>
-                        <p class="contacts__text">+7 (812) 555-66-66</p>
-                    </li>
-                    <li class="contacts-item">
-                        <p class="contacts__title">Пишите:</p>
-                        <p class="contacts__text">mail@htmlacademy.ru</p>
-                    </li>
-                    <li class="contacts-item">
-                        <p class="contacts__title">Приезжайте в гости:</p>
-                        <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
-                    </li>
-                </ul>
-                <div class="page-footer__map">
-                    гугл карту вставим
+            <main class="page-main">
+                <div class="offer-information">
+                    <h2 class="offer-information-title">Устали от серости мегаполиса?</h2>
+                    <h2 class="offer-information-title">Нам есть, что вам предложить!</h2>
                 </div>
-            </div>
-        </footer>
+
+                <section class="advantages">
+                    <!-- ПРЕИМУЩЕСТВА-->
+                    <ul class="advantages__list">
+                        <li class="advantages__item">
+                            <h3>Поднимает настроение</h3>
+                            <p>
+                                Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+                            </p>
+                        </li>
+                        <li class="advantages__item">
+                            <h3>Меняет мир вокруг</h3>
+                            <p>
+                                Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+                            </p>
+                        </li>
+                        <li class="advantages__item">
+                            <h3>Заводит новых друзей</h3>
+                            <p>
+                                Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+                            </p>
+                        </li>
+                    </ul>
+                    <div class="advantages__image">
+                        <!--иконка телефона -->
+                        <img src="img/iphone-screen-mobile@1x.png" alt="phone" width="157" height="320">
+                    </div>
+                </section>
+
+                <section class="reviews">
+                    <!-- блок ОТЗЫВЫЫ-->
+                    <div class="reviews__wrapper slider">
+                        <!-- обертка где будет слайдер-->
+                        <ul class="reviews__list slider__list">
+                            <!-- обертка для блока оТзывов, slider__list -cписок отзывов это часть слайдера.-->
+                            <li class="reviews__item slider__item">
+                                <!-- slider__item элемент слайдера-->
+                                <h3 class="reviews__title">Николай Петров</h3>
+                                <p class="reviews__description">
+                                    «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+                                </p>
+                            </li>
+                            <li class="reviews__item slider__item">
+                                <!-- slider__item элемент слайдера-->
+                                <h3 class="reviews__title">Иванов Иван</h3>
+                                <p class="reviews__description">
+                                    Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки
+                                </p>
+                            </li>
+                            <li class="reviews__item slider__item">
+                                <!-- slider__item элемент слайдера-->
+                                <h3 class="reviews__title">Петров Арсений</h3>
+                                <p class="reviews__description">
+                                    Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки
+                                </p>
+                            </li>
+                        </ul>
+                        <button class="reviews__prev" type="button">Предыдущий отзыв</button>
+                        <!--для декстопа отображаются  кнпоки стрелочки-->
+                        <button class="reviews__next" type="button">Следующий отзыв</button>
+                        <!--для декстопа отображаются кнопки стрелочки-->
+                        <p class="reviews__toggles slider-toggles">
+                            <!-- кнпоки слайдера-->
+                            <button class="slider-toggle" type="button">1</button>
+                            <button class="slider-toggle" type="button">2</button>
+                            <button class="slider-toggle" type="button">3</button>
+                        </p>
+                    </div>
+                </section>
+
+                <!--<table class="prices__list">
+<tr>
+<td class="stats__value">
+1 500<sup>*</sup>
+</td>
+<td class="stats__field">
+рублей<br> вложений
+</td>
+</tr>
 
 
+</table>-->
+            </main>
 
+            <footer class="page-footer">
+                <div class="page-footer__wrapper">
+                    <!-- обертка для подвала-->
+                    <h2>Остались вопросы?Свяжитесь с нами!</h2>
+                    <ul class="page-footer__contacts">
+                        <li class="contacts-item">
+                            <p class="contacts__title">Звоните:</p>
+                            <p class="contacts__text">+7 (812) 555-66-66</p>
+                        </li>
+                        <li class="contacts-item">
+                            <p class="contacts__title">Пишите:</p>
+                            <p class="contacts__text">mail@htmlacademy.ru</p>
+                        </li>
+                        <li class="contacts-item">
+                            <p class="contacts__title">Приезжайте в гости:</p>
+                            <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
+                        </li>
+                    </ul>
+                    <div class="page-footer__map">
+                        гугл карту вставим
+                    </div>
+                </div>
+            </footer>
+
+
+        </div>
     </body>
 
 </html>
