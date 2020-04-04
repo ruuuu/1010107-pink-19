@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +7,6 @@
         <link href="css/style.css" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
     </head>
-
     <body>
         <div class="container">
             <header class="page-header">
@@ -16,7 +14,6 @@
                 <a class="page-header__logo">
                     <img src="page-header__logo-image" alt="" src="img/logotype-white-mobile-svg.svg" width="74" height="23" alt="Пинк-лого"><!-- контентное изображение, поэтому используем тег img-->
                 </a>
-
                 <nav class="main-nav">
                     <!-- независимый  компонент страницы.который можно переиспользовать.-->
                     <button class="main-nav__toggle" type="button">Открыть меню</button><!-- бургер это кнопка-->
@@ -39,117 +36,110 @@
                         </ul>
                     </div>
                 </nav>
-
                 <div class="banner">
                     <h2 class="banner__title">Конкурс на самое безбашенное путешествие с Пинк</h2>
                 </div>
             </header>
 
             <main class="page-main">
+
                 <section class="slogan">
                     <p class="slogan__information">
                         Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
                     </p>
-
-                    <form class="form-data" action="https://echo.htmlacademy.ru" method="post">
-                        <div class="form-data__wrap-for-fields">
-                            <p class="form-data__wrap-for-label-with-field">
-                                <label for="user-familia">Фамилия: </label>
-                                <input id="user-familia" type="text" name="familia" value="" placeholder="Укажите фамилию *">
-                            </p>
-                            <p class="form-data__wrap-for-label-with-field">
-                                <label for="user-name">Имя: </label>
-                                <input id="user-name" type="text" name="name" value="" placeholder="Введите ваше имя *">
-                            </p>
-                            <p class="form-data__wrap-for-label-with-field">
-                                <label for="user-otchestvo">Отчество: </label>
-                                <input id="user-otchestvo" type="text" name="otchestvo" value="" placeholder="Ну и отчество тоже">
-                            </p>
-                        </div>
-
-                        <div class="form-data__wrap-for-checkboxs">
-                            <h3 class="form-data__title-block">Ваши безбашенные
-                                достижения в путешествии</h3>
-                            <ul class="form-data__list-checkbox">
-                                <li class="form-data__filter-option">
-                                    <input class="visually-hidden filter-input filter-input-checkbox" id="filter-for-shark" type="checkbox" name="shark" checked>
-                                    <!--связываем label и input -->
-                                    <label for="filter-for-shark">Сделал селфи с акулой</label>
-                                </li>
-                                <li class="form-data__filter-option">
-                                    <input class="visually-hidden filter-input filter-input-checkbox" id="filter-for-beach" type="checkbox" name="beach" checked>
-                                    <!--связываем label и input -->
-                                    <label for="filter-for-beach">Обгорел на пляже</label>
-                                </li>
-                                <li class="form-data__filter-option">
-                                    <input class="visually-hidden filter-input filter-input-checkbox" id="filter-for-chnorris" type="checkbox" name="chnorris">
-                                    <!--связываем label и input -->
-                                    <label for="filter-for-chnorris">Видел Чака Норриса</label>
-                                </li>
-                                <li class="form-data__filter-option">
-                                    <input class="visually-hidden filter-input filter-input-checkbox" id="filter-for-souvenir" type="checkbox" name="souvenir">
-                                    <!--связываем label и input -->
-                                    <label for="filter-for-souvenir">Накупил сувениров</label>
-                                </li>
-                                <li class="form-data__filter-option">
-                                    <input class="visually-hidden filter-input filter-input-checkbox" id="filter-for-tower" type="checkbox" name="tower" checked>
-                                    <!--связываем label и input -->
-                                    <label for="filter-for-tower">Удержал башню</label>
-                                </li>
-                                <li class="form-data__filter-option">
-                                    <input class="visually-hidden filter-input filter-input-checkbox" id="filter-for-hotel" type="checkbox" name="hotel">
-                                    <!--связываем label и input -->
-                                    <label for="filter-for-hotel">Разгромил отель</label>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="form-data__wrap-for-fields">
-                            <p class="form-data__wrap-for-label-with-field">
-                                <label for="user-phone">Номер телефона: </label>
-                                <input id="user-phone" type="text" name="user-phone" value="">
-                            </p>
-                            <p class="form-data__wrap-for-label-with-field">
-                                <label for="user-email">Адрес почты: </label>
-                                <input id="user-email" type="text" name="user-email" value="" placeholder="Введите почту *">
-                            </p>
-                        </div>
-
-                        <div class="form-data__wrap-for-radiobuttons">
-                            <h3 class="form-data__title-block">С каким приложением путешествовали?</h3>
-                            <ul class="form-data__list-radiobuttons">
-                                <li class="form-data__filter-option">
-                                    <input class="visually-hidden filter-input filter-input-radio" id="filter-pink-forIos" type="radio" name="product-group" checked>
-                                    <!--у группы радиокнопок  атрибут name должен бытьу всех один и тот же -->
-                                    <label for="filter-pink-forIos">Pink для iOS</label>
-                                </li>
-                                <li class="form-data__filter-option">
-                                    <input class="visually-hidden filter-input filter-input-radio" id="filter-pink-forAndroid" type="radio" name="product-group">
-                                    <label for="filter-pink-forAndroid">Pink на Android</label>
-                                </li>
-                                <li class="form-data__filter-option">
-                                    <input class="visually-hidden filter-input filter-input-radio" id="filter-pink-forWinPhone" type="radio" name="product-group">
-                                    <label for="filter-pink_forWinPhone">Windows Phone</label>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="form-data__wrap-for-textarea">
-                            <h3 class="form-data__title-block">Опишите свои эмоции</h3>
-                            <label class="for-textarea-label" for="user-text"></label>
-                            <textarea name="area-text" id="textarea" for="user-text" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-                        </div>
-
-                        <div class="form-data__wrap-for-button">
-                            <button type="submit">
-                                <!-- кнопка отправки данных формы-->
-                                Отправить форму
-                            </button>
-                        </div>
-
-                        <p class="form-data__obligatory-fileds">* — обязательные поля</p>
-                    </form>
                 </section>
+                <form class="form-data" action="https://echo.htmlacademy.ru" method="post">
+                    <div class="form-data__wrap-for-fields">
+                        <p class="form-data__wrap-for-label-with-field">
+                            <label for="user-familia">Фамилия: </label>
+                            <input id="user-familia" type="text" name="familia" value="" placeholder="Укажите фамилию *">
+                        </p>
+                        <p class="form-data__wrap-for-label-with-field">
+                            <label for="user-name">Имя: </label>
+                            <input id="user-name" type="text" name="name" value="" placeholder="Введите ваше имя *">
+                        </p>
+                        <p class="form-data__wrap-for-label-with-field">
+                            <label for="user-otchestvo">Отчество: </label>
+                            <input id="user-otchestvo" type="text" name="otchestvo" value="" placeholder="Ну и отчество тоже">
+                        </p>
+                    </div>
+                    <div class="form-data__wrap-for-checkboxs">
+                        <h3 class="form-data__title-block">Ваши безбашенные
+                            достижения в путешествии</h3>
+                        <ul class="form-data__list-checkbox">
+                            <li class="form-data__filter-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-for-shark" type="checkbox" name="shark" checked>
+                                <!--связываем label и input -->
+                                <label for="filter-for-shark">Сделал селфи с акулой</label>
+                            </li>
+                            <li class="form-data__filter-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-for-beach" type="checkbox" name="beach" checked>
+                                <!--связываем label и input -->
+                                <label for="filter-for-beach">Обгорел на пляже</label>
+                            </li>
+                            <li class="form-data__filter-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-for-chnorris" type="checkbox" name="chnorris">
+                                <!--связываем label и input -->
+                                <label for="filter-for-chnorris">Видел Чака Норриса</label>
+                            </li>
+                            <li class="form-data__filter-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-for-souvenir" type="checkbox" name="souvenir">
+                                <!--связываем label и input -->
+                                <label for="filter-for-souvenir">Накупил сувениров</label>
+                            </li>
+                            <li class="form-data__filter-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-for-tower" type="checkbox" name="tower" checked>
+                                <!--связываем label и input -->
+                                <label for="filter-for-tower">Удержал башню</label>
+                            </li>
+                            <li class="form-data__filter-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-for-hotel" type="checkbox" name="hotel">
+                                <!--связываем label и input -->
+                                <label for="filter-for-hotel">Разгромил отель</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form-data__wrap-for-fields">
+                        <p class="form-data__wrap-for-label-with-field">
+                            <label for="user-phone">Номер телефона: </label>
+                            <input id="user-phone" type="text" name="user-phone" value="">
+                        </p>
+                        <p class="form-data__wrap-for-label-with-field">
+                            <label for="user-email">Адрес почты: </label>
+                            <input id="user-email" type="text" name="user-email" value="" placeholder="Введите почту *">
+                        </p>
+                    </div>
+                    <div class="form-data__wrap-for-radiobuttons">
+                        <h3 class="form-data__title-block">С каким приложением путешествовали?</h3>
+                        <ul class="form-data__list-radiobuttons">
+                            <li class="form-data__filter-option">
+                                <input class="visually-hidden filter-input filter-input-radio" id="filter-pink-forIos" type="radio" name="product-group" checked>
+                                <!--у группы радиокнопок  атрибут name должен бытьу всех один и тот же -->
+                                <label for="filter-pink-forIos">Pink для iOS</label>
+                            </li>
+                            <li class="form-data__filter-option">
+                                <input class="visually-hidden filter-input filter-input-radio" id="filter-pink-forAndroid" type="radio" name="product-group">
+                                <label for="filter-pink-forAndroid">Pink на Android</label>
+                            </li>
+                            <li class="form-data__filter-option">
+                                <input class="visually-hidden filter-input filter-input-radio" id="filter-pink-forWinPhone" type="radio" name="product-group">
+                                <label for="filter-pink_forWinPhone">Windows Phone</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form-data__wrap-for-textarea">
+                        <h3 class="form-data__title-block">Опишите свои эмоции</h3>
+                        <label class="for-textarea-label" for="user-text"></label>
+                        <textarea name="area-text" id="textarea" for="user-text" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+                    </div>
+                    <div class="form-data__wrap-for-button">
+                        <button type="submit">
+                            <!-- кнопка отправки данных формы-->
+                            Отправить форму
+                        </button>
+                    </div>
+                    <p class="form-data__obligatory-fileds">* — обязательные поля</p>
+                </form>
 
             </main>
 
@@ -159,7 +149,6 @@
                     <div class="page-footer__logo">
                         <img src="img/mainlogotype.svg" alt="logo_footer" width="146" height="40">
                     </div>
-
                     <div class="page-footer__social social">
                         <!-- page-footer__social зададим позиционирование блока внутри футера.-->
                         <ul class="social__list">
@@ -174,7 +163,6 @@
                             </li>
                         </ul>
                     </div>
-
                     <div class="page-footer__copyright copyright">
                         <b class="copyright__text">Разработано:</b>
                         <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" alt="logo_footer" width="27" height="34"></a>
@@ -183,8 +171,6 @@
                 </div>
             </footer>
 
-
         </div>
     </body>
-
 </html>
