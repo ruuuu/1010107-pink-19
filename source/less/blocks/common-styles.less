@@ -1,0 +1,78 @@
+body {
+  /*часто-встречающиеся стили*/
+  padding: 0;
+  margin: 0;
+  color: #283645;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  background-color: bisque;
+  /*временный фон, чтобы видеть границы левую иправу/*/
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+a {
+  text-decoration: none;
+  /*подчеркивание убираем*/
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+h1 { /*Линтер почему то ругается, если сразу  одновременно на все h1,h2,h3 задать стиль*/
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+
+p {
+  margin: 0;
+}
+
+.container {
+  /*блок- центровщик  */
+  width: 320px;
+  margin: 0 auto;
+  /*отцентрирваоли блок*/
+  padding: 0 20px;
+}
+
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
