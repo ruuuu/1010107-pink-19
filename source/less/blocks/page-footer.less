@@ -1,14 +1,12 @@
 .page-footer {
-
-  width: 320px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: white;
+  min-width: 320px;
 
   &__wrapper {
-    width: 100%;
+    min-width: 320px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: white;
   }
-
 
   &__logo {
     width: 147px;/*ширина содержимого*/
@@ -16,7 +14,6 @@
     padding-right: 87px;
     margin-bottom: 30px;
   }
-
 
   &__social {
     width: 170px; /*ширина содержимого*/
@@ -29,5 +26,65 @@
     width: 128px;/*ширина содержимого*/
     padding-left: 96px;
     padding-right: 96px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media (min-width: @tablet-width) {/*для >660px;*/
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto; /*тянется по ширине экрана, 660px*/
+  }
+
+  .page-footer__logo {
+    width: 147px;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .page-footer__social {
+    width: 170px;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .page-footer__copyright {
+    width: 128px;
+    padding: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {/*для >1200*/
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto; /*тянется по ширине экрана, 1200px*/
+  }
+
+  .page-footer__logo {
+    width: 147px;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .page-footer__social {
+    width: 170px;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .page-footer__copyright {
+    width: 160px;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .copyright__text {
+    font-size: 18px;
   }
 }

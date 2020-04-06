@@ -2,8 +2,14 @@
   width: 320px;
   /*размеры картинки или пиcать 100% взять от родителя*/
   height: 462px;
+  position: relative;/*тект будем поверх него размещать и картинку руку*/
+  background-image: url("../../img/back-mobile.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
 
   &__title {
+    padding-top: 95px;
+    position: absolute;
     font-size: 24px;
     font-weight: 300;
     line-height: 24;
@@ -15,3 +21,7 @@
     color: white;
   }
 }
+/*@media (min-width: @tablet-width) {
+}*/
+/*@media (min-width: @desktop-width) {
+}*/

@@ -1,4 +1,8 @@
 .main-nav {
+  width: 320px;
+  margin: 0 auto;/*центруем для случая если 320<width<768*/
+  min-height: 321px; /* 69*5, т к пункты будут доавлять или убирать*/
+
   &__toggle {
     /*cbc*/
   }
@@ -7,12 +11,41 @@
     width: 320px;
   }
 
-
   &__list {
     width: 100%;
     padding-left: 0;
     list-style: none;
     text-transform: uppercase;
     text-align: center;
+  }
+}
+
+@media (min-width: @tablet-width) {/*для любых утсройств, у котрых   ширна >660px*/
+  .main-nav {
+    width: auto;/*займет всю возможную ширину*/
+    margin: 0; /*центровка здесь не нужна*/
+  }
+
+  .main-nav__wrapper {
+    width: auto;
+    margin: 0 auto;/*центровка*/
+  }
+
+  .site-list { /*меню*/
+    width: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {/*для любых утсройств, у котрых  ширна >1200px*/
+  .main-nav__wrapper {
+    width: 621px; /*ширина содержимого*/
+  }
+
+  .site-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%; /*ширина содержимого*/
+    min-height: 110px;/*если добавят пункт меню,  то он перенесется на след строку*/
   }
 }
