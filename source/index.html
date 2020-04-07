@@ -17,17 +17,16 @@
                 <a class="page-header__logo">
                     <img src="page-header__logo-image" alt="" src="img/logotype-white-mobile-svg.svg" width="74" height="23" alt="Пинк-лого"><!-- контентное изображение, поэтому используем тег img-->
                 </a>
+                <button class="main-nav__toggle" type="button">
+                    <img src="img/menu-burger-svg.svg" alt="" width="50" height="24">
+                </button>
             </div>
 
 
             <nav class="main-nav">
-                <!-- независимый  компонент страницы.который можно переиспользовать.-->
-                <button class="main-nav__toggle" type="button">
-                    <img src="img/menu-burger-svg.svg" alt="" width="50" height="24">
-                </button>
-                <!-- бургер это кнопка-->
+
                 <div class="main-nav__wrapper">
-                    <!--чтобы потом спозиционировтьь меню зададим обертку -->
+
                     <ul class="main-nav__list site-list">
                         <!--меню-независимый блок -->
                         <li class="site-list__item site-list__item--active">
@@ -97,18 +96,31 @@
                 </ul>
                 <div class="advantages__image">
                     <!--иконка телефона -->
-                    <img src="img/iphone-screen-mobile@1x.png" alt="phone" width="157" height="320">
+                    <img  class="advantages__phone" src="img/iphone-screen-mobile@1x.png" alt="phone" width="157" height="320">
                 </div>
             </section>
+
+
+            <section class="clock container"><!-- блок с часами-->
+                <img class="clock__icon" src="img/icon-timer.svg" alt="clock" width="238" height="276">
+                <div class="clock__wrapper">
+                    <div class="clock__title">Эффект на 24 часа!</div>
+                    <div class="clock__text">
+                        Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки
+                    </div>
+                    <a  class="clock__link" href="">Узнать больше об исследовании</a>
+                </div>
+            </section>
+
 
             <section class="reviews container">
                 <!-- блок ОТЗЫВЫЫ-->
                 <div class="reviews__wrapper slider">
                     <!-- обертка где будет слайдер-->
                     <ul class="reviews__list slider__list">
-                        <!-- обертка для блока оТзывов, slider__list -cписок отзывов это часть слайдера.-->
+
                         <li class="reviews__item slider__item">
-                            <!-- slider__item элемент слайдера-->
+
                             <h3 class="reviews__author">Николай Петров</h3>
                             <p class="reviews__description">
                                 «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»

@@ -34,21 +34,113 @@
   }
 }
 
+
 @media (min-width: @tablet-width) {/*>660px*/
+
+
   .advantages {
+
+    width: 620px; /*620= 660-20*2 */
+
     display: flex;
     justify-content: space-between;
+  }
+
+  .advantages__list {/*флекс элемент*/
+    width: 293px;
+    padding-left: 0;
+    padding-right: 0;
+    order: 1;/*для смены места телефона и списка*/
+  }
+
+  .advantages__item {
+    text-align: left;
+  }
+
+
+  .advantages__image {/*флекс элемент*/
+
+    width: 268px;/*размеры картинки*/
+    height: auto;
+    margin: 0;
+
+    order: -1;
+    /*margin: 20px auto;центруем*/
+  }
+
+
+  .advantages__phone {
+    display: block;
+    width: 268px;
+    height: 547px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  /*>1200*/
+
+  .container {
+    padding-left: 130px;
+    padding-right: 130px;
+    margin: 0 auto;
+  }
+
+
+  .advantages {
     width: auto;
+    /*940 = 1200-130(гориз. паддинги)*2 */
   }
 
   .advantages__list {
-    width: 306px;
+    /*флекс элемент*/
+    width: 940px;
+    /*940 = 1200-130(гориз. паддинги)*2 */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*расстояние между телеофнами по 20 px*/
+    flex-wrap: nowrap;
   }
 
-  &__image {
-    margin: 20px auto;/*центруем*/
-    margin-top: -60px;
-    width: 268px;/*размеры картинки*/
-    height: auto;
+  .advantages__item {
+    width: 300px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 56px;
+  }
+
+
+  .advantages__title {
+    width: 231px;/*чтобы тектс не разъзжался*/
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 0;
+    color: var(--black);
+  }
+
+
+  .advantages__description {
+    width: 231px;
+    font-size: 18px;
+  }
+
+  .advantages__image {
+    /*флекс элемент*/
+
+
+    display: none;
+    /*width: 268px;/*размеры картинки*/
+    /*height: auto;*/
+
+
+    /*margin: 20px auto;центруем*/
+  }
+
+
+  .advantages__phone {
+    display: none;
   }
 }

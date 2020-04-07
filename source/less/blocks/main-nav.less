@@ -1,6 +1,7 @@
 .main-nav {
-  width: 320px;
-  margin: 0 auto;/*центруем для случая если 320<width<768*/
+  min-width: 320px;
+
+  /*margin: 0 auto;/*центруем для случая если 320<width<768*/
   min-height: 321px; /* 69*5, т к пункты будут доавлять или убирать*/
 
   &__toggle {
@@ -8,44 +9,73 @@
   }
 
   &__wrapper {
-    width: 320px;
+    min-width: 320px;
   }
 
   &__list {
-    width: 100%;
+    width: auto;
     padding-left: 0;
+
     list-style: none;
     text-transform: uppercase;
     text-align: center;
   }
 }
 
-@media (min-width: @tablet-width) {/*для любых утсройств, у котрых   ширна >660px*/
+
+@media (min-width: @tablet-width) {/*>660px*/
+
   .main-nav {
     width: auto;/*займет всю возможную ширину*/
     margin: 0; /*центровка здесь не нужна*/
   }
 
   .main-nav__wrapper {
-    width: auto;
+    width: auto;/*займет всю возможную ширину*/
     margin: 0 auto;/*центровка*/
   }
 
   .site-list { /*меню*/
-    width: auto;
+    width: auto;/*займет всю возможную ширину*/
   }
 }
 
-@media (min-width: @desktop-width) {/*для любых утсройств, у котрых  ширна >1200px*/
+
+@media (min-width: @desktop-width) {/*>1200px*/
+
+  .page-header__headblock {
+    display: none;
+  }
+
   .main-nav__wrapper {
-    width: 621px; /*ширина содержимого*/
+    width: 621px;
+    /*ширина содержимого*/
   }
 
   .site-list {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%; /*ширина содержимого*/
-    min-height: 110px;/*если добавят пункт меню,  то он перенесется на след строку*/
+    width: 100%;
+    /*ширина содержимого*/
+    /*min-height: 110px;*/
+    /*если добавят пункт меню,  то он перенесется на след строку*/
+    padding-top: 30px;
+  }
+
+  .site-list__item {
+    /*fgfd*/
+  }
+
+  .site-list__item-link {
+    display: block;
+    text-transform: none;
+    color: white;
+    background-color: black;
+    padding-top: 55px;
+    padding-bottom: 45px;
+
+    font-size: 18px;
+    line-height: 18px;
   }
 }

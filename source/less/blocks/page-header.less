@@ -18,20 +18,34 @@
   }
 }
 
-@media (min-width: @tablet-width) {
+
+@media (min-width: @tablet-width) {/*>660px*/
+
   .page-header__headblock {
-    height: 110px;/*шапка*/
+    height: 109px;/*шапка*/
+    width: auto;  /*тянется на всю ширину*/
   }
+
 
   .page-header__logo {
     background-image: url("../../img/logotype-white-tablet-svg.svg");
-    width: 147px;
+    width: 147px;/*ширина лого*/
     height: 40px;/*высота лого*/
   }
 }
 
-@media (min-width: @desktop-width) {
+
+@media (min-width: @desktop-width) {/*>1200px*/
+
+  .page-header__headblock {
+    height: 110px;/*шапка*/
+    width: auto; /*тянется на всю ширину*/
+  }
+
+
   .page-header__logo {
+    background-image: url("../../img/logotype-white-tablet-svg.svg");
+    width: 147px;
     height: 40px;
   }
 }

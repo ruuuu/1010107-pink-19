@@ -1,8 +1,9 @@
 .photosblocks {
   min-width: 320px;
 
+
   &__list {
-    width: 320px;
+    width: 100%;
   }
 
   &__item {
@@ -10,6 +11,7 @@
     background-color: #f2f2f2;
     margin-bottom: 20px;
     /*расстояние между карточками*/
+    box-sizing: border-box;
   }
 
   &__image {
@@ -48,7 +50,9 @@
   }
 }
 
+
 @media (min-width: @tablet-width) {/*для >660px */
+
   .photosblocks {
     width: 620px;
   }
@@ -77,38 +81,38 @@
   }
 }
 
+
 @media (min-width: @desktop-width) {/*для >1200*/
+
   .photosblocks {
-    width: 960px; /*(300*3+20+20)*/
+    width: 940px; /*(300*3+20+20)*/
     /*margin: 0 auto;/*центрует*/
     padding-left: 130px;
     padding-right: 130px;
   }
 
+
   .photosblocks__list {
-    width: 940px;
+    width: 940px;/*(300*3+20+20)*/
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-wrap: wrap; /*можно переносить флекс элементы*/
   }
 
+
   .photosblocks__item {/* флекс элмент-карточка*/
     width: 300px;
-    margin-right: 20px;
+    margin-right: 0;
     margin-bottom: 60px;
   }
-  /*.photosblocks__item:not:nth-child(3n){/* карточка
-        margin-right: 20px;
-    }*/
-  .photosblocks__item:nth-child(3n) {/* карточка*/
-    margin-right: 0;
-  }
+
 
   .photosblocks__item:nth-child(4),
   .photosblocks__item:nth-child(5),
   .photosblocks__item:nth-child(6) {/*какую то формулу надо для последних элементов*/
     margin-bottom: 0;
   }
+
 
   .photosblocks__image {
     width: 300px;/*размеры фотки*/
