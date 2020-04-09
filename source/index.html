@@ -4,6 +4,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
         <title>Пинк</title>
         <link href="css/style.css" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
@@ -67,12 +69,14 @@
         </header>
 
         <main class="page-main">
-            <div class="offer-information container">
-                <h2 class="offer-information__title">Устали от серости мегаполиса?</h2>
-                <h2 class="offer-information__title">Нам есть, что вам предложить!</h2>
+            <div class="offer-information">
+                <h2 class="offer-information__title">Устали от серости мегаполиса?<br>
+                Нам есть, что вам<br> предложить!</h2>
             </div>
 
-            <section class="advantages container">
+          <section class="section">
+
+            <div class="advantages container">
                 <!-- ПРЕИМУЩЕСТВА-->
                 <ul class="advantages__list">
                     <li class="advantages__item">
@@ -98,22 +102,26 @@
                     <!--иконка телефона -->
                     <img  class="advantages__phone" src="img/iphone-screen-mobile@1x.png" alt="phone" width="157" height="320">
                 </div>
+              </div>
             </section>
 
-
-            <section class="clock container"><!-- блок с часами-->
-                <img class="clock__icon" src="img/icon-timer.svg" alt="clock" width="238" height="276">
-                <div class="clock__wrapper">
-                    <div class="clock__title">Эффект на 24 часа!</div>
-                    <div class="clock__text">
-                        Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки
+            <section class="sectionclock">
+                <div class="clock container">
+                    <!-- блок с часами-->
+                    <img class="clock__icon" src="img/icon-timer.svg" alt="clock" width="238" height="276">
+                    <div class="clock__wrapper">
+                        <div class="clock__title">Эффект на 24 часа!</div>
+                        <div class="clock__text">
+                            Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки
+                        </div>
+                        <a class="clock__link" href="">Узнать больше об исследовании</a>
                     </div>
-                    <a  class="clock__link" href="">Узнать больше об исследовании</a>
                 </div>
             </section>
 
 
-            <section class="reviews container">
+
+            <section class="reviews">
                 <!-- блок ОТЗЫВЫЫ-->
                 <div class="reviews__wrapper slider">
                     <!-- обертка где будет слайдер-->
@@ -168,7 +176,7 @@
 </table>-->
         </main>
 
-        <footer class="page-footer container">
+        <footer class="page-footer">
             <div class="page-footer contacts">
                 <!-- обертка для подвала-->
                 <h2 class="contacts__text contacts__questin-text">Остались вопросы?Свяжитесь с нами!</h2>
@@ -188,6 +196,34 @@
                 </ul>
                 <div class="page-footer__map">
 
+                </div>
+            </div>
+
+            <div class="page-footer__wrapper container">
+                <!-- обертка для подвала-->
+                <div class="page-footer__logo">
+                    <img src="img/mainlogotype.svg" alt="logo_footer" width="146" height="40">
+                </div>
+
+                <div class="page-footer__social social">
+                    <!-- page-footer__social зададим позиционирование блока внутри футера.-->
+                    <ul class="social__list">
+                        <li class="social__item">
+                            <a class="social__link social__link--twitter" href="https://vk.com/htmlacademy" href="">Мы в Твитеттер</a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link social__link--youtube" href="https://www.instagram.com/htmlacademy">Мы в youtube</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="page-footer__copyright copyright">
+                    <b class="copyright__text">Разработано:</b>
+                    <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" alt="logo_footer" width="27" height="34"></a>
+                    <!--кнопка-->
                 </div>
             </div>
         </footer>

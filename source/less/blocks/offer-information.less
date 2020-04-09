@@ -1,7 +1,10 @@
 .offer-information { /*в index.html*/
-  min-width: 320px;
-  padding: 40px 55px;
+
+  min-width: 250px;/*ширина содержимого*/
+  padding: 46px 58px;
   padding-bottom: 0;
+  margin: 0 auto;/*центрует*/
+  text-align: center;
 
   &__title {/*в index.html*/
     font-size: 24px;
@@ -14,7 +17,7 @@
 @media (min-width: @tablet-width) {/*для >660*/
 
   .offer-information {
-    width: auto;/*можно так?*/
+    width: auto;/*тянется на всю ширину*/
 
     padding-left: 37px;
     padding-right: 37px;
@@ -25,6 +28,26 @@
 
   .offer-information__title {
     font-size: 40px;
+    font-weight: 300;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .offer-information {
+    width: auto;/*тянется на всю ширину*/
+    /*display: flex;
+        justify-content: center;
+        align-items: center;*/
+    padding-left: 187px;
+    padding-right: 187px;
+    padding-bottom: 75px;
+    padding-top: 78px;
+    text-align: center;
+  }
+
+  .offer-information__title {
+    font-size: 50px;
     font-weight: 300;
   }
 }

@@ -1,10 +1,11 @@
 .contacts {
 
-  width: 219px;/*ширина содржимого*/
+  min-width: 237px;/*ширина содржимого*/
   padding-top: 50px;
   padding-bottom: 50px;
   padding-left: 5px;
   padding-right: 5px;
+  margin: 0 auto;
 
   &__text {
     font-size: 24px;
@@ -21,5 +22,19 @@
     font-size: 18px;
     text-align: center;
     font-weight: bold;
+  }
+}
+
+
+@media (min-width: @tablet-width) {/*для >660px */
+  .contacts {
+    display: none;
+  }
+}
+
+
+@media (min-width: @desktop-width) {/*>1200px*/
+  .contacts {
+    display: none;
   }
 }
