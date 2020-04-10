@@ -1,18 +1,26 @@
 .advantages {
 
-
-  background-color: #f2f2f2;
   min-width: 320px;
+  background-color: #f2f2f2;
+
 
   &__list {
-    /*флексбокс будет*/
-    padding: 40px 34px;
+
+
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
+
   &__item {
+    width: 239px;
     margin-bottom: 40px;
     text-align: center;
+    margin-right: 0;
   }
+
 
   &__title {
     margin: 0;
@@ -24,10 +32,11 @@
   &__description {
     margin: 0;
     font-size: 14px;
-    font-weight: 400;
-    line-height: 30px;
+    font-weight: normal;
+    line-height: 24px;
     color: #283645;
   }
+
 
   &__image {
     margin: 20px auto;/*центруем*/
@@ -42,11 +51,12 @@
 
   .advantages {
 
-    width: 620px; /*620= 660-20*2 */
+    /*ширину не задаем*/
 
     display: flex;
     justify-content: space-between;
   }
+
 
   .advantages__list {/*флекс элемент*/
     width: 293px;
@@ -55,6 +65,7 @@
     padding-right: 0;
     order: 1;/*для смены места телефона и списка*/
   }
+
 
   .advantages__item {
     text-align: left;
@@ -96,6 +107,7 @@
     /*940 = 1200-130(гориз. паддинги)*2 */
   }
 
+
   .advantages__list {
     /*флекс элемент*/
     width: 940px;
@@ -106,6 +118,7 @@
     /*расстояние между телеофнами по 20 px*/
     flex-wrap: nowrap;
   }
+
 
   .advantages__item {
     width: 300px;
@@ -128,6 +141,7 @@
     width: 231px;
     font-size: 18px;
   }
+
 
   .advantages__image {
     /*флекс элемент*/

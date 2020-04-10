@@ -1,13 +1,10 @@
 .photosblocks {
-  min-width: 320px;
-
-
   &__list {
-    width: 100%;
+    /*min-width: 320px;*/
   }
 
   &__item {
-    width: 100%;
+
     background-color: #f2f2f2;
     margin-bottom: 20px;
     /*расстояние между карточками*/
@@ -54,10 +51,11 @@
 @media (min-width: @tablet-width) {/*для >660px */
 
   .photosblocks {
-    width: 620px;
+    max-width: 620px;/*тогда скролл не появится*/
   }
 
-  .photosblocks__list {
+
+  .photosblocks__list {/*флексбокс*/
     width: 620px;
     display: flex;
     justify-content: flex-start;
@@ -85,8 +83,9 @@
 @media (min-width: @desktop-width) {/*для >1200*/
 
   .photosblocks {
-    width: 940px; /*(300*3+20+20)*/
-    /*margin: 0 auto;/*центрует*/
+    max-width: 940px;/* 300+300+20*2 тогда скролл не появится*/
+
+    padding: 0;
     padding-left: 130px;
     padding-right: 130px;
   }

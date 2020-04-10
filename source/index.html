@@ -17,7 +17,7 @@
             <!-- шапка — независимый блок.-->
             <div class="page-header__headblock"><!-- шапка-->
                 <a class="page-header__logo">
-                    <img src="page-header__logo-image" alt="" src="img/logotype-white-mobile-svg.svg" width="74" height="23" alt="Пинк-лого"><!-- контентное изображение, поэтому используем тег img-->
+                    <img class="page-header__logo-image"  alt="" src="img/logotype-white-mobile-svg.svg" width="74" height="23" alt="Пинк-лого"><!-- контентное изображение, поэтому используем тег img-->
                 </a>
                 <button class="main-nav__toggle" type="button">
                     <img src="img/menu-burger-svg.svg" alt="" width="50" height="24">
@@ -49,23 +49,33 @@
 
             <div class="banner">
                 <h2 class="banner__title">Взгляните на жизнь иначе!</h2>
-                <a href="">Скачать приложение</a><!-- кнопка-->
-                <ul class="banner__linksapp linksapp-list">
-                    <li class="linksapp-list__item">
-                        <img src="" alt="apple" width="47" height="56">
+                <div class="banner__imagge">
+                    <img class="banner__hand" src="img/iphone-hand-mobile@1x.png" alt="рука" width="258" height="286">
+                </div>
+
+            </div>
+
+            <div class="linksapp">
+                <a class="linksapp__download" href="">Скачать приложение</a><!-- кнопка-->
+
+                <ul class="linksapp__list">
+                    <li class="linksapp__item">
+                        <img src="img/apple-logo-svg.svg" alt="apple" width="43" height="47">
                     </li>
-                    <li class="linksapp-list__item">
-                        <img src="" alt="android" width="43" height="47">
+                    <li class="linksapp__item">
+                        <img src="img/android-logo-svg.svg" alt="android" width="43" height="47">
                     </li>
-                    <li class="linksapp-list__item">
-                        <img src="" alt="windows8" width="44" height="41">
+                    <li class="linksapp__item">
+                        <img src="img/microsoft-logo-svg.svg" alt="windows8" width="44" height="42">
                     </li>
                 </ul>
 
-                <p class="banner__links-information">
+                <p class="linksapp__links-information">
                     Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
                 </p>
             </div>
+
+
         </header>
 
         <main class="page-main">
@@ -199,7 +209,7 @@
                 </div>
             </div>
 
-            <div class="page-footer__wrapper container">
+            <div class="page-footer__wrapper container page-footer-index"><!-- page-footer__index нужен чтобы для 320  убрать последнюю часть подвала-->
                 <!-- обертка для подвала-->
                 <div class="page-footer__logo">
                     <img src="img/mainlogotype.svg" alt="logo_footer" width="146" height="40">

@@ -1,12 +1,17 @@
 .main-nav {
   min-width: 320px;
-
+  display: none;
   /*margin: 0 auto;/*центруем для случая если 320<width<768*/
   min-height: 321px; /* 69*5, т к пункты будут доавлять или убирать*/
 
-  &__toggle {
-    /*cbc*/
+
+  &__toggle {/*бургер кнопка*/
+
+    position: absolute;
+    top: 18px;
+    right: 22px;
   }
+
 
   &__wrapper {
     min-width: 320px;
@@ -30,10 +35,12 @@
     margin: 0; /*центровка здесь не нужна*/
   }
 
+
   .main-nav__wrapper {
     width: auto;/*займет всю возможную ширину*/
     margin: 0 auto;/*центровка*/
   }
+
 
   .site-list { /*меню*/
     width: auto;/*займет всю возможную ширину*/
@@ -52,6 +59,7 @@
     /*ширина содержимого*/
   }
 
+
   .site-list {
     display: flex;
     flex-direction: row;
@@ -63,9 +71,11 @@
     padding-top: 30px;
   }
 
+
   .site-list__item {
     /*fgfd*/
   }
+
 
   .site-list__item-link {
     display: block;

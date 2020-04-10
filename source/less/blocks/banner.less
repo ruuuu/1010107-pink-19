@@ -1,27 +1,59 @@
 .banner {
-  width: 320px;
+
+
+  min-width: 320px;
   /*размеры картинки или пиcать 100% взять от родителя*/
   height: 462px;
+
   position: relative;/*тект будем поверх него размещать и картинку руку*/
-  background-image: url("../../img/back-mobile.jpg");
-  background-position: 0 0;
+  background-image: url("../../img/back-mobile.jpg");/*back-mobile.jpg*/
+  background-size: cover;
+  background-position: 0 -55px;
   background-repeat: no-repeat;
 
+
   &__title {
-    padding-top: 95px;
+    width: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    height: 48px;
+
+    margin: 20px auto;
     position: absolute;
+    top: -170px;
+
+    /*z-index: 50;*/
+    color: #ffffff;
     font-size: 24px;
     font-weight: 300;
     line-height: 24;
   }
 
-  &__links-information {
-    font-size: 14px;
-    line-height: 24px;
-    color: white;
+
+  &__imagge {
+    margin: 0 auto;
+  }
+
+  &__hand {
+    width: auto;/*258px*/
+    display: block;
+
+
+    position: absolute;
+
+    bottom: 0;
+    /*как отцентрировать по горизонтали */
+
+    height: 286px;
   }
 }
+
 /*@media (min-width: @tablet-width) {
+
 }*/
+
+
 /*@media (min-width: @desktop-width) {
+
 }*/
