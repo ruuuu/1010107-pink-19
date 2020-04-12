@@ -19,8 +19,20 @@
   }
 
   &__wrap-information {
+    display: flex;
+    flex-direction: column;/*главная ось сверху вниз*/
+
     padding: 25px 27px;
     line-height: 24px;
+  }
+
+  &__image-panorama {
+    width: 100%;
+    position: relative;/*родитль для иконки  "Панорама дня"*/
+  }
+
+  &__wrap-information-panorama {
+    padding: 25px 27px;
   }
 
   &__author {
@@ -28,6 +40,7 @@
   }
 
   &__time {
+
     font-size: 12px;
     font-weight: 300;
     text-transform: uppercase;
@@ -38,12 +51,22 @@
     margin-bottom: 20px;
   }
 
-  &__wrap-for-like {
+
+  &__wrap-for-like {/*флексбокс*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
     color: #d22856;
     font-size: 12px;
     font-weight: 400;
     line-height: 24px;
     text-transform: uppercase;
+  }
+
+  &__like-link {/*флекс элемент*/
+    display: block;
+    margin-right: 20px;
   }
 }
 
@@ -76,6 +99,23 @@
     height: 300px;
     display: block;
     object-fit: cover;
+  }
+
+
+  .photosblocks__wrap-for-like {/*флексбокс*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .photosblocks__like-link {/*флекс элемент, иконка лайка*/
+    margin-right: 0;
+    order: 1;
+  }
+
+  .photosblocks__like-count {/*флекс элемент*/
+
+    order: -1;/*меняем местами флекс элементы*/
   }
 }
 

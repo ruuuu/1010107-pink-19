@@ -141,28 +141,35 @@
         </main>
 
         <footer class="page-footer container">
-            <div class="page-footer__wrapper">
+            <div class="page-footer__wrapper container page-footer-index"><!-- page-footer__index нужен чтобы для 320  убрать последнюю часть подвала-->
                 <!-- обертка для подвала-->
                 <div class="page-footer__logo">
                     <img src="img/mainlogotype.svg" alt="logo_footer" width="146" height="40">
                 </div>
+
                 <div class="page-footer__social social">
                     <!-- page-footer__social зададим позиционирование блока внутри футера.-->
                     <ul class="social__list">
                         <li class="social__item">
-                            <a class="social__link social__link--twitter" href="https://vk.com/htmlacademy" href="">Мы в Твитеттер</a>
+                            <a class="social__button social__link--twitter" href="https://vk.com/htmlacademy" href=""><img src="img/icon-twitter.svg" alt="twitter" width="18" height="15"></a>
+
                         </li>
                         <li class="social__item">
-                            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+                            <a class="social__button social__link--facebook" href="https://www.facebook.com/htmlacademy"><img src="img/icon-facebook.svg" alt="twitter" width="9" height="19"></a>
+
                         </li>
                         <li class="social__item">
-                            <a class="social__link social__link--youtube" href="https://www.instagram.com/htmlacademy">Мы в youtube</a>
+                            <a class="social__button social__link--youtube" href="https://www.instagram.com/htmlacademy"><img src="img/icon-youtube.svg" alt="twitter" width="15" height="14"></a>
+
                         </li>
                     </ul>
                 </div>
+
                 <div class="page-footer__copyright copyright">
                     <b class="copyright__text">Разработано:</b>
-                    <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" alt="logo_footer" width="27" height="34"></a>
+                    <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+                        <img src="img/logo-htmlacademy.svg" alt="logo_footer" width="27" height="34">
+                    </a>
                     <!--кнопка-->
                 </div>
             </div>

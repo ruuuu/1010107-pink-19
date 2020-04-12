@@ -1,6 +1,6 @@
 .advantages {
 
-  min-width: 320px;
+
   background-color: #f2f2f2;
 
 
@@ -10,15 +10,19 @@
     padding-left: 0;
     padding-right: 0;
     padding-top: 40px;
-    padding-bottom: 40px;
   }
 
 
   &__item {
-    width: 239px;
+
     margin-bottom: 40px;
     text-align: center;
     margin-right: 0;
+  }
+
+
+  &__item img {
+    display: none;
   }
 
 
@@ -39,9 +43,10 @@
 
 
   &__image {
-    margin: 20px auto;/*центруем*/
-    width: 157px;/*рмерв картинки*/
-    height: 320px;
+    margin: 0 auto;/*центруем телефон*/
+    margin-bottom: 0;
+    width: 153px;/*рмерв картинки*/
+    height: 280px;
   }
 }
 
@@ -49,12 +54,12 @@
 @media (min-width: @tablet-width) {/*>660px*/
 
 
-  .advantages {
+  .advantages {/*флексбокс*/  /*ширину не задаем*/
 
-    /*ширину не задаем*/
 
+    position: relative;/*добавила*/
     display: flex;
-    justify-content: space-between;
+    justify-content: center;/*space-between*/
   }
 
 
@@ -71,14 +76,22 @@
     text-align: left;
   }
 
+  .advantages__item img {
+    text-align: left;
+    display: none;
+  }
 
   .advantages__image {/*флекс элемент*/
 
     width: 268px;/*размеры картинки*/
     height: auto;
     margin: 0;
-
     order: -1;
+
+    margin-right: 40px;
+    position: absolute;
+    margin-top: -40px;/*добавила*/
+
     /*margin: 20px auto;центруем*/
   }
 
@@ -92,67 +105,75 @@
   }
 }
 
-
 @media (min-width: @desktop-width) {
   /*>1200*/
+
+  .advantages {
+
+    /*940 = 1200-130(гориз. паддинги)*2 */
+  }
 
   .container {
     padding-left: 130px;
     padding-right: 130px;
   }
 
+  .advantages__list {/*флексбокс*/
 
-  .advantages {
     width: 940px;
     /*940 = 1200-130(гориз. паддинги)*2 */
-  }
 
-
-  .advantages__list {
-    /*флекс элемент*/
-    width: 940px;
-    /*940 = 1200-130(гориз. паддинги)*2 */
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between;/*space-between*/
     /*расстояние между телеофнами по 20 px*/
     flex-wrap: nowrap;
+    margin: 0 auto;
   }
 
 
   .advantages__item {
-    width: 300px;
-    text-align: center;
-    margin: 0;
+
+
+    margin: 0 auto;
     margin-bottom: 56px;
   }
 
+  .advantages__item img {
+    display: block;
+    margin-bottom: 55px;
+    width: 292px;
+    height: 302px;
+  }
+
+
+  /*.advantages__item:last-child{
+        margin-right: 0;
+    }*/
 
   .advantages__title {
-    width: 231px;/*чтобы тектс не разъзжался*/
+    width: 222px;/*чтобы тексn не разъзжался*/
+    text-align: center;
     font-size: 30px;
     font-weight: bold;
+
+    padding: 0;
     margin-right: 0;
     color: var(--black);
   }
 
 
   .advantages__description {
+
     width: 231px;
+    margin-right: 0;
+    text-align: center;
     font-size: 18px;
   }
 
 
   .advantages__image {
-    /*флекс элемент*/
-
-
     display: none;
-    /*width: 268px;/*размеры картинки*/
-    /*height: auto;*/
-
-
-    /*margin: 20px auto;центруем*/
   }
 
 

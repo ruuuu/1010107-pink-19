@@ -1,0 +1,73 @@
+.bannerindex {
+
+
+  /*min-width: 320px;*/
+  /*размеры картинки или пиcать 100% взять от родителя*/
+  height: 462px;
+
+  position: relative;/*текст будем поверх него размещать и картинку-руку*/
+  background-image: url("../../img/back-mobile.jpg");/*back-mobile.jpg*/
+  background-size: cover;
+  background-position: 0 -55px;/*чтоб картинка под шапку ушла*/
+  background-repeat: no-repeat;
+
+
+  &__hand {
+    width: auto;
+    /*258px*/
+    display: block;
+
+    position: absolute;
+
+    top: 170px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+
+    height: 286px;
+  }
+
+  &__title {
+
+
+    position: absolute;
+
+    padding-top: 30px;
+    text-align: center;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+
+    /*z-index: 50;*/
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .bannerindex {
+    height: 729px;
+  }
+
+  .bannerindex__title {
+    top: 20px;
+    font-size: 50px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .bannerindex {
+    height: 854px;
+  }
+
+  /*.bannerindex__title{
+
+  }*/
+}

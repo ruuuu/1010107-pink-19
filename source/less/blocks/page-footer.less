@@ -8,23 +8,32 @@
   }
 
   &__logo {
-    width: 147px;/*ширина содержимого*/
-    padding-left: 87px;
-    padding-right: 87px;
+    /*width: 147px; ширина содержимого*/
+    margin: 0 auto;
     margin-bottom: 30px;
   }
 
+  &__logo img {
+    display: block;
+    margin: 0 auto;
+  }
+
+
   &__social {
-    width: 170px; /*ширина содержимого*/
-    padding-left: 75px;
-    padding-right: 75px;
+
+    width: 178px; /*ширина содержимого*/
+    margin: 0 auto;
     margin-bottom: 30px;
   }
 
   &__copyright {
-    width: 128px;/*ширина содержимого*/
-    padding-left: 96px;
-    padding-right: 96px;
+
+    width: 168px;/*ширина содержимого*/
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
     font-size: 14px;
     line-height: 18px;
   }
@@ -35,6 +44,7 @@
 
 
   .page-footer__wrapper {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,7 +64,10 @@
   }
 
   .page-footer__copyright {
-    width: 128px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 140px;
     padding: 0;
     margin-bottom: 0;
   }
@@ -82,7 +95,11 @@
     margin-bottom: 0;
   }
 
-  .page-footer__copyright {/*флекс элемент*/
+  .page-footer__copyright {
+    /*флекс элемент*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 160px;
     padding: 0;
     margin-bottom: 0;
