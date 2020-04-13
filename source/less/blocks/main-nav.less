@@ -1,6 +1,6 @@
 .main-nav {
 
-  display: none;
+  position: relative;
   /*margin: 0 auto;/*центруем для случая если 320<width<768*/
   min-height: 321px; /* 69*5, т к пункты будут доавлять или убирать*/
 
@@ -8,8 +8,88 @@
   &__toggle {/*бургер кнопка*/
 
     position: absolute;
-    top: 18px;
+
+    top: -45px;
     right: 22px;
+
+
+    background-color: transparent;/*прозрачный  у бургера*/
+
+    width: 50px;/*размеры кнопки бургера*/
+    height: 24px;
+
+    display: block;
+    cursor: pointer;
+    border: none;
+
+    /*&:hover,
+    &:active {
+
+    }*/
+  }
+
+
+  &--closed &__toggle::before { /*гориз полоска на бургере*/
+    content: "";
+
+    position: absolute;
+    top: 20px;
+    left: 0;
+
+    width: 50px;
+    height: 2px;
+
+    background-color: #ffffff;
+    /*box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;*/
+  }
+
+
+  &--closed &__toggle:hover::before { /*гориз полоски на бургере при ховере*/
+    background-color: #d22856;
+  }
+
+
+  &--closed &__toggle:active::before {/*гориз полоски на бургере при нажатии*/
+    background-color: rgba(210, 40, 86, 0.3);
+  }
+
+  &--opened &__toggle {
+    top: -55px;
+    left: auto;
+    right: 22px;
+
+    &::before,
+    &::after { /*полоски для крестика*/
+      content: "";
+
+      position: absolute;
+      top: 22px;
+      left: 18px;
+
+      width: 30px;
+      height: 4px;
+
+      background-color: #ffffff;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover::before,
+    &:hover::after {
+      background-color: #d22856;
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: rgba(210, 40, 86, 0.3);
+    }
   }
 
 

@@ -5,11 +5,12 @@
     padding-top: 40px;
     padding-bottom: 40px;
     background-color: white;
+
+    &--index { /*нужен чтобы для 320  убрать последнюю часть подвала*/
+      display: none;
+    }
   }
 
-  &__wrapper--index { /*нужен чтобы для 320  убрать последнюю часть подвала*/
-    display: none;
-  }
 
   &__logo {
     /*width: 147px; ширина содержимого*/
@@ -45,79 +46,82 @@
 
 
 @media (min-width: @tablet-width) {/*для >660px;*/
+  .page-footer {
+    &__wrapper {
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: auto;
+      /*тянется по ширине экрана, 660px*/
+
+      &--index {
+        display: flex;
+      }
+    }
 
 
-  .page-footer__wrapper {
+    &__logo {
+      width: 147px;
+      padding: 0;
+      margin-bottom: 0;
+    }
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: auto; /*тянется по ширине экрана, 660px*/
-  }
+    &__social {
+      width: 170px;
+      padding: 0;
+      margin-bottom: 0;
+    }
 
-  .page-footer__wrapper--index {
-    display: flex;
-  }
-
-  .page-footer__logo {
-    width: 147px;
-    padding: 0;
-    margin-bottom: 0;
-  }
-
-  .page-footer__social {
-    width: 170px;
-    padding: 0;
-    margin-bottom: 0;
-  }
-
-  .page-footer__copyright {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 140px;
-    padding: 0;
-    margin-bottom: 0;
+    &__copyright {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 140px;
+      padding: 0;
+      margin-bottom: 0;
+    }
   }
 }
 
 
 @media (min-width: @desktop-width) {/*для >1200*/
+  .page-footer {
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: auto;
+      /*тянется по ширине экрана, 1200px*/
 
-  .page-footer__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: auto; /*тянется по ширине экрана, 1200px*/
-  }
 
-  .page-footer__wrapper--index {
-    display: flex;
-  }
+      &--index {
+        display: flex;
+      }
+    }
 
-  .page-footer__logo {/*флекс элемент*/
-    width: 147px;
-    padding: 0;
-    margin-bottom: 0;
-  }
+    &__logo {
+      /*флекс элемент*/
+      width: 147px;
+      padding: 0;
+      margin-bottom: 0;
+    }
 
-  .page-footer__social {/*флекс элемент*/
-    width: 170px;
-    padding: 0;
-    margin-bottom: 0;
-  }
+    &__social {
+      /*флекс элемент*/
+      width: 170px;
+      padding: 0;
+      margin-bottom: 0;
+    }
 
-  .page-footer__copyright {
-    /*флекс элемент*/
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 160px;
-    padding: 0;
-    margin-bottom: 0;
-  }
-
-  .copyright__text {
-    font-size: 18px;
+    &__copyright {
+      /*флекс элемент*/
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 160px;
+      padding: 0;
+      margin-bottom: 0;
+    }
   }
 }
