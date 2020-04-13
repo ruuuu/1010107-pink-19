@@ -1,10 +1,57 @@
 .offer-information { /*в index.html*/
-  width: 100%;
-  padding: 40px 55px;
+
+
+  padding: 36px 30px;
+  padding-bottom: 0;
+
+  text-align: center;
+
 
   &__title {/*в index.html*/
     font-size: 24px;
     margin: 0;
     margin-bottom: 40px;
+  }
+}
+
+
+@media (min-width: @tablet-width) {/*для >660*/
+
+  .offer-information {
+
+    /*width: auto;/*тянется на всю ширину*/
+
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+
+  .offer-information__title {
+    font-size: 40px;
+    font-weight: 300;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .offer-information {
+
+    width: auto;/*тянется на всю ширину*/
+    /*display: flex;
+        justify-content: center;
+        align-items: center;*/
+    padding-left: 187px;
+    padding-right: 187px;
+    padding-bottom: 75px;
+    padding-top: 78px;
+    text-align: center;
+  }
+
+
+  .offer-information__title {
+    font-size: 50px;
+    font-weight: 300;
   }
 }

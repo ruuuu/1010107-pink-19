@@ -1,34 +1,43 @@
 .photosblocks {
-  width: 280px;
-
   &__list {
-    width: 280px;
+    /*min-width: 320px;*/
   }
 
-
   &__item {
+
     background-color: #f2f2f2;
     margin-bottom: 20px;
     /*расстояние между карточками*/
+    box-sizing: border-box;
   }
 
   &__image {
-    width: 100%;
+    width: 100%;/*размеры картинки*/
     height: 180px;
     display: block;
     object-fit: cover;
   }
 
-
   &__wrap-information {
-    padding: 25px 13px;
+    display: flex;
+    flex-direction: column;/*главная ось сверху вниз*/
+
+    padding: 25px 27px;
     line-height: 24px;
+  }
+
+  &__image-panorama {
+    width: 100%;
+    position: relative;/*родитль для иконки  "Панорама дня"*/
+  }
+
+  &__wrap-information-panorama {
+    padding: 25px 27px;
   }
 
   &__author {
     /*mklj*/
   }
-
 
   &__time {
 
@@ -43,12 +52,111 @@
   }
 
 
-  &__wrap-for-like {
-    color: #d22856;
+  &__wrap-for-like {/*флексбокс*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
+    color: #d22856;
     font-size: 12px;
     font-weight: 400;
     line-height: 24px;
     text-transform: uppercase;
+  }
+
+  &__like-link {/*флекс элемент*/
+    display: block;
+    margin-right: 20px;
+  }
+}
+
+
+@media (min-width: @tablet-width) {/*для >660px */
+
+  .photosblocks {
+    max-width: 620px;/*тогда скролл не появится*/
+  }
+
+
+  .photosblocks__list {/*флексбокс*/
+    width: 620px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap; /*можно переностиь флекс элементы*/
+  }
+
+  .photosblocks__item {/* флекс элмент-карточка*/
+    width: 300px;
+    margin-right: 20px;
+  }
+
+  .photosblocks__item:nth-child(2n) {/* карточка*/
+    margin-right: 0;
+  }
+
+  .photosblocks__image {
+    width: 300px;/*размеры фотки*/
+    height: 300px;
+    display: block;
+    object-fit: cover;
+  }
+
+
+  .photosblocks__wrap-for-like {/*флексбокс*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .photosblocks__like-link {/*флекс элемент, иконка лайка*/
+    margin-right: 0;
+    order: 1;
+  }
+
+  .photosblocks__like-count {/*флекс элемент*/
+
+    order: -1;/*меняем местами флекс элементы*/
+  }
+}
+
+
+@media (min-width: @desktop-width) {/*для >1200*/
+
+  .photosblocks {
+    max-width: 940px;/* 300+300+20*2 тогда скролл не появится*/
+
+    padding: 0;
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+
+
+  .photosblocks__list {
+    width: 940px;/*(300*3+20+20)*/
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /*можно переносить флекс элементы*/
+  }
+
+
+  .photosblocks__item {/* флекс элмент-карточка*/
+    width: 300px;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+
+
+  .photosblocks__item:nth-child(4),
+  .photosblocks__item:nth-child(5),
+  .photosblocks__item:nth-child(6) {/*какую то формулу надо для последних элементов*/
+    margin-bottom: 0;
+  }
+
+
+  .photosblocks__image {
+    width: 300px;/*размеры фотки*/
+    height: 400px;
+    display: block;
+    object-fit: cover;
   }
 }

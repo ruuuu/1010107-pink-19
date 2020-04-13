@@ -1,0 +1,99 @@
+.clock {
+
+  display: none; /*для < 660px  этот блок не отобраажем*/
+}
+
+
+@media (min-width: @tablet-width) {/*>660px*/
+
+  .clock {
+    /*ширину не задаем*/
+    padding-top: 59px;
+    display: flex;
+
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+
+  .clock__icon {/*флекс элемент*/
+    display: block;
+    width: 238px;
+    height: 276px;
+
+    margin-right: 70px;
+  }
+
+  .clock__wrapper {/*флекс элемент*/
+    /*width: 295px;*/
+    padding-top: 60px;
+  }
+
+  .clock__title {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: bold;
+
+    color: var(--black);
+    margin-bottom: 20px;
+  }
+
+  .clock__text {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  .clock__link {
+    display: block;
+    color: #d22856;
+    text-decoration: underline;
+  }
+}
+
+
+@media (min-width: @desktop-width) {/*>1200px*/
+
+  .clock {
+    /*width: 940px; теперь элемент приувеличнеии ширины расползаются по ккраям /*940 = 1200-130*2*/
+    display: flex;/*добавила*/
+
+    justify-content: flex-start;/*добавила*/
+    flex-wrap: nowrap;/*добавила*/
+
+    padding-left: 130px;
+    padding-right: 130px;
+
+    background-color: #f2f2f2;
+    padding-top: 0;
+    padding-bottom: 67px;
+  }
+
+  .clock__icon {/*флекс элемент*/
+    display: block;
+    /*width: 298px;*/
+    height: 345px;
+
+    margin-right: 70px;/*добавила*/
+  }
+
+
+  .clock__wrapper {/*флекс элемент*/
+    width: 525px;
+    padding-top: 95px;
+  }
+
+  .clock__title {
+    line-height: 36px;
+  }
+
+  .clock__text {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .clock__link {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}

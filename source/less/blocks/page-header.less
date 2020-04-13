@@ -1,10 +1,66 @@
 .page-header {
-  width: 320px;
-  background-color: #000000;
-  background-image: url("../../img/back-mobile.jpg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
+
+  /*min-width: 320px;*/
+  position: relative;/*родитель для лого и кнопки бургера */
+  background-color: #283645;
   box-shadow: 0 1px 0 0 var(--black);
   font-weight: 300;
   line-height: 1.71;
+
+
+  &__headblock { /* шапка */
+    /*min-width: 320px;/*чтобы шапка тянулась вместе с разрешением  экрана*/
+    height: 66px;
+
+    background-color: black;
+    opacity: 0.3;
+  }
+
+
+  &__logo {/*лого*/
+
+    height: 22px;/*у моб  шапки высота лого */
+    position: absolute;
+    left: 20px;
+    top: 22px;
+  }
+
+
+  &__logo img {
+
+    width: 75px;/*размеры лого*/
+    height: 22px;/*у моб  шапки высота лого */
+  }
+}
+
+@media (min-width: @tablet-width) {/*>660px*/
+
+
+  .page-header__headblock {
+    height: 110px;/*шапка*/
+    /*тянется на всю ширину*/
+  }
+
+
+  .page-header__logo {
+    background-image: url("../../img/logotype-white-tablet-svg.svg");
+    width: 147px;/*ширина лого*/
+    height: 40px;/*высота лого*/
+  }
+}
+
+
+@media (min-width: @desktop-width) {/*>1200px*/
+
+  .page-header__headblock {
+    height: 110px;/*шапка*/
+    width: auto; /*тянется на всю ширину*/
+  }
+
+
+  .page-header__logo {
+    background-image: url("../../img/logotype-white-tablet-svg.svg");
+    width: 147px;
+    height: 40px;
+  }
 }

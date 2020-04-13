@@ -1,0 +1,51 @@
+.bannerphoto {
+
+
+  /*min-width: 320px;*/
+  /*размеры картинки или пиcать 100% взять от родителя*/
+  height: 262px;
+
+  position: relative;/*тект будем поверх него размещать и картинку руку*/
+  background-image: url("../../img/back-mobile.jpg");/*back-mobile.jpg*/
+  background-size: cover;
+  background-position: 0 -55px;
+  background-repeat: no-repeat;
+
+
+  &__title {
+
+    padding-left: 50px;
+    padding-right: 50px;
+    position: relative;
+
+
+    /*z-index: 50;*/
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 24;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .bannerphoto {
+    height: 440px;
+  }
+
+  .bannerphoto__title {
+    top: 20px;
+    font-size: 50px;
+    color: yellow;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .bannerphoto {
+    height: 394px;
+  }
+
+  /*.bannerphoto__title{
+
+  }*/
+}

@@ -1,15 +1,30 @@
 .advantages {
+
+
+  background-color: #f2f2f2;
+
+
   &__list {
-    /*флексбокс будет*/
-    width: 252px;
-    padding: 40px 34px;
-    background-color: #f2f2f2;
+
+
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 40px;
   }
 
+
   &__item {
+
     margin-bottom: 40px;
     text-align: center;
+    margin-right: 0;
   }
+
+
+  &__item img {
+    display: none;
+  }
+
 
   &__title {
     margin: 0;
@@ -21,8 +36,148 @@
   &__description {
     margin: 0;
     font-size: 14px;
-    font-weight: 400;
-    line-height: 30px;
+    font-weight: normal;
+    line-height: 24px;
     color: #283645;
+  }
+
+
+  &__image {
+    margin: 0 auto;/*центруем телефон*/
+    margin-bottom: 0;
+    width: 153px;/*рмерв картинки*/
+    height: 280px;
+  }
+}
+
+
+@media (min-width: @tablet-width) {/*>660px*/
+
+
+  .advantages {/*флексбокс*/  /*ширину не задаем*/
+
+
+    position: relative;/*добавила*/
+    display: flex;
+    justify-content: center;/*space-between*/
+  }
+
+
+  .advantages__list {/*флекс элемент*/
+    width: 293px;
+
+    padding-left: 0;
+    padding-right: 0;
+    order: 1;/*для смены места телефона и списка*/
+  }
+
+
+  .advantages__item {
+    text-align: left;
+  }
+
+  .advantages__item img {
+    text-align: left;
+    display: none;
+  }
+
+  .advantages__image {/*флекс элемент*/
+
+    width: 268px;/*размеры картинки*/
+    height: auto;
+    margin: 0;
+    order: -1;
+
+    margin-right: 40px;
+    position: absolute;
+    margin-top: -40px;/*добавила*/
+
+    /*margin: 20px auto;центруем*/
+  }
+
+
+  .advantages__phone {
+    display: block;
+    width: 268px;
+    height: 547px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  /*>1200*/
+
+  .advantages {
+
+    /*940 = 1200-130(гориз. паддинги)*2 */
+  }
+
+  .container {
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+
+  .advantages__list {/*флексбокс*/
+
+    width: 940px;
+    /*940 = 1200-130(гориз. паддинги)*2 */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;/*space-between*/
+    /*расстояние между телеофнами по 20 px*/
+    flex-wrap: nowrap;
+    margin: 0 auto;
+  }
+
+
+  .advantages__item {
+
+
+    margin: 0 auto;
+    margin-bottom: 56px;
+  }
+
+  .advantages__item img {
+    display: block;
+    margin-bottom: 55px;
+    width: 292px;
+    height: 302px;
+  }
+
+
+  /*.advantages__item:last-child{
+        margin-right: 0;
+    }*/
+
+  .advantages__title {
+    width: 222px;/*чтобы тексn не разъзжался*/
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+
+    padding: 0;
+    margin-right: 0;
+    color: var(--black);
+  }
+
+
+  .advantages__description {
+
+    width: 231px;
+    margin-right: 0;
+    text-align: center;
+    font-size: 18px;
+  }
+
+
+  .advantages__image {
+    display: none;
+  }
+
+
+  .advantages__phone {
+    display: none;
   }
 }

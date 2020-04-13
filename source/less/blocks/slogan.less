@@ -1,9 +1,9 @@
 .slogan {
-  width: 253px;
+
   /*или 100%?*/
   line-height: 2.14;
-  padding: 40px 40px;
 
+  padding: 40px 20px;
   font-size: 14px;
   text-align: center;
   color: #283645;
@@ -11,5 +11,38 @@
   &__information {
     margin-bottom: 0;
     margin-top: 0;
+  }
+}
+
+
+@media (min-width: @tablet-width) {/*для >660px*/
+  .slogan {
+
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  .slogan__information {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {/*для >1200px*/
+  .slogan {
+
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    /*display: flex;/*для идеального центрирования*/
+  }
+
+  .slogan__information {
+    /*margin: 100px auto;/*сделаем идеальное центрирование*/
+    font-size: 18px;
+    line-height: 30px;
   }
 }

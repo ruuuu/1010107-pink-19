@@ -1,0 +1,102 @@
+.contacts {
+
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 0 auto;
+
+  &__text {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #d22856;
+    font-weight: 300;
+  }
+
+
+  &__questin-text {
+    color: #283645;
+  }
+
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+
+@media (min-width: @tablet-width) {/*для >660px */
+
+  .contacts__questin-text {
+    text-align: center;
+    color: #283645;
+    font-size: 40px;
+    font-weight: 300;
+  }
+
+
+  .contacts__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  /*.contacts__item{
+
+
+  }*/
+
+
+  .contacts__item:nth-child(3) {
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {/*>1200px*/
+
+  .contacts__questin-text {
+    font-size: 50px;
+    padding-left: 340px;
+    padding-right: 340px;
+    margin-bottom: 70px;
+  }
+
+  .contacts__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 148px;
+    padding-right: 148px;
+  }
+
+  .contacts__item {
+    width: auto;/*сбрасываем и делаем щначения по умолчанию*/
+  }
+
+  .contacts__item:nth-child(1) {
+    order: -2;
+  }
+
+  .contacts__item:nth-child(2) {
+    margin: 0;
+    padding-top: 0;
+    order: 1;
+  }
+
+  .contacts__item:nth-child(3) {
+
+    margin: 0;
+    padding-top: 0;
+    order: -1;
+  }
+}
