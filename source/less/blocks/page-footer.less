@@ -7,33 +7,33 @@
     background-color: white;
   }
 
-  /*&__index{
-
-  }*/
+  &__wrapper--index { /*нужен чтобы для 320  убрать последнюю часть подвала*/
+    display: none;
+  }
 
   &__logo {
     /*width: 147px; ширина содержимого*/
-    margin: 0 auto;
+
     margin-bottom: 30px;
   }
 
   &__logo img {
     display: block;
-    margin: 0 auto;
   }
 
 
   &__social {
 
     width: 178px; /*ширина содержимого*/
-    margin: 0 auto;
+
     margin-bottom: 30px;
   }
+
 
   &__copyright {
 
     width: 168px;/*ширина содержимого*/
-    margin: 0 auto;
+
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -53,6 +53,10 @@
     justify-content: space-between;
     align-items: center;
     width: auto; /*тянется по ширине экрана, 660px*/
+  }
+
+  .page-footer__wrapper--index {
+    display: flex;
   }
 
   .page-footer__logo {
@@ -85,6 +89,10 @@
     justify-content: space-between;
     align-items: center;
     width: auto; /*тянется по ширине экрана, 1200px*/
+  }
+
+  .page-footer__wrapper--index {
+    display: flex;
   }
 
   .page-footer__logo {/*флекс элемент*/
