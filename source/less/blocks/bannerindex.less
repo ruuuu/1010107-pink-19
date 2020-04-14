@@ -5,10 +5,15 @@
   /*размеры картинки или пиcать 100% взять от родителя*/
   height: 462px;
 
+  display: flex;/*чтоб отценровать надпись */
+  justify-content: center;
+  align-items: center;
+
   position: relative;/*текст будем поверх него размещать и картинку-руку*/
   background-image: url("../../img/back-mobile.jpg");/*back-mobile.jpg*/
   background-size: cover;
-  background-position: 0 -55px;/*чтоб картинка под шапку ушла*/
+
+  background-position: center -55px;/* либов место 0 center, чтоб картинка под шапку ушла*/
   background-repeat: no-repeat;
 
 
@@ -35,11 +40,13 @@
     position: absolute;
 
     padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: center;
 
     top: 0;
     bottom: 0;
-    left: 0;
+    /*left: width/2;*/
 
 
     /*z-index: 50;*/

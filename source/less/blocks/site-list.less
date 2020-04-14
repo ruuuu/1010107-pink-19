@@ -1,20 +1,30 @@
 .site-list {
   &__item {
-
-    background-color: #283645;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     font-size: 18px;
-    box-shadow: 0 1px 0 0 var(--black), inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
   }
 
 
-  &__item-link {
+  &__item-link { /*a*/
 
     display: block;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-decoration: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
     color: white;
+    line-height: 24px;
+
+    box-shadow: 0 1px 0 0 var(--black), inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+
+    &:hover {
+      color: #d22856;
+    }
+
+    &:active {
+      color: rgba(210, 40, 86, 0.3);
+    }
   }
 }
 
@@ -30,30 +40,71 @@
 @media (min-width: @desktop-width) {/*>1200px*/
 
   .site-list {
+
     display: flex;
     flex-direction: row;
+
+    flex-wrap: wrap;
+
     justify-content: space-between;
-    width: 100%;
+    flex-grow: 1;
     /*ширина содержимого*/
     /*min-height: 110px;*/
     /*если добавят пункт меню,  то он перенесется на след строку*/
-    padding-top: 30px;
+    position: absolute;
+    top: -110px;/*чтоб меню поднялось*/
   }
 
   .site-list__item {
-    /*fgfd*/
+    margin-right: 90px;
+
+    &:last-child {
+      margin-right: 0;/*у псоледнего item убираем отступ*/
+    }
+
+    &--active {/*подчеркивание под пукнтом меню*/
+      position: relative;
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        right: 0;
+        bottom: -15px;
+        left: 0;
+
+        height: 3px;
+
+        background: white;
+      }
+    }
   }
 
 
   .site-list__item-link {
-    display: block;
-    text-transform: none;
-    color: white;
-    background-color: black;
-    padding-top: 55px;
-    padding-bottom: 45px;
+    /*a*/
 
-    font-size: 18px;
-    line-height: 18px;
+    text-transform: none;
+    padding: 0;
+    padding-top: 48px;
+    /*padding-bottom: ;*/
+
+    font-size: 17px;
+    line-height: 1;
+
+    background: none;
+    /*фон убрали*/
+    border: none;
+
+    &:hover {
+      color: #d22856;
+      background-color: transparent;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+      background-color: transparent;
+      opacity: 0.3;
+    }
   }
 }

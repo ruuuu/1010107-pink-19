@@ -46,8 +46,9 @@
 
 
 @media (min-width: @tablet-width) {/*для >660px;*/
+
   .page-footer {
-    &__wrapper {
+    &__wrapper {/*флексбокс*/
 
       display: flex;
       justify-content: space-between;
@@ -61,23 +62,23 @@
     }
 
 
-    &__logo {
+    &__logo {/*флекс элемент*/
       width: 147px;
       padding: 0;
       margin-bottom: 0;
     }
 
-    &__social {
+    &__social {/*флекс элемент*/
       width: 170px;
       padding: 0;
       margin-bottom: 0;
     }
 
-    &__copyright {
+    &__copyright {/*флекс элемент*/
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 140px;
+
       padding: 0;
       margin-bottom: 0;
     }
@@ -86,8 +87,11 @@
 
 
 @media (min-width: @desktop-width) {/*для >1200*/
+
   .page-footer {
-    &__wrapper {
+    &__wrapper {/*флекбокс*/
+
+      /*при >1200  будет центроваться*/
       display: flex;
       justify-content: space-between;
       align-items: center;

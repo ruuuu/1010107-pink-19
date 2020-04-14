@@ -1,27 +1,29 @@
 .main-nav {
 
   position: relative;
-  /*margin: 0 auto;/*центруем для случая если 320<width<768*/
-  min-height: 321px; /* 69*5, т к пункты будут доавлять или убирать*/
+  width: auto; /*тянется на всю ширину*/
+
+  background-color: #283645;
 
 
   &__toggle {/*бургер кнопка*/
 
     position: absolute;
 
-    top: -45px;
-    right: 22px;
-
+    display: block;
+    top: -50px; /* calc(heihgt/2)как отцентровать  по высоте на планшете??*/
+    right: 22px;/*расстояние от правой границы родителя до правой границы иконки*/
+    z-index: 2;
 
     background-color: transparent;/*прозрачный  у бургера*/
 
     width: 50px;/*размеры кнопки бургера*/
     height: 24px;
 
-    display: block;
+
     cursor: pointer;
     border: none;
-
+    outline: none; /*чтобы синим не выделлялась кнопка переключения*/
     /*&:hover,
     &:active {
 
@@ -29,31 +31,34 @@
   }
 
 
-  &--closed &__toggle::before { /*гориз полоска на бургере*/
+  &--closed &__toggle::before { /*гориз полоски у бургера*/
     content: "";
 
     position: absolute;
-    top: 20px;
-    left: 0;
-
     width: 50px;
     height: 2px;
+    top: 10px;/*calc(height/2;*/
+    left: 0;
+
 
     background-color: #ffffff;
-    /*box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;*/
+    box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;/*чтобы две горизонт полосы еще добавиилсь*/
   }
 
 
   &--closed &__toggle:hover::before { /*гориз полоски на бургере при ховере*/
     background-color: #d22856;
+    box-shadow: 0 8px 0 0 #d22856, 0 16px 0 0 #d22856;
   }
 
 
   &--closed &__toggle:active::before {/*гориз полоски на бургере при нажатии*/
     background-color: rgba(210, 40, 86, 0.3);
+    box-shadow: 0 8px 0 0 rgba(210, 40, 86, 0.3), 0 16px 0 0 rgba(210, 40, 86, 0.3);
   }
 
-  &--opened &__toggle {
+
+  &--opened &__toggle {/*кнпока крестик*/
     top: -55px;
     left: auto;
     right: 22px;
@@ -92,6 +97,9 @@
     }
   }
 
+  &--nojs &__toggle {
+    display: none;
+  }
 
   &__wrapper {
     /*min-width: 320px;*/
@@ -104,6 +112,14 @@
     list-style: none;
     text-transform: uppercase;
     text-align: center;
+  }
+}
+
+
+@media (max-width: @mobile-planshet-width-only) { /*максимум 1200px*/
+
+  .main-nav--closed .site-list__item {/*меню закрыто, пункты не отобраажем*/
+    display: none;
   }
 }
 
@@ -126,7 +142,17 @@
 @media (min-width: @desktop-width) {/*>1200px*/
 
   .main-nav__wrapper {
-    width: 621px;
-    /*ширина содержимого*/
+    width: 671px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-grow: 1;/*чтобы меню тянудось*/
+
+    max-width: 960px;  /* 960px / .84 ~= 1142px (центровка начнётся чуть раньше 1200px) */
+  }
+
+
+  .main-nav__toggle {/*кнопку переключения(бургер) скрываем для декстопа*/
+    display: none;
   }
 }

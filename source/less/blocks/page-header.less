@@ -1,7 +1,10 @@
 .page-header {
 
   /*min-width: 320px;*/
-  position: relative;/*родитель для лого и кнопки бургера */
+
+  display: flex;
+  flex-direction: column;
+  position: relative;/*родитель для лого и кнопки бургера и в дектопе для меню */
   background-color: #283645;
   box-shadow: 0 1px 0 0 var(--black);
   font-weight: 300;
@@ -12,7 +15,7 @@
     /*min-width: 320px;/*чтобы шапка тянулась вместе с разрешением  экрана*/
     height: 66px;
 
-    background-color: black;
+    /*background-color: rgba(40, 54, 69, 0.3);*/
     opacity: 0.3;
   }
 
@@ -26,12 +29,13 @@
   }
 
 
-  &__logo img {
+  &__logo img {/*размеры лого*/
 
-    width: 75px;/*размеры лого*/
-    height: 22px;/*у моб  шапки высота лого */
+    width: 74px;
+    height: 23px;/*у моб  шапки высота лого */
   }
 }
+
 
 @media (min-width: @tablet-width) {/*>660px*/
 

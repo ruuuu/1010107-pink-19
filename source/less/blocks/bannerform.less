@@ -1,4 +1,4 @@
-.bannerphoto {
+.bannerform {
 
 
   /*min-width: 320px;*/
@@ -27,11 +27,12 @@
     top: 40px;
     text-align: center;
 
+
     /*z-index: 50;*/
     color: #ffffff;
     font-size: 24px;
     font-weight: 300;
-
+    font-family: "OpenSans", "Arial", sans-serif;
 
     font-stretch: normal;
     font-style: normal;
@@ -42,27 +43,30 @@
 
 
 @media (min-width: @tablet-width) {
-  .bannerphoto {
+  .bannerform {
     height: 340px;
     background-position: 0 -175px; /*поднимаем фон вверх под шапку*/
   }
 
-  .bannerphoto__title {
-    top: 80px;
+  .bannerform__title {
+    top: 50px;
     font-size: 50px;
+    padding-left: 93px;
+    padding-right: 93px;
+    padding-bottom: 300px;
   }
 }
 
 
 @media (min-width: @desktop-width) {
-  .bannerphoto {
+  .bannerform {
     height: 284px;
     background-position: 0 -175px; /*поднимаем фон вверх под шапку*/
   }
 
-  .bannerphoto__title {
+  .bannerform__title {
     top: 80px;
-    padding-left: 426px;
-    padding-right: 426px;
+    padding-left: 229px;
+    padding-right: 229px;
   }
 }

@@ -2,7 +2,30 @@
 
 
   background-color: #f2f2f2;
+  position: relative;
 
+  &::after {/*псевдоэлемнет для треугольника*/
+    content: "";
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    top: -35px; /*высота треугольника */
+    bottom: 0; /*700*/
+
+    /*background-image: url(../../img/bg-triangle-white.svg);
+      transform: rotate(180deg);/*переворачиваем треугоьник*/
+    /*background-repeat: no-repeat;*/
+    width: 305px;
+
+    transform: rotateY(-180deg);
+    /*width: 0;*/
+    height: 0;
+    border-style: solid;
+    border-width: 35px 0 0 305px;
+    border-color: transparent transparent transparent #f2f2f2;
+    line-height: 0;
+  }
 
   &__list {
 
@@ -56,19 +79,27 @@
 
   .advantages {/*флексбокс*/  /*ширину не задаем*/
 
+    max-width: 660px;
 
-    position: relative;/*добавила*/
+
     display: flex;
     justify-content: center;/*space-between*/
   }
 
 
   .advantages__list {/*флекс элемент*/
-    width: 293px;
+    /*width: 293px;*/
 
-    padding-left: 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 42px;
     padding-right: 0;
+
     order: 1;/*для смены места телефона и списка*/
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;/*тоже самое чтои  width*/
   }
 
 
@@ -85,14 +116,15 @@
 
     width: 268px;/*размеры картинки*/
     height: auto;
+
     margin: 0;
     order: -1;
 
-    margin-right: 40px;
-    position: absolute;
-    margin-top: -40px;/*добавила*/
+    margin-top: -20px;/*чтобы телефон поднялся вверх*/
 
-    /*margin: 20px auto;центруем*/
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;/*тоже самое чтои  width*/
   }
 
 
@@ -105,18 +137,18 @@
   }
 }
 
+
 @media (min-width: @desktop-width) {
   /*>1200*/
 
   .advantages {
+    max-width: 1200px; /*если экран будет больше, то будет центроваться*/
 
-    /*940 = 1200-130(гориз. паддинги)*2 */
-  }
-
-  .container {
     padding-left: 130px;
     padding-right: 130px;
+    margin: 0 auto;
   }
+
 
   .advantages__list {/*флексбокс*/
 
@@ -128,7 +160,7 @@
     justify-content: space-between;/*space-between*/
     /*расстояние между телеофнами по 20 px*/
     flex-wrap: nowrap;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
   }
 
 
@@ -138,6 +170,7 @@
     margin: 0 auto;
     margin-bottom: 56px;
   }
+
 
   .advantages__item img {
     display: block;

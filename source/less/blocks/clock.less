@@ -7,26 +7,69 @@
 @media (min-width: @tablet-width) {/*>660px*/
 
   .clock {
+    max-width: 660px;
     /*ширину не задаем*/
+
     padding-top: 59px;
     display: flex;
 
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     flex-wrap: nowrap;
   }
 
 
   .clock__icon {/*флекс элемент*/
+
     display: block;
+
+    position: relative;/*позииционировать розовый круг будем*/
+    /*background-image:  url(../../img/timer-svg.svg); */
+
     width: 238px;
     height: 276px;
 
-    margin-right: 70px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;/*тоже самое что и  width*/
+
+
+    &::before {/*псевдоэлемент- розовый круг*/
+      content: "";
+      position: absolute;
+
+      top: 10px;
+      left: 10px;
+
+      width: 202px;
+      height: 202px;
+
+      border: 10px solid #d22856;
+      border-radius: 50%;
+    }
   }
+
+
+  /*.clock__icon::after{/*псевдоэлемент розовый круг
+
+       position: absolute;
+
+       top: 0;
+       left:0 ;
+
+       width: 202px;
+       height: 202px;
+
+      border: 10px solid #d22856;
+   }*/
 
   .clock__wrapper {/*флекс элемент*/
     /*width: 295px;*/
     padding-top: 60px;
+    padding-left: 70px;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;/*тоже самое чтои  width*/
   }
 
   .clock__title {
@@ -55,7 +98,8 @@
 @media (min-width: @desktop-width) {/*>1200px*/
 
   .clock {
-    /*width: 940px; теперь элемент приувеличнеии ширины расползаются по ккраям /*940 = 1200-130*2*/
+    max-width: 1200px;
+
     display: flex;/*добавила*/
 
     justify-content: flex-start;/*добавила*/
@@ -67,7 +111,10 @@
     background-color: #f2f2f2;
     padding-top: 0;
     padding-bottom: 67px;
+
+    margin: 0 auto;
   }
+
 
   .clock__icon {/*флекс элемент*/
     display: block;
