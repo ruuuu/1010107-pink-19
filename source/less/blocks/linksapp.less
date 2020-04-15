@@ -52,8 +52,80 @@
 
 
   &__links-information {
-    font-size: 0.875rem;
-    line-height: 1.5rem;
+    font-size: 14px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
     text-align: center;
   }
+}
+
+
+@media (min-width: @tablet-width) {/*для >660px */
+
+  .linksapp {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+
+    top: 400px;
+    left: 20px;
+
+    width: 300px;/*чтоб текст не раползался*/
+  }
+
+
+  .linksapp__download {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+
+  .linksapp__list {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    margin-bottom: 50px;
+  }
+
+
+  .linksapp__links-information {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+
+    font-size: 18px;
+    line-height: 1.33;
+    width: 300px;/*чтоб текст не расползался с увеличенем экрана*/
+  }
+}
+
+
+@media (min-width: @desktop-width) {/*>1200px*/
+  .linksapp {
+
+    left: 130px;
+  }
+
+  .linksapp__download {
+
+    margin-bottom: 70px;
+  }
+
+
+  .linksapp__list {
+
+    margin-bottom: 70px;
+  }
+
+
+  /*.linksapp__links-information{
+
+  }*/
 }
