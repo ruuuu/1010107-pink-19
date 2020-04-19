@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="ru">
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Пинк</title>
-        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/normalize.css">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/style.css">
+
+        <!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>-->
     </head>
+
     <body>
+
         <header class="page-header">
+
             <!-- шапка — независимый блок.-->
-            <div class="page-header__headblock"><!-- шапка-->
+            <div class="page-header__headblock">
+                <!-- шапка-->
                 <a class="page-header__logo" href="index.html">
-                    <img class="page-header__logo-image"  alt="" src="img/logotype-white-mobile-svg.svg" width="74" height="23" alt="Пинк-лого"><!-- контентное изображение, поэтому используем тег img-->
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+
+                        <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+
+                        <img class="page-header__logo-image" alt="" src="img/logotype-white-mobile-svg.svg" width="74" height="23" alt="Пинк-лого"><!-- контентное изображение, поэтому используем тег img-->
+                    </picture>
                 </a>
             </div>
+
             <nav class="main-nav main-nav--closed main-nav--nojs">
-                <button class="main-nav__toggle" type="button"><!--кнопка переключения (бургер)-->
+                <button class="main-nav__toggle" type="button">
+                    <!--кнопка переключения (бургер)-->
                     <span class="visually-hidden">Открыть меню</span>
                 </button>
                 <div class="main-nav__wrapper">
@@ -34,17 +48,20 @@
                             <a class="site-list__item-link" href="form.html">Конкурс</a>
                         </li>
                         <li class="site-list__item">
-                            <a class="site-list__item-link"  href="#">HTML Academy</a>
+                            <a class="site-list__item-link" href="#">HTML Academy</a>
                         </li>
                     </ul>
                 </div>
             </nav>
+
             <div class="bannerindex">
-                <div class="bannerindex__imagge"><!-- рука-->
+                <div class="bannerindex__imagge">
+                    <!-- рука-->
                     <img class="bannerindex__hand" src="img/iphone-hand-mobile@1x.png" alt="рука" width="258" height="286">
                 </div>
                 <h2 class="bannerindex__title">Взгляните на жизнь иначе! </h2>
             </div>
+
             <div class="linksapp">
                 <a class="linksapp__download" href="">Скачать приложение</a><!-- кнопка-->
                 <ul class="linksapp__list">
@@ -62,7 +79,10 @@
                     Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
                 </p>
             </div>
+
         </header>
+
+
         <main class="page-main">
             <div class="offer-information">
                 <h2 class="offer-information__title">Устали от серости мегаполиса?<br>
@@ -71,32 +91,64 @@
             <section class="section">
                 <div class="advantages container">
                     <!-- ПРЕИМУЩЕСТВА-->
-                    <ul class="advantages__list"><!-- флекбокс-->
+                    <ul class="advantages__list">
+                        <!-- флекбокс-->
                         <li class="advantages__item">
-                            <img src="img/iphone-screen-1-desktop@1x.png" alt="phone1" width="292" height="302">
+
+                            <picture>
+                                <source media="(min-width: 1200px)" srcset="img/iphone-screen-1-desktop@1x.png 1x, img/iphone-screen-1-desktop@2x.png 2x">
+
+                                <source media="(min-width: 660px)" srcset="img/iphone-screen-1-tablet@1x.png 1x, img/iphone-screen-1-tablet@2x.png 2x">
+
+
+                                <img class="photosblocks__image" src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@1x.png 1x, img/iphone-screen-mobile@2x.png 2x" alt="photo">
+                            </picture>
                             <h3 class="advantages__title">Поднимает настроение</h3>
                             <p class="advantages__description">
                                 Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
                             </p>
                         </li>
+
                         <li class="advantages__item">
-                            <img src="img/iphone-screen-2-desktop@1x.png" alt="phone2" width="292" height="302">
+
+                            <picture>
+                                <source media="(min-width: 1200px)" srcset="img/iphone-screen-2-desktop@1x.png 1x, img/iphone-screen-2-desktop@2x.png 2x">
+
+                                <source media="(min-width: 660px)" srcset="img/iphone-screen-2-tablet@1x.png 1x, img/iphone-screen-2-tablet@2x.png 2x">
+
+
+                                <img class="photosblocks__image" src="img/" srcset="img/iphone-screen-mobile@1x.png 1x, img/iphone-screen-mobile@2x.png 2x" alt="photo">
+                            </picture>
                             <h3 class="advantages__title">Меняет мир вокруг</h3>
                             <p class="advantages__description">
                                 Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
                             </p>
                         </li>
+
                         <li class="advantages__item">
-                            <img src="img/iphone-screen-3-desktop@1x.png" alt="phone3" width="292" height="302">
+                            <picture>
+                                <source media="(min-width: 1200px)" srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x">
+
+                                <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x">
+
+
+                                <img class="photosblocks__image" src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@1x.png 1x,  img/iphone-screen-mobile@2x.png 2x" alt="photo">
+                            </picture>
                             <h3 class="advantages__title">Заводит новых друзей</h3>
                             <p class="advantages__description">
                                 Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
                             </p>
                         </li>
+
                     </ul>
                     <div class="advantages__image">
                         <!--иконка телефона -->
-                        <img  class="advantages__phone" src="img/photoeditorsdk-export.png" alt="phone" width="153" height="280">
+                        <picture>
+
+                            <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x">
+
+                            <img class="advantages__phone" src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@1x.png 1x, img/iphone-screen-mobile@2x.png 2x" alt="phone">
+                        </picture>
                     </div>
                 </div>
             </section>
@@ -173,10 +225,14 @@
 </tr>
 </table>-->
         </main>
+
+
         <footer class="page-footer">
+
             <div class="page-footer contacts">
                 <!-- обертка для подвала-->
                 <h2 class="contacts__text contacts__questin-text">Остались вопросы?<br>Свяжитесь с нами!</h2>
+
                 <ul class="contacts__list">
                     <li class="contacts__item">
                         <p class="contacts__title">Звоните:</p>
@@ -191,17 +247,35 @@
                         <p class="contacts__text">ул. Большая<br> Конюшенная, 19/8</p>
                     </li>
                 </ul>
-                <div class="page-footer__map">
-                    <img src="" alt="">
-                </div>
             </div>
-            <div class="page-footer__wrapper container page-footer__wrapper--index"><!-- page-footer__footer-index нужен чтобы для 320  убрать последнюю часть подвала-->
-                <!-- обертка для подвала-->
+
+
+            <div class="page-footer__map">
+                <!--в этом блоке распооложена карта карта-->
+
+
+
+            </div>
+
+
+            <div class="page-footer__wrapper container page-footer__wrapper--index">
+                <!-- page-footer__footer-index нужен чтобы для 320  убрать последнюю часть подвала-->
+
+
                 <div class="page-footer__logo">
-                    <img src="img/mainlogotype.svg" alt="logo_footer" width="146" height="40">
+                    <a href="index.html">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="img/logo-pink-blue-desktop.svg">
+
+                            <source media="(min-width: 660px)" srcset="img/logo-pink-blue-mobile.svg">
+
+                            <img src="img/mainlogotype.svg" alt="logo_footer" width="147" height="40">
+                        </picture>
+                    </a>
                 </div>
+
                 <div class="page-footer__social social">
-                    <!-- page-footer__social зададим позиционирование блока внутри футера.-->
+
                     <ul class="social__list">
                         <li class="social__item">
                             <a class="social__button social__link--twitter" href="https://vk.com/htmlacademy" href=""><img src="img/icon-twitter.svg" alt="twitter" width="18" height="15"></a>
@@ -214,6 +288,7 @@
                         </li>
                     </ul>
                 </div>
+
                 <div class="page-footer__copyright copyright">
                     <b class="copyright__text">Разработано:</b>
                     <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
@@ -221,21 +296,31 @@
                     </a>
                     <!--кнопка-->
                 </div>
+
             </div>
         </footer>
+
+
+        <script>
+            var navMain = document.querySelector('.main-nav');
+
+            var navToggle = document.querySelector('.main-nav__toggle');
+
+            navMain.classList.remove('main-nav--nojs');
+
+            navToggle.addEventListener('click', function() {
+
+                if (navMain.classList.contains('main-nav--closed')) {
+                    navMain.classList.remove('main-nav--closed');
+                    navMain.classList.add('main-nav--opened');
+                } else {
+                    navMain.classList.add('main-nav--closed');
+                    navMain.classList.remove('main-nav--opened');
+                }
+            });
+
+        </script>
+
     </body>
-    <script>
-        var navMain = document.querySelector('.main-nav');
-        var navToggle = document.querySelector('.main-nav__toggle');
-        navMain.classList.remove('main-nav--nojs');
-        navToggle.addEventListener('click', function() {
-            if (navMain.classList.contains('main-nav--closed')) {
-                navMain.classList.remove('main-nav--closed');
-                navMain.classList.add('main-nav--opened');
-            } else {
-                navMain.classList.add('main-nav--closed');
-                navMain.classList.remove('main-nav--opened');
-            }
-        });
-    </script>
+
 </html>

@@ -6,14 +6,18 @@
   background-color: #283645;
 
 
-  &__toggle {/*бургер кнопка*/
+  &--closed &__toggle {/*бургер кнопка*/
 
     position: absolute;
 
     display: block;
-    top: -50px; /* calc(heihgt/2)как отцентровать  по высоте на планшете??*/
+
+    top: 50%; /*  50% как отцентровать  по высоте на планшете??*/
     right: 22px;/*расстояние от правой границы родителя до правой границы иконки*/
-    z-index: 2;
+    left: auto;
+
+
+    z-index: 10;
 
     background-color: transparent;/*прозрачный  у бургера*/
 
@@ -31,14 +35,17 @@
   }
 
 
-  &--closed &__toggle::before { /*гориз полоски у бургера*/
+  &--closed &__toggle::before { /*3 гориз полоски у бургера*/
     content: "";
 
     position: absolute;
-    width: 50px;
+    width: 50px;/*размер одной гори полосы*/
     height: 2px;
-    top: 10px;/*calc(height/2;*/
+
+    top: 0;
     left: 0;
+
+    right: 22px;
 
 
     background-color: #ffffff;
@@ -58,10 +65,12 @@
   }
 
 
-  &--opened &__toggle {/*кнпока крестик*/
-    top: -55px;
-    left: auto;
+  &--opened &__toggle {/*кнпока крестик(меню открыто)*/
+    top: 50%;
+
+
     right: 22px;
+    left: 0;
 
     &::before,
     &::after { /*полоски для крестика*/
@@ -69,7 +78,7 @@
 
       position: absolute;
       top: 22px;
-      left: 18px;
+      right: 22px;
 
       width: 30px;
       height: 4px;
@@ -96,6 +105,7 @@
       background-color: rgba(210, 40, 86, 0.3);
     }
   }
+
 
   &--nojs &__toggle {
     display: none;
@@ -136,13 +146,20 @@
     width: auto;/*займет всю возможную ширину*/
     margin: 0 auto;/*центровка*/
   }
+
+  .main-nav--closed &__toggle {/*бургер кнопка*/
+
+    margin-top: -12px;
+  }
 }
 
 
 @media (min-width: @desktop-width) {/*>1200px*/
 
   .main-nav__wrapper {
+
     width: 671px;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

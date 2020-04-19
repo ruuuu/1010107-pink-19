@@ -10,21 +10,23 @@
 
     left: 0;
     right: 0;
-    top: -35px; /*высота треугольника */
+    top: -556px; /*высота треугольника */
     bottom: 0; /*700*/
 
-    /*background-image: url(../../img/bg-triangle-white.svg);
-      transform: rotate(180deg);/*переворачиваем треугоьник*/
-    /*background-repeat: no-repeat;*/
-    /*width: 305px;*/
+    background-image: url("../../img/bg-triangle-white.svg");
 
-    transform: rotateY(-180deg);
+    background-repeat: no-repeat;
+    background-position: 0 -50px;
+    background-size: contain;
+
+    transform: rotate(180deg);/*переворачиваем треугоьник*/
+    /*transform: rotateY(-180deg);
     width: 0;
     height: 0;
     border-style: solid;
     border-width: 35px 0 0 305px;
     border-color: transparent transparent transparent #f2f2f2;
-    line-height: 0;
+    line-height: 0;*/
   }
 
   &__list {
@@ -150,7 +152,7 @@
   }
 
 
-  .advantages__list {/*флексбокс*/
+  .advantages__list {/*флексбокс, коотрый сам фдекс элемент*/
 
     width: 940px;
     /*940 = 1200-130(гориз. паддинги)*2 */

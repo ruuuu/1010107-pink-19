@@ -1,4 +1,5 @@
 .copyright {
+
   display: flex;
 
 
@@ -7,10 +8,43 @@
     display: block;
     margin-right: 20px;
 
-    font-size: 18px;
+    font-size: 14px;
+    line-height: 18px;
   }
 
   &__link {
     display: block;
+  }
+
+  &__link:hover {
+    /*при наведении на лого*/
+    background-image: url("../../img/logo-htmlacademy-hover.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  &__link:active {
+    /*при наведении на лого*/
+    background-image: url("../../img/logo-htmlacademy-active.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+
+/*@media (min-width: @tablet-width) {/*>660px
+
+
+}*/
+
+
+@media (min-width: @desktop-width) {/*>1200px*/
+
+  .copyright {
+    &__text {
+      /*флекс элемент*/
+      font-size: 18px;
+      line-height: 18px;
+    }
   }
 }

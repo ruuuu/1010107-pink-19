@@ -1,15 +1,23 @@
 .photosblocks {
+  &__panorama-like {
+    display: none;
+  }
+
+
   &__list {
     /*min-width: 320px;*/
+    margin-top: 20px;
   }
+
 
   &__item {
 
     background-color: #f2f2f2;
     margin-bottom: 20px;
     /*расстояние между карточками*/
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
   }
+
 
   &__image {
     width: 100%;/*размеры картинки*/
@@ -18,25 +26,19 @@
     object-fit: cover;
   }
 
+
   &__wrap-information {
     display: flex;
     flex-direction: column;/*главная ось сверху вниз*/
 
     padding: 25px 27px;
     line-height: 24px;
+    background-color: #f2f2f2;
   }
 
-  &__image-panorama {
-    width: 100%;
-    position: relative;/*родитль для иконки  "Панорама дня"*/
-  }
-
-  &__wrap-information-panorama {
-    padding: 25px 27px;
-  }
 
   &__author {
-    /*mklj*/
+    font-weight: bold;
   }
 
   &__time {
@@ -73,32 +75,38 @@
 
 @media (min-width: @tablet-width) {/*для >660px */
 
+
   .photosblocks {
-    max-width: 620px;/*тогда скролл не появится*/
+    /*min-width: 620px;тогда скролл не появится*/
+  }
+
+  .photosblocks__panorama-information {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .photosblocks__panorama-like {
+    width: 118px;
   }
 
 
   .photosblocks__list {/*флексбокс*/
-    width: 620px;
+
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap; /*можно переностиь флекс элементы*/
+    margin-top: 50px;
   }
 
+
   .photosblocks__item {/* флекс элмент-карточка*/
-    width: 300px;
+    width: 50%;
     margin-right: 20px;
   }
 
+
   .photosblocks__item:nth-child(2n) {/* карточка*/
     margin-right: 0;
-  }
-
-  .photosblocks__image {
-    width: 300px;/*размеры фотки*/
-    height: 300px;
-    display: block;
-    object-fit: cover;
   }
 
 
@@ -108,10 +116,12 @@
     align-items: center;
   }
 
+
   .photosblocks__like-link {/*флекс элемент, иконка лайка*/
     margin-right: 0;
     order: 1;
   }
+
 
   .photosblocks__like-count {/*флекс элемент*/
 
@@ -123,7 +133,7 @@
 @media (min-width: @desktop-width) {/*для >1200*/
 
   .photosblocks {
-    max-width: 940px;/* 300+300+20*2 тогда скролл не появится*/
+    /*max-width: 940px;/* 300+300+20*2 тогда скролл не появится*/
 
     padding: 0;
     padding-left: 130px;
@@ -132,26 +142,27 @@
 
 
   .photosblocks__list {
-    width: 940px;/*(300*3+20+20)*/
+    /*(300*3+20+20)*/
+
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /*space-between*/
     flex-wrap: wrap; /*можно переносить флекс элементы*/
   }
 
 
   .photosblocks__item {/* флекс элмент-карточка*/
     width: 300px;
-    margin-right: 0;
+    margin-right: 20px;
     margin-bottom: 60px;
   }
 
-
-  .photosblocks__item:nth-child(4),
-  .photosblocks__item:nth-child(5),
-  .photosblocks__item:nth-child(6) {/*какую то формулу надо для последних элементов*/
-    margin-bottom: 0;
+  .photosblocks__item:nth-child(2n) {
+    margin-right: 20px;
   }
 
+  .photosblocks__item:nth-child(3n) {
+    margin-right: 0;
+  }
 
   .photosblocks__image {
     width: 300px;/*размеры фотки*/
