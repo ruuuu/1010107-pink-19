@@ -11,9 +11,10 @@
 
 
   &__item {
+    box-sizing: border-box;
 
-    background-color: #f2f2f2;
-    margin-bottom: 20px;
+    //background-color: #f2f2f2;
+    //margin-bottom: 20px;
     /*расстояние между карточками*/
     /*box-sizing: border-box;*/
   }
@@ -73,6 +74,8 @@
 }
 
 
+
+
 @media (min-width: @tablet-width) {/*для >660px */
 
 
@@ -101,14 +104,17 @@
 
   .photosblocks__item {/* флекс элмент-карточка*/
     width: 50%;
-    margin-right: 20px;
+    //margin-right: 20px;
+      margin-bottom: 20px;
+
+    &:nth-child(even) {
+      padding-left: 10px;
+    }
+
+    &:nth-child(odd) {
+      padding-right: 10px;
+    }
   }
-
-
-  .photosblocks__item:nth-child(2n) {/* карточка*/
-    margin-right: 0;
-  }
-
 
   .photosblocks__wrap-for-like {/*флексбокс*/
     display: flex;
@@ -151,21 +157,35 @@
 
 
   .photosblocks__item {/* флекс элмент-карточка*/
-    width: 300px;
-    margin-right: 20px;
+    width: 33.3%;
+    //margin-right: 20px;
     margin-bottom: 60px;
+
+    &:nth-child(3n+2) {
+      padding: 0 10px;
+    }
+
+    &:nth-child(3n) {
+      padding-left: 10px;
+      padding-right: 0;
+    }
+
+    &:nth-child(3n+1) {
+      padding-right: 10px;
+      padding-left: 0;
+    }
   }
 
-  .photosblocks__item:nth-child(2n) {
-    margin-right: 20px;
-  }
-
-  .photosblocks__item:nth-child(3n) {
-    margin-right: 0;
-  }
+  //.photosblocks__item:nth-child(3n) {
+  //  //margin-right: 20px;
+  //}
+  //
+  //.photosblocks__item:nth-child(3n) {
+  //  //margin-right: 0;
+  //}
 
   .photosblocks__image {
-    width: 300px;/*размеры фотки*/
+    //width: 300px;/*размеры фотки*/
     height: 400px;
     display: block;
     object-fit: cover;

@@ -12,7 +12,7 @@
 
     display: block;
 
-    top: 50%; /*  50% как отцентровать  по высоте на планшете??*/
+    top: -47px; /*  50% как отцентровать  по высоте на планшете??*/
     right: 22px;/*расстояние от правой границы родителя до правой границы иконки*/
     left: auto;
 
@@ -66,19 +66,21 @@
 
 
   &--opened &__toggle {/*кнпока крестик(меню открыто)*/
-    top: 50%;
-
-
+    position: absolute;
+    top: -41px;
     right: 22px;
-    left: 0;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: 0;
 
     &::before,
     &::after { /*полоски для крестика*/
       content: "";
 
       position: absolute;
-      top: 22px;
-      right: 22px;
+      top: 12px;
+      left: 0;
 
       width: 30px;
       height: 4px;
@@ -147,9 +149,13 @@
     margin: 0 auto;/*центровка*/
   }
 
-  .main-nav--closed &__toggle {/*бургер кнопка*/
+  .main-nav--opened .main-nav__toggle {
+    top: -62px;
+  }
 
-    margin-top: -12px;
+  .main-nav--closed .main-nav__toggle {/*бургер кнопка*/
+    //margin-top: -12px;
+    top: -66px;
   }
 }
 
