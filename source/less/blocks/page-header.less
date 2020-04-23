@@ -58,12 +58,20 @@
   }
 
 
-  &__logo img {
-    /*размеры лого*/
+  &__logo-mobile {
+    display: block;
+  }
 
-    width: 74px;
-    height: 23px;
-    /*у моб  шапки высота лого */
+  .icon:hover {
+    fill: #d22856;
+  }
+
+  &__logo-tablet {
+    display: none;
+  }
+
+  &__logo-desctop {
+    display: none;
   }
 }
 
@@ -98,6 +106,19 @@
     height: 40px;
     /*высота лого*/
   }
+
+
+  .page-header__logo-mobile {
+    display: none;
+  }
+
+  .page-header__logo-tablet {
+    display: block;
+  }
+
+  .page-header__logo-desctop {
+    display: none;
+  }
 }
 
 
@@ -130,5 +151,18 @@
 
     width: 146px;
     height: 40px;
+  }
+
+
+  .page-header__logo-mobile {
+    display: none;
+  }
+
+  .page-header__logo-tablet {
+    display: none;
+  }
+
+  .page-header__logo-desctop {
+    display: block;
   }
 }
