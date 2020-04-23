@@ -1,5 +1,4 @@
 .page-footer {
-    
   &__map {
     position: relative;
 
@@ -52,37 +51,35 @@
 
     margin-bottom: 30px;
   }
-    
-    
-  &__logo-mobiletablet-icon{/*для мобилки и планшета отображаем*/
-       display: block; 
-  }    
-    
-  &__logo-decstop-icon{/*для дектопа не отображаем*/
-       display: none; 
-  }
-       
-  
-  &__logo-mobiletablet-icon-footer:hover{/* для моб+планшет при наведении*/
-      fill: #d22856;  
+
+
+  &__logo-mobiletablet-icon {/*для мобилки и планшета отображаем*/
+    display: block;
   }
 
-  &__logo-mobiletablet-icon-footer:active{/*для моб+планшет при нажатии*/
-      fill: rgba(40, 54, 69, 0.1);  
-  }  
-    
-    
+  &__logo-decstop-icon {/*для дектопа не отображаем*/
+    display: none;
+  }
+
+
+  &__logo-mobiletablet-icon-footer:hover {/* для моб+планшет при наведении*/
+    fill: #d22856;
+  }
+
+  &__logo-mobiletablet-icon-footer:active {/*для моб+планшет при нажатии*/
+    fill: rgba(40, 54, 69, 0.1);
+  }
+
+
   &__logo-decstop-icon-footer:hover {/*для декстопа*/
-        fill: #d22856;
-        
+    fill: #d22856;
   }
-   
-   &__logo-decstop-icon-footer:active{/*для декстопа*/
-      fill: rgba(40, 54, 69, 0.1);  
-        
+
+  &__logo-decstop-icon-footer:active {/*для декстопа*/
+    fill: rgba(40, 54, 69, 0.1);
   }
-    
-    
+
+
   &__social {
 
     width: 178px; /*ширина содержимого*/
@@ -105,13 +102,9 @@
 }
 
 
-
-
-
 @media (min-width: @tablet-width) {/*для >660px;*/
 
   .page-footer {
-      
     &__map {
       @media (min-width: 768px) and (min-resolution: 144dpi),
         (min-width: 768px) and (min-resolution: 1.5dppx) {
@@ -181,13 +174,9 @@
 }
 
 
-
-
-
 @media (min-width: @desktop-width) {/*для >1200*/
 
   .page-footer {
-      
     &__wrapper {/*флекбокс*/
 
       padding-left: 130px;
@@ -206,17 +195,16 @@
       padding: 0;
       margin-bottom: 0;
     }
-      
-      
-       
-      &__logo-mobiletablet-icon{/*для мобилки и планшета отображаем*/
-           display: none; 
-      }    
 
-      &__logo-decstop-icon{/*для дектопа не отображаем*/
-           display: block; 
-      }
-      
+
+    &__logo-mobiletablet-icon {/*для мобилки и планшета отображаем*/
+      display: none;
+    }
+
+    &__logo-decstop-icon {/*для дектопа не отображаем*/
+      display: block;
+    }
+
 
     &__social {
       /*флекс элемент*/
