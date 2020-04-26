@@ -1,4 +1,40 @@
 .page-main {
   /*min-width: 320px;*/
   background-color: #ffffff;
+
+  &__prices { //таблица
+    margin: 0;
+    padding-top: 35px;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 9px;
+  }
+}
+
+
+@media (min-width: @tablet-width) {/*для >660px;*/
+
+
+  .page-main__prices {
+
+    margin: 0;
+    margin-top: 20px;
+
+    padding: 0;
+    padding-top: 38px;
+    padding-bottom: 65px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {/*для >1200*/
+
+  .page-main__prices {
+    margin: 0;
+    margin-top: 45px;
+
+    padding: 0;
+    padding-top: 38px;
+    padding-bottom: 92px;
+  }
 }

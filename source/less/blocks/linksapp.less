@@ -1,14 +1,17 @@
 .linksapp {
 
-  padding-left: 20px;
-  padding-right: 20px;
+  //padding-left: 20px;
+  //padding-right: 20px;
   color: #ffffff;
 
   padding-top: 28px;
   padding-bottom: 35px;
 
+  max-width: 280px;
+  margin: 0 auto;
 
-  &__download {/*ссылка Скачать приложение*/
+
+  &__download { /*ссылка Скачать приложение*/
 
     display: block;
 
@@ -37,7 +40,33 @@
   }
 
 
+  &__title {
+    position: absolute;
+    top: 20px;//95px
+    left: 0;
+    right: 0;
+
+
+    //padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+
+    /*z-index: 50;*/
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 24px;
+
+    font-stretch: normal;
+    font-style: normal;
+
+    letter-spacing: normal;
+  }
+
+
   &__list {
+
     display: flex;
     width: 206px;/* auto будет тянутся на всю ширину*/
     justify-content: space-between;
@@ -66,15 +95,33 @@
 @media (min-width: @tablet-width) {/*для >660px */
 
   .linksapp {
-    display: flex;
-    flex-direction: column;
+
 
     position: absolute;
 
-    top: 400px;
-    left: 20px;
+    top: -74px;
+    left: 10px;// было 0
+    bottom: 0;
 
-    width: 300px;/*чтоб текст не раползался*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 300px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+
+  .linksapp__title {
+    position: static;
+    padding-left: 78px;
+    width: 186px;
+    font-size: 40px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
   }
 
 
@@ -82,8 +129,8 @@
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: auto;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    margin-bottom: 40px;
+    margin-top: 40px;
   }
 
 
@@ -91,30 +138,39 @@
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: auto;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 
 
   .linksapp__links-information {
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: auto;
+    //flex-grow: 1;
+    //flex-shrink: 0;
+    //flex-basis: auto;
 
     font-size: 18px;
     line-height: 1.33;
     width: 300px;/*чтоб текст не расползался с увеличенем экрана*/
+    padding-left: 0;
   }
 }
 
 
 @media (min-width: @desktop-width) {/*>1200px*/
+
   .linksapp {
 
     left: 130px;
   }
 
-  .linksapp__download {
+  .linksapp__title {
+    width: 231px;
+    font-size: 50px;
+    padding-left: 40px;
+  }
 
+  .linksapp__download {
+    font-size: 21px;
+    line-height: 18px;
     margin-bottom: 70px;
   }
 

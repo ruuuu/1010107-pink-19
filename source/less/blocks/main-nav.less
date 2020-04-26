@@ -3,7 +3,7 @@
   position: relative;
   width: auto; /*тянется на всю ширину*/
 
-  background-color: #283645;
+ background-color:#283645;
 
 
   &--closed &__toggle {/*бургер кнопка*/
@@ -66,11 +66,15 @@
 
 
   &--opened &__toggle {/*кнпока крестик(меню открыто)*/
+
     position: absolute;
-    top: -41px;
+
+    top: -47px;
     right: 22px;
+
     width: 30px;
     height: 30px;
+
     background: transparent;
     border: 0;
 
@@ -109,12 +113,13 @@
   }
 
 
-  &--nojs &__toggle {
+  &--nojs &__toggle {/*при выключенных скриптах бургер не отображаем*/
     display: none;
   }
 
   &__wrapper {
-    /*min-width: 320px;*/
+    width: auto;/*займет всю возможную ширину*/
+    margin: 0 auto;/*центровка*/
   }
 
   &__list {
@@ -128,7 +133,7 @@
 }
 
 
-@media (max-width: @mobile-planshet-width-only) { /*максимум 1200px*/
+@media (max-width: @mobile-planshet-width-only) { /*максимум 1200px меню открыватеся и закрывается толкь на мобилках и планшетах*/
 
   .main-nav--closed .site-list__item {/*меню закрыто, пункты не отобраажем*/
     display: none;
@@ -149,7 +154,7 @@
     margin: 0 auto;/*центровка*/
   }
 
-  .main-nav--opened .main-nav__toggle {
+  .main-nav--opened .main-nav__toggle {/*кнопка крестик*/
     top: -62px;
   }
 
@@ -162,6 +167,20 @@
 
 @media (min-width: @desktop-width) {/*>1200px*/
 
+  .main-nav {
+    width: auto;
+    margin: 0;
+  }
+
+  .main-nav--closed .main-nav__toggle {/* меню закрыто, кнопку переключения(бургер) скрываем для декстопа*/
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__toggle {//кнопка крестик
+    display: none;
+  }
+
+
   .main-nav__wrapper {
 
     width: 671px;
@@ -172,10 +191,7 @@
     flex-grow: 1;/*чтобы меню тянудось*/
 
     max-width: 960px;  /* 960px / .84 ~= 1142px (центровка начнётся чуть раньше 1200px) */
-  }
 
-
-  .main-nav__toggle {/*кнопку переключения(бургер) скрываем для декстопа*/
-    display: none;
+    margin: 0 auto;
   }
 }

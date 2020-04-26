@@ -1,0 +1,85 @@
+.prices {
+
+  position: relative;
+  /*для псевдоэлемента треугольник скошенный*/
+  width: 100%;/*тянется на всю ширину*/
+
+
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+
+  padding-top: 97px;
+  background-color: #f2f2f2;
+
+  overflow: hidden;
+  box-sizing: border-box;
+
+
+  background-image: url("../img/bg-triangle-white.svg");/*ширина у кратинки 1200px*/
+  background-repeat: no-repeat;
+  background-position: top left;
+
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    margin: 0;
+    margin-top: 60px;
+    overflow: hidden;
+  }
+
+
+  &__tariffs {
+    transform: translateX(0);
+  }
+
+  .prices__tariffs--base {
+    transform: translateX(280px);
+    transition: 0.5s;
+  }
+
+  .prices__tariffs--standart {
+    transform: translateX(0);
+    transition: 0.5s;
+  }
+
+  .prices__tariffs--unlim {
+    transform: translateX(-280px);
+    transition: 0.5s;
+  }
+}
+
+
+@media (min-width: @tablet-width) {/*>1200px*/
+
+  .prices {
+    padding-top: 70px;
+
+    &::before {
+      /*псевдоэлемент треугольник скошенный*/
+
+      height: 50px;
+    }
+  }
+
+  .prices__wrapper {
+
+    margin-top: 54px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {/*для >1200px*/
+
+  .prices {
+    padding-top: 50px;
+  }
+
+  .prices__wrapper {
+    margin-top: 110px;
+  }
+}

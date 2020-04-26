@@ -4,12 +4,18 @@
   /*min-width: 320px;*/
   /*размеры картинки или пиcать 100% взять от родителя*/
   height: 190px;
+    background: url("../img/bg-back-mobile@2x.jpg") 50% 0 no-repeat;
+    background-size: cover;
 
-  display: flex;/*чтоб центровать надпись на баннере*/
-  justify-content: center;
-  align-items: center;
+  //display: flex;/*чтоб центровать надпись на баннере*/
+  //justify-content: center;
+  //align-items: center;
 
-  position: relative;/*тект будем поверх него размещать */
+  //position: relative;/*тект будем поверх него размещать */
+  //background-image: url("../img/back-mobile.jpg");//фон
+  //background-size: cover;
+  //background-position: 0 -55px;
+  //background-repeat: no-repeat;
 
   &__title {
 
@@ -37,7 +43,9 @@
 
 
 @media (min-width: @tablet-width) {
+    
   .bannerphoto {
+    background-image: none;
     height: 340px;
     background-position: 0 -175px; /*поднимаем фон вверх под шапку*/
   }
@@ -50,6 +58,7 @@
 
 
 @media (min-width: @desktop-width) {
+    
   .bannerphoto {
     height: 284px;
     background-position: 0 -175px; /*поднимаем фон вверх под шапку*/

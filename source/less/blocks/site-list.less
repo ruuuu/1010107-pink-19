@@ -1,5 +1,5 @@
 .site-list {
-  &__item {
+  &__item {//li
     font-size: 18px;
   }
 
@@ -13,7 +13,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     border-top: 1px solid rgba(255, 255, 255, 0.15);
 
-    color: white;
+    color: #ffffff;
     line-height: 24px;
 
     box-shadow: 0 1px 0 0 var(--black), inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
@@ -52,14 +52,19 @@
     /*min-height: 110px;*/
     /*если добавят пункт меню,  то он перенесется на след строку*/
     position: absolute;
-    top: -110px;/*чтоб меню поднялось*/
+    top: -120px;/*чтоб меню поднялось*/
+
+    margin-left: 160px;
   }
 
-  .site-list__item {
+
+  .site-list__item {//li
     margin-right: 90px;
+    color: #ffffff;
+    background-color: transparent;
 
     &:last-child {
-      margin-right: 0;/*у псоледнего item убираем отступ*/
+      margin-right: 0;/*у последнего item убираем отступ*/
     }
 
     &--active {/*подчеркивание под пукнтом меню*/
@@ -70,7 +75,7 @@
 
         position: absolute;
         right: 0;
-        bottom: -15px;
+        bottom: -10px;
         left: 0;
 
         height: 3px;
@@ -82,28 +87,35 @@
 
 
   .site-list__item-link {
+    //a
     /*a*/
-
+    display: block;
     text-transform: none;
     padding: 0;
     padding-top: 48px;
     /*padding-bottom: ;*/
 
-    font-size: 17px;
+    color: rgba(255, 255, 255, 1); //#ffffff;
+
+    font-size: 18px;
     line-height: 1;
 
     background: none;
     /*фон убрали*/
     border: none;
+  }
 
+
+  .site-list__item a[href] {
     &:hover {
       color: #d22856;
-      background-color: transparent;
+      opacity: 1;
     }
 
     &:active {
       color: rgba(255, 255, 255, 0.3);
-      background-color: transparent;
+
+      background-color: #000000;
       opacity: 0.3;
     }
   }
