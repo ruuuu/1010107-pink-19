@@ -1,66 +1,266 @@
 .page-header {
 
   /*min-width: 320px;*/
-  position: relative;/*родитель для лого и кнопки бургера */
+
+  /*display: flex;*/
+  /*flex-direction: column;*/
+
+  position: relative;
+  /*родитель для лого и кнопки бургера и в дектопе для меню */
   background-color: #283645;
   box-shadow: 0 1px 0 0 var(--black);
   font-weight: 300;
   line-height: 1.71;
 
+  /*background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center -80px;
+  background-size: cover;/*чтобы фон тянулся*/
 
-  &__headblock { /* шапка */
+
+  @media (min-resolution: @retina-dpi),
+    (min-resolution: @retina-dppx) {
+    /*background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-size: 640px auto; какой размер по ширине указывать?*/
+  }
+
+  &__headblock {
+    /* шапка */
     /*min-width: 320px;/*чтобы шапка тянулась вместе с разрешением  экрана*/
+
+    position: relative;
+    //z-index: 10;
     height: 66px;
 
-    background-color: black;
-    opacity: 0.3;
+    background-color: rgba(0, 0, 0, 0.3);
+    /*rgba(40, 54, 69, 0.3);*/
   }
 
 
-  &__logo {/*лого*/
+  &__logo {
+    /*лого*/
 
-    height: 22px;/*у моб  шапки высота лого */
+    height: 50%;
+    /*у моб  шапки высота лого */
     position: absolute;
+
     left: 20px;
-    top: 22px;
+    top: 20px;
+
+    /*&:hover {
+      /*при наведении на лого
+      background-image: url("../img/logotype-white-mobile-hover.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    &:active {
+      /*при нажатии на лого
+      background-image: url("../img/logotype-white-mobile-active.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }*/
   }
 
 
-  &__logo img {
+  &__logo-mobile {
+    //мобилка
+    display: block;
+  }
 
-    width: 75px;/*размеры лого*/
-    height: 22px;/*у моб  шапки высота лого */
+  &__logo-mobile:hover {
+    fill: #d22856;
+  }
+
+
+  &__logo-mobile:active {
+    fill: rgba(255, 255, 255, 0.3);
+  }
+
+
+  &__logo-tablet {
+    //планшет
+    display: none;
+  }
+
+  &__logo-tablet:hover {
+    fill: #d22856;
+  }
+
+
+  &__logo-tablet:active {
+    fill: rgba(255, 255, 255, 0.3);
+  }
+
+
+  &__logo-desctop {
+    //декстоп
+    display: none;
+  }
+
+
+  &__logo-desctop:hover {
+    fill: #d22856;
+  }
+
+
+  &__logo-desctop:active {
+    fill: rgba(255, 255, 255, 0.3);
+  }
+
+
+  &__about-app {
+    position: relative;
+    //margin-top: -66px;
+
+    &::before {
+      content: "";
+
+      height: 430px; //530
+      margin-top: 0; //-66px
+
+      display: flex;
+      /*чтоб отценровать надпись */
+      justify-content: center;
+      align-items: center;
+
+      position: relative;
+      /*текст будем поверх него размещать и картинку-руку*/
+
+      background:
+        url("../img/iphone-hand-mobile@1x.png") 50% bottom no-repeat,
+        url("../img/bg-back-mobile@1x.jpg") 0 0 no-repeat;
+      background-size: 280px auto, cover;
+    }
   }
 }
 
-@media (min-width: @tablet-width) {/*>660px*/
+
+@media (min-width: @tablet-width) {
+  /*>660px*/
+
+
+  .page-header {
+    position: relative;
+    /*для соц сей и телефона*/
+
+    background: url("../img/bg-back-tablet@2x.jpg") 50% 0 no-repeat;
+    background-size: cover;
+
+    /*@media (min-resolution: @retina-dpi),
+      (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-size: 2400px auto;
+      какой размер по ширине указывать?*/
+  }
 
 
   .page-header__headblock {
-    height: 110px;/*шапка*/
-    /*тянется на всю ширину*/
+    height: 110px;
+    /*шапка*/
+
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
 
   .page-header__logo {
-    background-image: url("../../img/logotype-white-tablet-svg.svg");
-    width: 147px;/*ширина лого*/
-    height: 40px;/*высота лого*/
-  }
-}
 
-
-@media (min-width: @desktop-width) {/*>1200px*/
-
-  .page-header__headblock {
-    height: 110px;/*шапка*/
-    width: auto; /*тянется на всю ширину*/
-  }
-
-
-  .page-header__logo {
-    background-image: url("../../img/logotype-white-tablet-svg.svg");
-    width: 147px;
+    width: 146px;
+    /*ширина лого*/
     height: 40px;
+    /*высота лого*/
+  }
+
+
+  .page-header__logo-mobile {
+    display: none;
+  }
+
+  .page-header__logo-tablet {
+    display: block;
+  }
+
+  .page-header__logo-desctop {
+    display: none;
+  }
+
+  .page-header__about-app {
+    //margin-top: -110px;
+    //margin-top: 0;
+    max-width: 620px;
+    margin: 0 auto;
+
+    &::before {
+      margin-top: 0;
+      min-height: 630px;
+      background:
+        url("../img/iphone-hand-mobile@1x.png") right bottom no-repeat,
+        none;
+      //url("../img/bg-back-tablet@2x.jpg") 0 0 no-repeat;
+      background-size: 460px auto, cover;
+    }
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+
+  /*>1200px*/
+
+  .page-header {
+
+    background: url("../img/bg-back-desktop@1x.jpg") 50% 0 no-repeat;
+    background-size: cover;
+
+    //@media (min-resolution: @retina-dpi),
+    //(min-resolution: @retina-dppx) {
+    //background-image: url("../img/bg-back-desktop@2x.jpg");
+    //background-size: 5120px auto;
+    /*какой размер по ширине указывать?*/
+  }
+
+
+  .page-header__headblock {
+    height: 110px;
+    /*шапка*/
+    width: auto;
+    /*тянется на всю ширину*/
+
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+
+
+  .page-header__logo {
+    left: 130px;
+
+    width: 146px;
+    height: 40px;
+  }
+
+
+  .page-header__logo-mobile {
+    display: none;
+  }
+
+  .page-header__logo-tablet {
+    display: none;
+  }
+
+  .page-header__logo-desctop {
+    display: block;
+  }
+
+
+  .page-header__about-app {
+    max-width: 1200px;
+
+    &::before {
+      min-height: 740px;
+
+      background:
+        url("../img/iphone-hand-desktop@1x.png") right bottom no-repeat,
+        none;
+    }
   }
 }

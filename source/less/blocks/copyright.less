@@ -1,4 +1,5 @@
 .copyright {
+
   display: flex;
 
 
@@ -7,10 +8,40 @@
     display: block;
     margin-right: 20px;
 
-    font-size: 18px;
+    font-size: 14px;
+    line-height: 18px;
   }
 
   &__link {
     display: block;
+  }
+
+
+  &__icon:hover {
+    fill: #283645;
+  }
+
+
+  &__icon:active {
+    /*при наведении на лого*/
+    fill: rgba(40, 54, 69, 0.3);
+  }
+}
+
+
+/*@media (min-width: @tablet-width) {/*>660px
+
+
+}*/
+
+
+@media (min-width: @desktop-width) {/*>1200px*/
+
+  .copyright {
+    &__text {
+      /*флекс элемент*/
+      font-size: 18px;
+      line-height: 18px;
+    }
   }
 }

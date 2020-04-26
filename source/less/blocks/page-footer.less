@@ -1,12 +1,46 @@
 .page-footer {
+  &__map {
+    position: relative;
+
+    background-image: url("../img/bg-map-mobile@1x.png");
+    width: 100%;/*размер карты*/
+    height: 167px;
+
+    background-color: #000000;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &::before {/*псевдоэлемнет для белого треугольника*/
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 100%;
+      height: 60px;
+
+      background-image: url("../img/bg-triangle-white-footer.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100%;
+    }
+  }
+
+
   &__wrapper {
     /*display: none; для мобилок не отображаем*/
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     padding-top: 40px;
     padding-bottom: 40px;
     background-color: white;
 
-    &--index { /*нужен чтобы для 320  убрать последнюю часть подвала*/
+    &--index {
+      /*нужен чтобы для 320  убрать последнюю часть подвала*/
       display: none;
     }
   }
@@ -18,8 +52,31 @@
     margin-bottom: 30px;
   }
 
-  &__logo img {
+
+  &__logo-mobiletablet-icon {/*для мобилки и планшета отображаем*/
     display: block;
+  }
+
+  &__logo-decstop-icon {/*для дектопа не отображаем*/
+    display: none;
+  }
+
+
+  &__logo-mobiletablet-icon-footer:hover {/* для моб+планшет при наведении*/
+    fill: #d22856;
+  }
+
+  &__logo-mobiletablet-icon-footer:active {/*для моб+планшет при нажатии*/
+    fill: rgba(40, 54, 69, 0.1);
+  }
+
+
+  &__logo-decstop-icon-footer:hover {/*для декстопа*/
+    fill: #d22856;
+  }
+
+  &__logo-decstop-icon-footer:active {/*для декстопа*/
+    fill: rgba(40, 54, 69, 0.1);
   }
 
 
@@ -46,12 +103,42 @@
 
 
 @media (min-width: @tablet-width) {/*для >660px;*/
+
   .page-footer {
-    &__wrapper {
+    &__map {
+      @media (min-width: 768px) and (min-resolution: 144dpi),
+        (min-width: 768px) and (min-resolution: 1.5dppx) {
+
+        background-image: url("../../img/bg-map-tablet@2x.jpg");
+        background-size: 100% 848px;
+        background-position: center 0;
+      }
+
+
+      &::before {/*псевдоэлемнет для белого треугольника*/
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        width: 305px;
+        height: 60px;
+
+        background-image: url("../../img/");
+        background-repeat: no-repeat;
+        background-position: center 0;
+        background-size: auto;
+      }
+    }
+
+
+    &__wrapper {/*флексбокс*/
 
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
       align-items: center;
+
       width: auto;
       /*тянется по ширине экрана, 660px*/
 
@@ -61,23 +148,25 @@
     }
 
 
-    &__logo {
-      width: 147px;
+    &__logo {/*флекс элемент*/
+      /*width: 147px;*/
       padding: 0;
       margin-bottom: 0;
     }
 
-    &__social {
-      width: 170px;
+
+    &__social {/*флекс элемент*/
+      /*width: 170px;*/
       padding: 0;
       margin-bottom: 0;
     }
 
-    &__copyright {
+
+    &__copyright {/*флекс элемент*/
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
-      width: 140px;
+
       padding: 0;
       margin-bottom: 0;
     }
@@ -86,40 +175,51 @@
 
 
 @media (min-width: @desktop-width) {/*для >1200*/
+
   .page-footer {
-    &__wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: auto;
-      /*тянется по ширине экрана, 1200px*/
+    &__wrapper {/*флекбокс*/
 
+      padding-left: 130px;
+      padding-right: 130px;
+      padding-top: 70px;
+      padding-bottom: 70px;
 
-      &--index {
+      &--index {/* или вот так .page-footer__wrapper--index*/
         display: flex;
       }
     }
 
     &__logo {
       /*флекс элемент*/
-      width: 147px;
+      /*width: 147px;*/
       padding: 0;
       margin-bottom: 0;
     }
 
+
+    &__logo-mobiletablet-icon {/*для мобилки и планшета отображаем*/
+      display: none;
+    }
+
+    &__logo-decstop-icon {/*для дектопа не отображаем*/
+      display: block;
+    }
+
+
     &__social {
       /*флекс элемент*/
-      width: 170px;
+      /*width: 170px;*/
       padding: 0;
       margin-bottom: 0;
     }
 
     &__copyright {
       /*флекс элемент*/
+      /*width: 160px;*/
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 160px;
+
       padding: 0;
       margin-bottom: 0;
     }

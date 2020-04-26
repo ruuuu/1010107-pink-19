@@ -1,6 +1,6 @@
 .contacts {
 
-
+  background-color: #ffffff;
   padding-top: 50px;
   padding-bottom: 50px;
   padding-left: 5px;
@@ -27,6 +27,43 @@
     text-align: center;
     font-weight: bold;
   }
+
+
+  &__map {
+    position: relative;/*иконкку маркера  и белый треугольник  буем позиционироватьт отоноситеьно этого элемента*/
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+  }
+
+
+  &__map::before {/* псевдоэлемент треугольник белый*/
+    content: "";
+    position: absolute;
+    display: block;
+    top: -1px;
+    left: 0;
+    z-index: 2;
+    width: 100%; /*чтобы трреугольник  тянулся вместе с ширной жкрана*/
+    height: 62px;
+
+    background-image: url("../img/bg-triangle-white-footer.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center; /* по x bottom, по  y- center*/
+  }
+
+
+  &__map-icon {/*иконка маршкера*/
+    position: absolute;
+    top: 97px;
+    right: 50%;
+    transform: translate(50%);
+  }
+
+  &__map iframe {
+    width: 100%; /*чтоб карта тянулась*/
+  }
 }
 
 
@@ -49,15 +86,32 @@
     padding-right: 50px;
   }
 
-  /*.contacts__item{
-
-
-  }*/
+  .contacts__item {
+    width: 50%;
+    margin: auto;
+  }
 
 
   .contacts__item:nth-child(3) {
     margin: 0 auto;
     padding-top: 30px;
+  }
+
+
+  .contacts__map::before {/* псевдоэлемент треугольник белый*/
+    content: "";
+    position: absolute;
+    display: block;
+    top: -1px;
+    left: 0;
+    z-index: 2;
+    width: 100%; /*чтобы трреугольник  тянулся вместе с ширной жкрана*/
+    height: 50%;
+
+    background-image: url("../img/bg-triangle-white-footer.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center; /* по x bottom, по  y- center*/
   }
 }
 
@@ -81,6 +135,7 @@
 
   .contacts__item {
     width: auto;/*сбрасываем и делаем щначения по умолчанию*/
+    margin: 0;
   }
 
   .contacts__item:nth-child(1) {
@@ -98,5 +153,22 @@
     margin: 0;
     padding-top: 0;
     order: -1;
+  }
+
+
+  .contacts__map::before {/* псевдоэлемент треугольник белый*/
+    content: "";
+    position: absolute;
+    display: block;
+    top: -1px;
+    left: 0;
+    z-index: 2;
+    width: 100%; /*чтобы трреугольник  тянулся вместе с ширной жкрана*/
+    height: 100%;
+
+    background-image: url("../img/bg-triangle-white-footer.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center; /* по x bottom, по  y- center*/
   }
 }

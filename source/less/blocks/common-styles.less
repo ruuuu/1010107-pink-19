@@ -29,7 +29,7 @@ a {
 
 
 img {
-  max-width: 100%;
+  max-width: 100%;/*чтобы картика ужималась, тем самым не выпадала из родителя*/
   height: auto;/*чтобы картинка не выпала из блока */
 }
 
@@ -76,4 +76,11 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+
+@media (min-width: @desktop-width) {
+  .container {
+    max-width: 940px; /*для photoblocks декстоп чтобы контенер с фтками не тялнулся при увеличении ширину экрана*/
+  }
 }

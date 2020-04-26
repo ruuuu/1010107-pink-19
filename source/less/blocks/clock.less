@@ -6,27 +6,82 @@
 
 @media (min-width: @tablet-width) {/*>660px*/
 
-  .clock {
+  .clock {/*флекбокс*/
+    max-width: 660px;/*чтобы резинился блок*/
     /*ширину не задаем*/
+
     padding-top: 59px;
     display: flex;
 
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     flex-wrap: nowrap;
+
+    position: relative;/*позицоировать будем круг розовый с цифрой*/
   }
 
 
   .clock__icon {/*флекс элемент*/
+
     display: block;
+
+    background-image: url("../img/icon-timer.svg");
+    background-size: cover; /* изображение подстроится под размер контенйра*/
+
     width: 238px;
     height: 276px;
 
-    margin-right: 70px;
+    flex-grow: 1;/*чтобы круг увеличивался с увеличением ширины экрана*/
+    flex-shrink: 0;
+    flex-basis: auto;/*тоже самое что и  width*/
+
+
+    &::before {/*псевдоэлемент- розовый круг*/
+      content: "";
+      position: absolute;
+
+      top: 110px;
+      left: 35px;
+
+      width: 180px;/*размеры круга*/
+      height: 180px;
+
+      border: 15px solid #d22856;
+      border-radius: 50%;
+    }
+
+
+    &::after {/*для цифры 24*/
+      content: "24";
+      position: absolute;
+
+      top: 130px;
+      left: 80px;
+
+      width: 106px;/*размеры цифры*/
+
+      height: 70px;
+      color: #d22856;
+
+      font-size: 96px;
+      line-height: 149.5px;
+      font-weight: bold;
+    }
   }
 
+
+  /*.clock__digit{
+
+  }*/
+
+
   .clock__wrapper {/*флекс элемент*/
-    /*width: 295px;*/
+
     padding-top: 60px;
+    padding-left: 70px;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;/*тоже самое чтои  width*/
   }
 
   .clock__title {
@@ -55,11 +110,12 @@
 @media (min-width: @desktop-width) {/*>1200px*/
 
   .clock {
-    /*width: 940px; теперь элемент приувеличнеии ширины расползаются по ккраям /*940 = 1200-130*2*/
-    display: flex;/*добавила*/
+    max-width: 1200px;/*чтобы резинился блок*/
 
-    justify-content: flex-start;/*добавила*/
-    flex-wrap: nowrap;/*добавила*/
+    display: flex;
+
+    justify-content: flex-start;
+    flex-wrap: nowrap;
 
     padding-left: 130px;
     padding-right: 130px;
@@ -69,12 +125,46 @@
     padding-bottom: 67px;
   }
 
+
   .clock__icon {/*флекс элемент*/
-    display: block;
-    /*width: 298px;*/
+    width: 298px;
     height: 345px;
 
     margin-right: 70px;/*добавила*/
+    flex-grow: 0;/*чтобы круг увеличивался с увеличением ширины экрана*/
+    flex-shrink: 0;
+    flex-basis: auto;/*тоже самое что и  width*/
+
+    &::before {/*псевдоэлемент- розовый круг*/
+      content: "";
+      position: absolute;
+
+      top: 70px;
+      left: 155px;
+
+      width: 221px;/*размеры круга*/
+      height: 221px;
+
+      border: 15px solid #d22856;
+      border-radius: 50%;
+    }
+
+    &::after {
+      /*для цифры 24*/
+      content: "24";
+      position: absolute;
+
+      top: 100px;
+      left: 210px;
+
+      width: 131px;
+      height: 87px;
+      color: #d22856;
+
+      font-size: 120px;
+      line-height: 187px;
+      font-weight: bold;
+    }
   }
 
 

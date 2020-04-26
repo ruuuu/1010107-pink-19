@@ -1,27 +1,33 @@
 .main-nav {
 
   position: relative;
-  /*margin: 0 auto;/*центруем для случая если 320<width<768*/
-  min-height: 321px; /* 69*5, т к пункты будут доавлять или убирать*/
+  width: auto; /*тянется на всю ширину*/
+
+  background-color: #283645;
 
 
-  &__toggle {/*бургер кнопка*/
+  &--closed &__toggle {/*бургер кнопка*/
 
     position: absolute;
 
-    top: -45px;
-    right: 22px;
+    display: block;
 
+    top: -47px; /*  50% как отцентровать  по высоте на планшете??*/
+    right: 22px;/*расстояние от правой границы родителя до правой границы иконки*/
+    left: auto;
+
+
+    z-index: 10;
 
     background-color: transparent;/*прозрачный  у бургера*/
 
     width: 50px;/*размеры кнопки бургера*/
     height: 24px;
 
-    display: block;
+
     cursor: pointer;
     border: none;
-
+    outline: none; /*чтобы синим не выделлялась кнопка переключения*/
     /*&:hover,
     &:active {
 
@@ -29,42 +35,56 @@
   }
 
 
-  &--closed &__toggle::before { /*гориз полоска на бургере*/
+  &--closed &__toggle::before { /*3 гориз полоски у бургера*/
     content: "";
 
     position: absolute;
-    top: 20px;
-    left: 0;
-
-    width: 50px;
+    width: 50px;/*размер одной гори полосы*/
     height: 2px;
 
+    top: 0;
+    left: 0;
+
+    right: 22px;
+
+
     background-color: #ffffff;
-    /*box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;*/
+    box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;/*чтобы две горизонт полосы еще добавиилсь*/
   }
 
 
   &--closed &__toggle:hover::before { /*гориз полоски на бургере при ховере*/
     background-color: #d22856;
+    box-shadow: 0 8px 0 0 #d22856, 0 16px 0 0 #d22856;
   }
 
 
   &--closed &__toggle:active::before {/*гориз полоски на бургере при нажатии*/
     background-color: rgba(210, 40, 86, 0.3);
+    box-shadow: 0 8px 0 0 rgba(210, 40, 86, 0.3), 0 16px 0 0 rgba(210, 40, 86, 0.3);
   }
 
-  &--opened &__toggle {
-    top: -55px;
-    left: auto;
+
+  &--opened &__toggle {/*кнпока крестик(меню открыто)*/
+
+    position: absolute;
+
+    top: -47px;
     right: 22px;
+
+    width: 30px;
+    height: 30px;
+
+    background: transparent;
+    border: 0;
 
     &::before,
     &::after { /*полоски для крестика*/
       content: "";
 
       position: absolute;
-      top: 22px;
-      left: 18px;
+      top: 12px;
+      left: 0;
 
       width: 30px;
       height: 4px;
@@ -93,8 +113,13 @@
   }
 
 
+  &--nojs &__toggle {/*при выключенных скриптах бургер не отображаем*/
+    display: none;
+  }
+
   &__wrapper {
-    /*min-width: 320px;*/
+    width: auto;/*займет всю возможную ширину*/
+    margin: 0 auto;/*центровка*/
   }
 
   &__list {
@@ -104,6 +129,14 @@
     list-style: none;
     text-transform: uppercase;
     text-align: center;
+  }
+}
+
+
+@media (max-width: @mobile-planshet-width-only) { /*максимум 1200px меню открыватеся и закрывается толкь на мобилках и планшетах*/
+
+  .main-nav--closed .site-list__item {/*меню закрыто, пункты не отобраажем*/
+    display: none;
   }
 }
 
@@ -120,13 +153,45 @@
     width: auto;/*займет всю возможную ширину*/
     margin: 0 auto;/*центровка*/
   }
+
+  .main-nav--opened .main-nav__toggle {/*кнопка крестик*/
+    top: -62px;
+  }
+
+  .main-nav--closed .main-nav__toggle {/*бургер кнопка*/
+    //margin-top: -12px;
+    top: -66px;
+  }
 }
 
 
 @media (min-width: @desktop-width) {/*>1200px*/
 
+  .main-nav {
+    width: auto;
+    margin: 0;
+  }
+
+  .main-nav--closed .main-nav__toggle {/* меню закрыто, кнопку переключения(бургер) скрываем для декстопа*/
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__toggle {//кнопка крестик
+    display: none;
+  }
+
+
   .main-nav__wrapper {
-    width: 621px;
-    /*ширина содержимого*/
+
+    width: 671px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-grow: 1;/*чтобы меню тянудось*/
+
+    max-width: 960px;  /* 960px / .84 ~= 1142px (центровка начнётся чуть раньше 1200px) */
+
+    margin: 0 auto;
   }
 }

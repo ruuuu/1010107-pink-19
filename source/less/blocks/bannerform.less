@@ -1,21 +1,20 @@
-.bannerphoto {
+.bannerform {
 
 
   /*min-width: 320px;*/
   /*размеры картинки или пиcать 100% взять от родителя*/
   height: 190px;
-  background: url("../img/bg-back-mobile@2x.jpg") 50% 0 no-repeat;
-  background-size: cover;
 
   //display: flex;/*чтоб центровать надпись на баннере*/
   //justify-content: center;
   //align-items: center;
 
   //position: relative;/*тект будем поверх него размещать */
-  //background-image: url("../img/back-mobile.jpg");//фон
+  //background-image: url("../img/back-mobile.jpg");/*back-mobile.jpg*/
   //background-size: cover;
-  //background-position: 0 -55px;
+  //background-position: 0 -55px;/*поднимаем фон вверх под шапку*/
   //background-repeat: no-repeat;
+
 
   &__title {
 
@@ -28,11 +27,12 @@
     top: 40px;
     text-align: center;
 
+
     /*z-index: 50;*/
     color: #ffffff;
     font-size: 24px;
     font-weight: 300;
-
+    font-family: "OpenSans", "Arial", sans-serif;
 
     font-stretch: normal;
     font-style: normal;
@@ -43,28 +43,32 @@
 
 
 @media (min-width: @tablet-width) {
-  .bannerphoto {
-    background-image: none;
-    height: 340px;
-    background-position: 0 -175px; /*поднимаем фон вверх под шапку*/
-  }
 
-  .bannerphoto__title {
-    top: 80px;
+  //.bannerform {
+  // height: 340px;
+  // background-position: 0 -175px; /*поднимаем фон вверх под шапку*/
+  // }
+
+  .bannerform__title {
+    top: 50px;
     font-size: 50px;
+    padding-left: 93px;
+    padding-right: 93px;
+    padding-bottom: 300px;
   }
 }
 
 
 @media (min-width: @desktop-width) {
-  .bannerphoto {
-    height: 284px;
-    background-position: 0 -175px; /*поднимаем фон вверх под шапку*/
-  }
 
-  .bannerphoto__title {
+  //.bannerform {
+  // height: 284px;
+  // background-position: 0 -175px; /*поднимаем фон вверх под шапку*/
+  //}
+
+  .bannerform__title {
     top: 80px;
-    padding-left: 426px;
-    padding-right: 426px;
+    padding-left: 229px;
+    padding-right: 229px;
   }
 }
