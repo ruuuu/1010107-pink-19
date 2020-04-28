@@ -1,0 +1,54 @@
+.radio {
+  &__value {
+    display: none;
+  }
+
+  &__label {
+    position: relative;// для  радиокнпоки
+    padding-left: 70px;
+  }
+
+  &__label::before {//псевдоэдемент радиокнопка
+    content: "";
+    position: absolute;
+
+    top: -6px;
+    left: 0;
+
+    width: 39px;//размеры круглешка
+    height: 39px;
+
+    box-sizing: border-box;
+    border: 2px solid #e5e5e5;
+    border-radius: 50%;
+
+    background-color: #ffffff;
+  }
+
+  &__value:checked + &__label::after {//псевдоэдемент маленький кружочек в радиокнпоке
+    content: "";
+    position: absolute;
+
+    top: 6px;
+    left: 12px;
+
+    width: 15px;//размеры круглешка
+    height: 15px;
+
+    border-radius: 50%;
+
+    background-color: #d22856;
+  }
+}
+
+
+@media (min-width: @tablet-width) {/*>660px*/
+
+  .radio__label {
+    padding-left: 58px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {/*>1200px*/
+}

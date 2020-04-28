@@ -1,0 +1,371 @@
+.application {
+
+
+  background-color: #f2f2f2;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  margin-bottom: 30px;
+
+
+  &__form {
+    margin: 0;
+    padding: 0;
+  }
+
+
+  &__wrapper-picture {
+    //margin-bottom: 40px;
+    width: 100%;
+  }
+
+  &__image {
+    width: 100%;// чтобтянулась на всю ширину экарна
+    height: 100%;//чтоб прилегал к границе контейнера
+  }
+
+
+  &__buttons-list {//кнопки филтров флексбокс
+
+    //max-width: 500px;//чтобы кнпоки не растягивались по щширине экрна
+    margin: 40px auto;//чтоб ценровалось при увеличнеее экрана
+
+
+    display: flex;
+    justify-content: space-around;
+
+    align-items: center;
+  }
+
+
+  &__button {//кнопка фильтра флекс элемент
+    width: 48px;//размеры кнопки
+    height: 48px;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: transparent;
+    border-style: none;//рамку убираем
+    outline: none;
+    cursor: pointer;
+  }
+
+
+  &__button-image {
+    width: 48px;
+    height: 48px;
+  }
+
+  &__button-image--crop {
+    padding-left: 3px;
+  }
+
+  &__button--active {//выбранная кнопка
+    color: #d22856;
+  }
+
+  &__ranges-list {//список ползунков
+    margin: 0 20px;
+    padding: 0;
+    padding-bottom: 24px;
+  }
+
+
+  &__ranges-item {// ползунок
+    position: relative;//чтобы серкю полоску горизотальную чертить с помощью псевдоэлемента
+    display: none;
+  }
+
+
+  &__ranges-item:nth-child(2) {
+    display: none;
+  }
+
+  &__ranges-item:nth-child(3) {
+    display: none;
+  }
+
+  &__ranges-item::after {//песвдоэлемент гор серая полоска под ползунком
+    content: "";
+    position: absolute;
+
+    top: 45px;
+    left: -40px;
+
+    width: calc(100% + 50px);//100%
+    height: 1px;
+    background-color: rgba(40, 54, 69, 0.1);
+  }
+
+
+  &__ranges-item--active {
+    display: flex;
+  }
+
+  &__ranges-item--crop .range__toggle {
+    left: 80%;
+  }
+
+  &__ranges-item--fill .range__toggle {
+    left: 30%;
+  }
+
+  &__ranges-item--contrast .range__toggle {
+    left: 60%;
+  }
+
+
+  &__wrapper-buttons {//контейнер для двух кнопок
+    margin: 0;
+    padding: 0;
+    padding-top: 50px;
+  }
+
+
+  &__btn-upload {//кнопка Запостить
+    width: 100%;
+    //width: 260px;
+    background-color: transparent;
+    color: #d22856;
+    border: 3px solid #d22856;
+    margin-bottom: 20px;
+  }
+
+  &__btn-round {
+    display: inline-block;
+    padding: 17px 16px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+  }
+
+
+  &__btn-reset {//кнопка Отмнить
+    //width: 260px;
+    width: 100%;
+    background-color: transparent;
+    color: rgba(40, 54, 69, 0.1);
+    border: 3px solid rgba(40, 54, 69, 0.1);
+  }
+}
+
+@media (min-width: @tablet-width) { /*>660*/
+
+  .application {
+    padding-top: 54px;
+    padding-bottom: 54px;
+  }
+
+  .application__form {
+
+    display: flex;
+    //justify-content: space-between;
+  }
+
+  .application__wrapper-picture {//флекс эелмент
+    max-width: 300px;
+    height: 400px;
+    margin: 0;
+    margin-right: 10px;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  .application__controls {//флекс эелмент сам флексбокс
+    //width: 275px;
+    //max-width: 300px;//при растягивании ширину будет макси 300 и больше не будет тянутся
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    flex-grow: 1;
+
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
+    padding-left: 25px;
+  }
+
+  .application__filters {//флес элемент(ползунки+кнпоки), сам флекбокс
+    display: flex;
+    max-width: 900px;
+  }
+
+  .application__buttons-list {//кнопки фильтров^  флкус элент сам флекбокс
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .application__button {
+    width: 22px;
+    height: 22px;
+
+    margin-top: 10px;
+    margin-bottom: 35px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .application__button-image {
+    width: 24px;
+    height: 24px;
+  }
+
+  .application__button-image--crop {
+    padding-left: 3px;
+  }
+
+  .application__button-image--fill {
+    padding-left: 3px;
+    padding-top: 4px;
+  }
+
+
+  .application__button-image--contrast {
+    width: 16px;
+    padding-left: 5px;
+    padding-top: 0;
+  }
+
+  .application__ranges-list {//ползунки
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin-right: 6px;
+    margin-bottom: 0;
+    margin-left: 31px;
+
+
+    width: 100%;//для шкалы черной
+    padding: 0;
+  }
+
+
+  .application__ranges-item {
+    display: flex;
+    width: 100%;
+
+    height: 24px;
+
+    margin: 0;
+    margin-top: 11px;
+    margin-bottom: 35px;
+    padding: 0;
+  }
+
+
+  .application__ranges-item:nth-child(2) {
+    display: block;
+  }
+
+  .application__ranges-item:nth-child(3) {
+    display: block;
+  }
+
+  //.application__ranges-item::after{//песвдоэлемент гор серая полоска под ползунком
+  //  top: auto;
+  // bottom: -24px;
+  // left: -56px;
+  // width: calc(100% + 74px);
+
+
+  //}
+
+
+  &__btn-upload {
+    margin-bottom: 20px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {/*для >1200*/
+
+  .applications {
+    max-width: 940px;
+
+    margin-bottom: 57px;
+  }
+
+  .application__wrapper-picture {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .application__controls {
+    width: 50%;
+    //max-width: 400px;
+    margin: 0;
+    margin-left: 30px;
+    padding: 0;
+  }
+
+
+  .application__button {
+    width: 48px;
+    height: 48px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+
+  .application__button-image {
+    width: 44px;
+    height: 44px;
+  }
+
+  .application__button-image--crop {
+    padding-left: 0;
+    width: 44px;
+    height: 44px;
+  }
+
+  .application__button-image--fill {
+    padding-left: 0;
+  }
+
+
+  .application__button-image--contrast {
+    padding-top: 11px;
+    padding-left: 0;
+  }
+
+  .application__ranges-list {
+    margin-right: 30px;
+    margin-left: 44px;
+  }
+
+
+  .application__ranges-item::after {//песвдоэлемент гор серая полоска под ползунком
+
+
+    width: calc(100% + 30px);
+  }
+
+
+  .application__wrapper-buttons {
+    display: flex;
+    margin-right: 25px;
+  }
+
+
+  .application__btn-upload {
+    margin: 0;
+    margin-right: 44px;
+  }
+
+  .btn-round {
+    font-size: 21px;
+  }
+}

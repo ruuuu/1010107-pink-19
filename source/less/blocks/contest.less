@@ -1,0 +1,585 @@
+.contest {
+  &__wrapper {
+    position: relative;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: none;
+  }
+
+  &__user-wrapper {
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  &__wrapper--user {
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+  &__label {
+
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 22px;
+    text-transform: uppercase;
+    color: #d22856;
+    line-height: 30px;
+  }
+
+
+  &__input {
+
+    width: 100%;
+    margin-bottom: 3px;
+    padding-top: 14px;
+    padding-bottom: 15px;
+    padding-left: 22px;
+    padding-right: 22px;
+
+    font-size: 18px;
+    line-height: 30px;
+    border: 2px solid #e5e5e5;
+    box-sizing: border-box;
+  }
+
+
+  &__wrapper--progress { //безбашнеы действия
+
+    padding-top: 38px;
+    padding-bottom: 46px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #f2f2f2;
+  }
+
+
+  &__legend {
+
+    position: absolute;
+    left: 0;
+    padding: 0 40px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #d22856;
+    line-height: 18px;
+  }
+
+  &__progress-list {
+    margin: 0;
+
+
+    padding: 0;
+    padding-top: 28px;
+
+
+    list-style: none;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+
+  &__progress-item {
+    padding: 0;
+    margin: 0;
+    margin-top: 52px;
+  }
+
+
+  &__wrapper--contacts {
+    margin-top: 18px;
+    margin-bottom: 25px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+  &__legend--contacts {
+    display: none;
+  }
+
+  &__contacts-wrapper {
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  &__wrapper--application {
+    padding-top: 38px;
+    padding-bottom: 46px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    background-color: #f2f2f2;
+  }
+
+
+  &__application-list {
+    margin: 0;
+    padding: 0;
+    padding-top: 28px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+
+  &__application-item {
+    padding: 0;
+    margin: 0;
+    margin-top: 46px;
+  }
+
+
+  &__wrapper--comment {//блок комментария
+    margin-top: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+  &__label--comment {
+    margin: 0;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+  }
+
+  &__comment-text {
+
+    width: 100%;
+    height: 200px;
+
+    padding-top: 14px;
+    padding-right: 22px;
+    padding-left: 22px;
+    padding-bottom: 15px;
+
+    margin-top: 10px;
+    margin-bottom: 18px;
+
+    font-size: 18px;
+    line-height: 30px;
+    border: 2px solid  #e5e5e5;
+    box-sizing: border-box;//чтобы паддинги учитывались в контенте
+
+    outline: none;
+    resize: none;//чтоб не увиилился размер тексарии
+  }
+
+
+  &__wrapper--send {
+    margin: 0;
+
+    padding: 0;
+  }
+
+  &__btn-wrapper {
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+  &__btn-submit {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .btn {
+
+    display: inline-block;
+    //width: 100%;
+
+    padding-top: 22px;
+    padding-right: 35px;
+    padding-bottom: 22px;
+    padding-left: 35px;
+
+    vertical-align: middle;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #2aab6d;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+  }
+
+
+  &__required-text {
+    margin: 0;
+    margin-top: 35px;
+    margin-bottom: 15px;
+
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 30px;
+  }
+
+  &__required-label {
+    color: #d22856;
+  }
+
+  &__required-hidden {
+    display: none;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  /*>660px*/
+
+  .contest {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+  .contest__wrapper {
+    width: 100%;
+  }
+
+
+  .contest__wrapper--user {
+    order: 0;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .contest__user-wrapper {
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    margin-top: 5px;
+    padding: 0;
+    padding-top: 44px;
+  }
+
+  .contest__label {
+    margin: 0;
+    padding: 0;
+    padding-right: 20px;
+  }
+
+
+  .contest__input {
+    padding-right: 19px;
+    padding-left: 19px;
+  }
+
+
+  .contest__wrapper--progress {
+
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+    order: 3;
+    padding-top: 0;
+    padding-right: 60px;
+    padding-bottom: 54px;
+    padding-left: 60px;
+
+    margin: 30px 20px;
+  }
+
+  .contest__legend {
+    position: static;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+
+  .contest__legend--progress {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .contest__progress-list {
+    padding-top: 0;
+  }
+
+  .contest__progress-item {
+    margin: 0;
+    margin-top: 51px;
+  }
+
+
+  .contest__wrapper--contacts {
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+
+    order: 2;
+    padding-top: 20px;
+    padding-right: 58px;
+    padding-left: 58px;
+    padding-bottom: 0;
+
+    margin: 30px 20px;
+  }
+
+
+  .contest__legend--contacts {
+    display: block;
+
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .contest__contacts-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .contest__label--tel {
+    position: relative;//иконкку телеофна будем позиционировать отнсиельно этого эл-та
+    margin-top: 8px;
+    margin-right: 0;
+    margin-bottom: 12px;
+    margin-left: 20px;
+  }
+
+
+  .contest__label--tel::after {//псевдоэлемент дял иконки телеофна
+    content: "";
+    position: absolute;
+    top: -73px;
+    right: 2px;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: #e5e5e5;
+
+    background-image: url("../img/icon-phone.svg");
+    background-position: center;//центриуем по горизонлати и верткали
+    background-repeat: no-repeat;
+  }
+
+  .contest__label--email {
+    position: relative;//позционировать будем иокнку мейла отнсительно этого элемента
+
+    margin-top: 8px;
+    margin-right: 0;
+    margin-bottom: 12px;
+    margin-left: 20px;
+  }
+
+  .contest__label--email::after {//псевдоэлемент дял иконки мейла
+    content: "";
+    position: absolute;
+    top: -73px;
+    right: 2px;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: #e5e5e5;
+
+    background-image: url("../img/icon-mail.svg");
+    background-position: center;//центриуем по горизонлати и верткали
+    background-repeat: no-repeat;
+  }
+
+  .contest__wrapper--application {
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+
+    order: 1;
+    padding-top: 0;
+    padding-bottom: 58px;
+    padding-left: 60px;
+    padding-right: 60px;
+
+    margin: 30px 20px;
+  }
+
+  .contest__application-list {
+    padding-top: 0;
+  }
+
+  .contest__wrapper--comment {
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+
+    order: 3;
+    margin-top: 34px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+
+    padding-left: 58px;
+    padding-right: 58px;
+  }
+
+  .contest__label--comment {
+    width: 185px;
+
+    padding: 0 36px;
+    box-sizing: content-box;
+
+    background-color: #ffffff;
+
+    margin-top: -30px;//-20
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contest__comment-text {//текстария
+
+    padding-left: 19px;
+    padding-right: 19px;
+    margin-top: 31px;
+    margin-bottom: 30px;
+    height: 193px;
+    resize: none;
+  }
+
+  .contest__wrapper--send {
+    display: flex;
+    align-items: center;
+
+    order: 3;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 38px 20px;
+  }
+
+  .contest__btn-wrapper {
+    padding: 0;
+    margin: 0;
+  }
+
+  .contest__btn-submit {
+    width: 300px;
+  }
+
+  .contest__required-text {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+@media (min-width: @desktop-width) {/*>1200px*/
+
+  .contest {
+    margin-top: 35px;
+    margin-right: 10px;
+    margin-bottom: 0;
+    margin-left: 10px;
+
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  .contest__wrapper {
+    margin: 0;
+  }
+
+
+  .contest__wrapper--user {
+    width: 435px;
+    padding: 0;
+    padding-left: 130px;
+
+    margin: 0;
+    margin-right: 70px;
+  }
+
+  .contest__wrapper--progress {
+    margin-top: 55px;
+
+    margin-left: 120px;
+    margin-right: 120px;
+    padding-bottom: 60px;
+  }
+
+  .contest__progress-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .contest__wrapper--contacts {
+    margin: 0;
+    margin-top: 55px;
+
+    margin-left: 120px;
+    margin-right: 120px;
+
+    padding-top: 37px;
+    padding-right: 58px;
+    padding-bottom: 0;
+    padding-left: 58px;
+  }
+
+  .contest__contacts-wrapper-col {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contest__contacts-wrapper {
+    width: 375px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contest__wrapper--application {
+    width: 435px;
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: 37px;
+    padding-top: 3px;
+
+    padding-right: 0;// было 10
+    padding-bottom: 0;
+    padding-left: 74px;
+  }
+
+  .contest__legend--application {
+    width: 330px;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .contest__wrapper--comment {
+    margin: 0;
+
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 64px;
+  }
+
+
+  .contest__comment-text {
+    margin-top: 28px;
+    margin-bottom: 19px;
+    height: 128px;
+  }
+
+  .contest__wrapper--send {
+    margin-top: 66px;
+    margin-left: 120px;
+    margin-right: 120px;
+
+    padding: 0;
+  }
+
+  .contest__required-hidden {
+    display: inline;
+  }
+}
