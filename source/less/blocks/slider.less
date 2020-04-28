@@ -1,0 +1,160 @@
+.slider{
+    
+    width: 100%;
+    box-sizing: border-box;
+    
+    &__btn{
+        display: none;
+    }
+    
+    &__list{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+    &__item{
+        margin: 0;
+        padding: 0;
+        display: none;
+    }
+    
+    &__item--active{
+        display: block;
+    }
+    
+    
+    &__controls{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        margin-top: 29px;
+        margin-bottom: 38px;
+    }
+    
+    
+    &__toogle{
+        width: 13px;
+        height: 13px;
+        
+        margin: 0;
+        margin-left: 6px;
+        margin-right: 6px;
+        padding: 0;
+        opacity: 0.3;
+        background-color: #283645;
+        border-radius: 50%;
+        border: 3px solid #ffffff;
+    }
+    
+    &__toogle--active{
+        opacity: 1;
+        border: 3px solid #283645;
+        background-color: #ffffff;
+    }
+    
+    
+    
+}
+
+
+
+@media (min-width: @tablet-width) {//>660px
+    
+    .slider__controls{
+        
+        margin: 0;
+        margin-top: 34px;
+        
+        
+    }
+    
+    
+    
+}
+
+
+
+
+
+@media (min-width: @desktop-width) {/*для >1200px*/
+    
+    .slider{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    
+    .slider__btn{ //тсрелки влево и вправо
+        display: block;
+        min-width: 30px;
+        
+        min-height: 30px;
+        
+        max-width: 31px;
+        
+        max-height: 31px;
+        
+        margin-top: 170px;
+        margin-right: 5px;
+        margin-bottom: 0;
+        margin-left: 0;
+        
+        
+        padding: 0;
+        box-sizing: border-box;
+        
+        background-color: transparent;
+        border: 0;
+        outline: none;
+        transform: rotate(45deg);
+    }
+    
+    
+    .slider__btn--left{
+        border-bottom: 2px solid rgba(40, 54, 69, 0.3);
+        border-left: 2px solid rgba(40, 54, 69, 0.3);
+    }
+    
+    
+    .slider__list{
+        position: relative;//отнсиельно него позиционируем иконку  большой кавычки
+        width: 690px;
+        padding-top: 157px;//месо дял иконкт качвычки вверху
+    }
+    
+    
+    .slider__list::after{//псевдоэлемент кавычка большая 
+        content: "";
+        position: absolute;
+        
+        top: 44px;
+        right: 50%;
+        
+        width: 80px;
+        height: 65px;
+        
+        
+        background-image: url("../img/icon-quotes.svg");
+        
+        background-repeat: no-repeat;
+        
+        background-position: center;
+        
+        
+    }
+    
+    .slider__btn--right{
+        border-top: 2px solid rgba(40, 54, 69, 0.3);
+        border-right: 2px solid rgba(40, 54, 69, 0.3);
+    }
+    
+    .slider__controls{
+        display: none;
+    }
+    
+}

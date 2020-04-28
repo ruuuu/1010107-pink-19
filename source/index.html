@@ -138,8 +138,15 @@
 
     <main class="page-main">
         <div class="offer-information">
-            <h2 class="offer-information__title">Устали от серости мегаполиса?<br>
-                Нам есть, что вам<br> предложить!</h2>
+           
+           <p class="slogan__information">
+             Устали от серости мегаполиса?
+           </p>
+           <p class="slogan__information">
+             Нам есть, что вам предложить!
+           </p>
+            <!--<h2 class="offer-information__title">Устали от серости мегаполиса?
+                Нам есть, что вам предложить!</h2>-->
         </div>
 
         <section class="section">
@@ -222,43 +229,58 @@
 
         </section>
 
-        <section class="reviews">
+        <section class="reviews container">
             <!-- блок ОТЗЫВЫЫ-->
-            <div class="reviews__wrapper slider">
-                <!-- обертка где будет слайдер-->
-                <ul class="reviews__list slider__list">
-                    <li class="reviews__item slider__item">
-                        <h3 class="reviews__author">Николай Петров</h3>
-                        <p class="reviews__description">
-                            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-                        </p>
+            <div class="reviews__slider slider">
+                <button type="button" class="slider__btn slider__btn--left"></button>
+                <ul class="slider__list">
+                    <li class="slider__item slider__item--active">
+                        <div class="slider__content rewiew">
+                            <div class="rewiew__author">
+                                "Николай Петров"
+                                <span class="rewiew__author-info">25 лет, водитель трамвая</span> 
+                            </div>
+                            <div class="rewiew__text">
+                                «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+                            </div>
+                        </div>
                     </li>
-                    <li class="reviews__item slider__item">
-                        <!-- slider__item элемент слайдера-->
-                        <h3 class="reviews__author">Иванов Иван</h3>
-                        <p class="reviews__description">
-                            Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки
-                        </p>
+                    <li class="slider__item">
+                       <div class="slider__content rewiew">
+                            <div class="rewiew__author">
+                                "Петр Петров"
+                                <span class="rewiew__author-info">13 лет, водитель трамвая</span> 
+                            </div>
+                            <div class="rewiew__text">
+                                «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+                            </div>
+                        </div>
                     </li>
-                    <li class="reviews__item slider__item">
-                        <!-- slider__item элемент слайдера-->
-                        <h3 class="reviews__author">Петров Арсений</h3>
-                        <p class="reviews__description">
-                            Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки
-                        </p>
+                    <li class="slider__item"> 
+                       <div class="slider__content rewiew">
+                            <div class="rewiew__author">
+                                "Емеля Сидоров"
+                                <span class="rewiew__author-info">13 лет, водитель автомобиля</span> 
+                            </div>
+                            <div class="rewiew__text">
+                                «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+                            </div>
+                        </div>
                     </li>
                 </ul>
-                <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-                <!--для декстопа отображаются  кнпоки стрелочки-->
-                <button class="reviews__next" type="button">Следующий отзыв</button>
-                <!--для декстопа отображаются кнопки стрелочки-->
-                <p class="reviews__toggles slider-toggles">
-                    <!-- кнпоки слайдера-->
-                    <button class="slider-toggle" type="button">1</button>
-                    <button class="slider-toggle" type="button">2</button>
-                    <button class="slider-toggle" type="button">3</button>
-                </p>
-            </div>
+                <button type="button" class="slider__btn slider__btn--right"></button>
+                
+                <div class="slider__controls">
+                  <button type="button" class="slider__toogle slider__toogle--active">
+                      <span class="visually-hidden">1</span>
+                  </button>  
+                  <button type="button" class="slider__toogle">
+                      <span class="visually-hidden">2</span>
+                  </button> 
+                  <button type="button" class="slider__toogle">
+                      <span class="visually-hidden">3</span>
+                  </button> 
+                </div>
         </section>
 
 
@@ -291,7 +313,7 @@
                         </td>
                         <td class="tariffs__option">
                             <p class="tariffs__feature-wrapper">
-                                <span class="tariffs__feature-name">розовый фильтр</span>
+                                <span class="tariffs__feature-name">Розовый фильтр</span>
                                 <span class="tariffs__feature-value tariffs__feature-value--on" role="note" aria-label="Включено в тариф">
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31px" height="21px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09" xml:space="preserve">
                                         <path class="tariffs__feature-icon" d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z" />
@@ -301,7 +323,7 @@
                         </td>
                         <td class="tariffs__option">
                             <p class="tariffs__feature-wrapper">
-                                <span class="tariffs__feature-name">розовый фильтр</span>
+                                <span class="tariffs__feature-name">Розовый фильтр</span>
                                 <span class="tariffs__feature-value tariffs__feature-value--on" role="note" aria-label="Включено в тариф">
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31px" height="21px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09" xml:space="preserve">
                                         <path class="tariffs__feature-icon" d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z" />
@@ -311,7 +333,7 @@
                         </td>
                         <td class="tariffs__option">
                             <p class="tariffs__feature-wrapper">
-                                <span class="tariffs__feature-name">розовый фильтр</span>
+                                <span class="tariffs__feature-name">Розовый фильтр</span>
                                 <span class="tariffs__feature-value tariffs__feature-value--on" role="note" aria-label="Включено в тариф">
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31px" height="21px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09" xml:space="preserve">
                                         <path class="tariffs__feature-icon" d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z" />
@@ -327,7 +349,7 @@
                         </td>
                         <td class="tariffs__option">
                             <p class="tariffs__feature-wrapper">
-                                <span class="tariffs__feature-name">смайлики</span>
+                                <span class="tariffs__feature-name">Смайлики</span>
                                 <span class="tariffs__feature-value tariffs__feature-value--off" role="note" aria-label="Невключено в тариф">
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
                                         <path class="tariffs__feature-icon" d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439 c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121 c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439 s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z" />
@@ -337,7 +359,7 @@
                         </td>
                         <td class="tariffs__option">
                             <p class="tariffs__feature-wrapper">
-                                <span class="tariffs__feature-name">смайлики</span>
+                                <span class="tariffs__feature-name">Смайлики</span>
                                 <span class="tariffs__feature-value tariffs__feature-value--on" role="note" aria-label="Включено в тариф">
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31px" height="21px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09" xml:space="preserve">
                                         <path class="tariffs__feature-icon" d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z" />
@@ -347,7 +369,7 @@
                         </td>
                         <td class="tariffs__option">
                             <p class="tariffs__feature-wrapper">
-                                <span class="tariffs__feature-name">смайлики</span>
+                                <span class="tariffs__feature-name">Смайлики</span>
                                 <span class="tariffs__feature-value tariffs__feature-value--on" role="note" aria-label="Включено в тариф">
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31px" height="21px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09" xml:space="preserve">
                                         <path class="tariffs__feature-icon" d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z" />
@@ -363,7 +385,7 @@
                         </td>
                         <td class="tariffs__option">
                             <p class="tariffs__feature-wrapper">
-                                <span class="tariffs__feature-name">комментарии</span>
+                                <span class="tariffs__feature-name">Комментарии</span>
                                 <span class="tariffs__feature-value tariffs__feature-value--off" role="note" aria-label="Невключено в тариф">
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
                                         <path class="tariffs__feature-icon" d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439 c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121 c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439 s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z" />
@@ -373,7 +395,7 @@
                         </td>
                         <td class="tariffs__option">
                             <p class="tariffs__feature-wrapper">
-                                <span class="tariffs__feature-name">комментарии</span>
+                                <span class="tariffs__feature-name">Комментарии</span>
                                 <span class="tariffs__feature-value tariffs__feature-value--off" role="note" aria-label="Невключено в тариф">
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
                                         <path class="tariffs__feature-icon" d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439 c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121 c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439 s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z" />
@@ -383,7 +405,7 @@
                         </td>
                         <td class="tariffs__option">
                             <p class="tariffs__feature-wrapper">
-                                <span class="tariffs__feature-name">комментарии</span>
+                                <span class="tariffs__feature-name">Комментарии</span>
                                 <span class="tariffs__feature-value tariffs__feature-value--on" role="note" aria-label="Невключено в тариф">
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31px" height="21px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09" xml:space="preserve">
                                         <path class="tariffs__feature-icon" d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z" />
@@ -394,7 +416,17 @@
                     </tr>
                 </table>
                 <!--кнопки для слайдера -->
-
+                <div class="prices__control">
+                    <button type="button" class="prices__toogle prices__toogle--active">
+                        <span class="visually-hidden">1</span>
+                    </button>
+                    <button type="button" class="prices__toogle">
+                        <span class="visually-hidden">2</span>
+                    </button>
+                    <button type="button" class="prices__toogle">
+                        <span class="visually-hidden">3</span>
+                    </button>
+                </div>
 
             </div>
         </section>

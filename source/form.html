@@ -116,99 +116,118 @@
                 </p>
             </section>
 
-            <form class="form-data" action="https://echo.htmlacademy.ru" method="post">
-                <div class="form-data__wrap-for-fields">
-                    <p class="form-data__wrap-for-label-with-field">
-                        <label for="user-familia">Фамилия: </label>
-                        <input id="user-familia" type="text" name="familia" value="" placeholder="Укажите фамилию *">
+            <form class="contest" action="https://echo.htmlacademy.ru" method="post">
+               <fieldset class="contest__wrapper contest__wrapper--user"><!-- фио-->
+                   
+                   <legend class="visually-hidden">Введите ФИО</legend>
+                   <p class="contest__user-wrapper">
+                       <label for="contest__user-surname" class="contest__label">Фамилия:</label>
+                       <input id="contest__user-surname" type="text" class="contest__input contest__input--user-surname" placeholder="Укажите фамилию *" required>
+                   </p>
+                   <p class="contest__user-wrapper">
+                        <label for="contest__user-name" class="contest__label">Имя:</label>
+                        <input id="contest__user-name" type="text" class="contest__input contest__input--user-name" placeholder="Введите ваше имя *" required>
+                   </p> 
+                   <p class="contest__user-wrapper">
+                       <label for="contest__user-secondname" class="contest__label">Отчество:</label>
+                       <input id="contest__user-secondname" type="text" class="contest__input contest__input--user-secondname" placeholder="Ну и отчество тоже" required>
+                   </p>
+                   
+               </fieldset>
+               
+               <fieldset class="contest__wrapper contest__wrapper--progress"><!--список чекбоксов -->
+                   <legend class="contest__legend contest__legend--progress">
+                       Ваши безбашенные достижения в путешествии
+                   </legend>
+                   <div class="contest__progress-list">
+                       <div class="contest__progress-wrapper">
+                           <div class="contest__progress-item checkbox">
+                               <input type="checkbox"  id="contest__progress-value-1" class="checkbox__value" checked>
+                               <label for="contest__progress-value-1" class="checkbox__label">Сделал селфи с акулой</label><!-- вставить псевдоэдемент-->
+                           </div>
+                           <div class="contest__progress-item checkbox">
+                               <input type="checkbox"  id="contest__progress-value-2" class="checkbox__value" checked>
+                               <label for="contest__progress-value-2" class="checkbox__label">Обгорел на пляже</label><!-- вставить псевдоэдемент-->
+                           </div>
+                       </div>
+                       <div class="contest__progress-wrapper">
+                           <div class="contest__progress-item checkbox">
+                               <input type="checkbox"  id="contest__progress-value-3" class="checkbox__value">
+                               <label for="contest__progress-value-3" class="checkbox__label">Видел Чака Норриса</label><!-- вставить псевдоэдемент-->
+                           </div>
+                           <div class="contest__progress-item checkbox">
+                               <input type="checkbox"  id="contest__progress-value-4" class="checkbox__value">
+                               <label for="contest__progress-value-4" class="checkbox__label">Накупил сувениров</label><!-- вставить псевдоэдемент--> 
+                           </div>
+                       </div>
+                       <div class="contest__progress-wrapper">
+                           <div class="contest__progress-item checkbox">    
+                               <input type="checkbox"  id="contest__progress-value-5" class="checkbox__value">
+                               <label for="contest__progress-value-5" class="checkbox__label">Удержал башню</label><!-- вставить псевдоэдемент--> 
+                           </div>
+                           <div class="contest__progress-item checkbox"> 
+                               <input type="checkbox"  id="contest__progress-value-6" class="checkbox__value">
+                               <label for="contest__progress-value-6" class="checkbox__label">Разгромил отель</label><!-- вставить псевдоэдемент--> 
+                           </div>
+                       </div>
+                   </div>
+               </fieldset>
+               
+               <fieldset class="contest__wrapper contest__wrapper--contacts"><!--Номер тел Адрес почтв -->
+                   <legend class="contest__legend contest__legend--contacts">Контактная информация</legend>
+                   <div class="contest__contacts-wrapper-col">
+                       <p class="contest__contacts-wrapper">
+                          <label for="contest__contacts-tel" class="contest__label contest__label--tel">Номер телефона</label>
+                          <input type="tel"  id="contest__contacts-tel" class="contest__input contest__input--contacts-tel" placeholder="Номер, пожалуйста">
+                       </p>
+                       <p class="contest__contacts-wrapper">
+                           <label for="contest__contacts-email" class="contest__label contest__label--email">Адрес почты</label>
+                           <input type="email"  id="contest__contacts-email" class="contest__input contest__input--contacts-email" placeholder="Введите почту *" required>
+                       </p>
+                   </div>
+               </fieldset>
+               
+               <fieldset class="contest__wrapper contest__wrapper--application"><!--список радиобаттонов -->
+                   <legend class="contest__legend contest__legend--application">
+                       С каким приложением путешествовали?
+                   </legend>
+                   <ul class="contest__application-list">
+                      <li class="contest__application-item radio">
+                          <input type="radio"  id="contest__application-value-1" class="radio__value" value="contest__application-value-1" name="application-value" checked>
+                          <label for="contest__application-value-1" class="radio__label">Pink для iOS</label><!-- вставить псевдоэдемент-->
+                      </li> 
+                      <li class="contest__application-item radio">
+                          <input type="radio"  id="contest__application-value-2" class="radio__value" value="contest__application-value-2" name="application-value">
+                          <label for="contest__application-value-2" class="radio__label">Pink на Android</label><!-- вставить псевдоэдемент-->
+                      </li> 
+                      <li class="contest__application-item radio">
+                          <input type="radio"  id="contest__application-value-3" class="radio__value" value="contest__application-value-3" name="application-value">
+                          <label for="contest__application-value-3" class="radio__label">Windows Phone</label><!-- вставить псевдоэдемент-->
+                      </li> 
+                  </ul>
+               </fieldset>
+               
+               <fieldset class="contest__wrapper contest__wrapper--comment"><!--комментарий -->
+                   <p class="contest__comment-wrapper">
+                       <label for="contest__comment-text" class="contest__label contest__label--comment">Опишите свои эмоции</label>
+                       <textarea class="contest__comment-text" name="comment-text" id="contest__comment-text" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+                   </p>
+               </fieldset>
+               
+               <fieldset class="contest__wrapper contest__wrapper--send"><!--Кнопка Отправить форму-->
+                    <p class="contest__btn-wrapper">
+                       <button type="submit" class="contest__btn-submit btn btn-submit">Отправить форму </button>
+                    </p>   
+                    <p class="contest__required-text">
+                        <span class="contest__required-label">*</span> — обязательные поля 
                     </p>
-                    <p class="form-data__wrap-for-label-with-field">
-                        <label for="user-name">Имя: </label>
-                        <input id="user-name" type="text" name="name" value="" placeholder="Введите ваше имя *">
-                    </p>
-                    <p class="form-data__wrap-for-label-with-field">
-                        <label for="user-otchestvo">Отчество: </label>
-                        <input id="user-otchestvo" type="text" name="otchestvo" value="" placeholder="Ну и отчество тоже">
-                    </p>
-                </div>
-                <div class="form-data__wrap-for-checkboxs">
-                    <h3 class="form-data__title-block">Ваши безбашенные
-                        достижения в путешествии</h3>
-                    <ul class="form-data__list-checkbox">
-                        <li class="form-data__filter-option">
-                            <input class="visually-hidden filter-input filter-input-checkbox" id="filter-for-shark" type="checkbox" name="shark" checked>
-                            <!--связываем label и input -->
-                            <label for="filter-for-shark">Сделал селфи с акулой</label>
-                        </li>
-                        <li class="form-data__filter-option">
-                            <input class="visually-hidden filter-input filter-input-checkbox" id="filter-for-beach" type="checkbox" name="beach" checked>
-                            <!--связываем label и input -->
-                            <label for="filter-for-beach">Обгорел на пляже</label>
-                        </li>
-                        <li class="form-data__filter-option">
-                            <input class="visually-hidden filter-input filter-input-checkbox" id="filter-for-chnorris" type="checkbox" name="chnorris">
-                            <!--связываем label и input -->
-                            <label for="filter-for-chnorris">Видел Чака Норриса</label>
-                        </li>
-                        <li class="form-data__filter-option">
-                            <input class="visually-hidden filter-input filter-input-checkbox" id="filter-for-souvenir" type="checkbox" name="souvenir">
-                            <!--связываем label и input -->
-                            <label for="filter-for-souvenir">Накупил сувениров</label>
-                        </li>
-                        <li class="form-data__filter-option">
-                            <input class="visually-hidden filter-input filter-input-checkbox" id="filter-for-tower" type="checkbox" name="tower" checked>
-                            <!--связываем label и input -->
-                            <label for="filter-for-tower">Удержал башню</label>
-                        </li>
-                        <li class="form-data__filter-option">
-                            <input class="visually-hidden filter-input filter-input-checkbox" id="filter-for-hotel" type="checkbox" name="hotel">
-                            <!--связываем label и input -->
-                            <label for="filter-for-hotel">Разгромил отель</label>
-                        </li>
-                    </ul>
-                </div>
-                <div class="form-data__wrap-for-fields">
-                    <p class="form-data__wrap-for-label-with-field">
-                        <label for="user-phone">Номер телефона: </label>
-                        <input id="user-phone" type="text" name="user-phone" value="">
-                    </p>
-                    <p class="form-data__wrap-for-label-with-field">
-                        <label for="user-email">Адрес почты: </label>
-                        <input id="user-email" type="text" name="user-email" value="" placeholder="Введите почту *">
-                    </p>
-                </div>
-                <div class="form-data__wrap-for-radiobuttons">
-                    <h3 class="form-data__title-block">С каким приложением путешествовали?</h3>
-                    <ul class="form-data__list-radiobuttons">
-                        <li class="form-data__filter-option">
-                            <input class="visually-hidden filter-input filter-input-radio" id="filter-pink-forIos" type="radio" name="product-group" checked>
-                            <!--у группы радиокнопок  атрибут name должен бытьу всех один и тот же -->
-                            <label for="filter-pink-forIos">Pink для iOS</label>
-                        </li>
-                        <li class="form-data__filter-option">
-                            <input class="visually-hidden filter-input filter-input-radio" id="filter-pink-forAndroid" type="radio" name="product-group">
-                            <label for="filter-pink-forAndroid">Pink на Android</label>
-                        </li>
-                        <li class="form-data__filter-option">
-                            <input class="visually-hidden filter-input filter-input-radio" id="filter-pink-forWinPhone" type="radio" name="product-group">
-                            <label for="filter-pink_forWinPhone">Windows Phone</label>
-                        </li>
-                    </ul>
-                </div>
-                <div class="form-data__wrap-for-textarea">
-                    <h3 class="form-data__title-block">Опишите свои эмоции</h3>
-                    <label class="for-textarea-label" for="user-text"></label>
-                    <textarea name="area-text" id="textarea" for="user-text" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-                </div>
-                <div class="form-data__wrap-for-button">
-                    <button type="submit">
-                        <!-- кнопка отправки данных формы-->
-                        Отправить форму
-                    </button>
-                </div>
-                <p class="form-data__obligatory-fileds">* — обязательные поля</p>
+               </fieldset>
             </form>
+            
+            
         </main>
+        
+        
         <footer class="page-footer container">
             <div class="page-footer__wrapper container page-footer-index">
                 <!-- page-footer__index нужен чтобы для 320  убрать последнюю часть подвала-->

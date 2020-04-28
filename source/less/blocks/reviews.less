@@ -1,39 +1,33 @@
 .reviews {
-
-
-  padding-top: 0;
-  padding-bottom: 90px;
-  padding-left: 0;
-  padding-right: 0;
-  margin: 0 auto;/*центрует*/
-
-  /*&__list {
-
-  }*/
-
-  &__item {
-
-    padding-top: 50px;
-    padding-left: 20px;
-    /*padding-right: 20px;
-    padding-bottom: 50px;*/
-    text-align: center;
-  }
-
-  &__author {
-    font-size: 18px;
-    line-height: 1.67;
-    margin: 0;
-    margin-bottom: 20px;
-  }
-
-  &__description {
-    width: 100%;
-    font-weight: normal;
-    line-height: 2.14;
-    text-align: center;
-  }
+    
+   position: relative;
+    
+    &__slider{
+        margin: 0;
+        padding: 0;
+        padding-top: 11px;
+        padding-bottom: 0;
+        //padding-left: 20px;
+        //padding-right: 20px;
+    }
+    
+    
+    
 }
 
-/*@media (min-width: @desktop-width) {
-}*/
+
+
+@media (min-width: @tablet-width) {
+    
+}
+
+
+
+
+@media (min-width: @desktop-width) {
+    
+    reviews__slider{
+        padding: 0 20px;
+    }
+    
+}
