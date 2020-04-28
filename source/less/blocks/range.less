@@ -1,60 +1,55 @@
 .range {
-    
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 0;
-    box-sizing: border-box;
-    
-    &__bar{//шкала
-        width: 100%;
-        height: 2px;//высота шлкалы
-        
-        background: #283645;
-    }
-    
-    
-    &__toggle {//кругялшек
-        position: absolute;
-        top: -9px; //по шкале позиционируем круглешок/
-        //bottom: 50%;
-            
-        width: 14px; //размеры круглешков
-        height: 15px;
 
-        background: #f2f2f2;
-        border: 2px solid #d22856;
-        border-radius: 50%;
-        box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
-        cursor: pointer;
-    }
-    
-    
-    &__toggle--grey{//круглешок закрашиваем
-        background-color: #f2f2f2;
-    }
-    
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
 
+  &__bar {//шкала
+    width: 100%;
+    height: 2px;//высота шлкалы
+
+    background: #283645;
+  }
+
+
+  &__toggle {//кругялшек
+    position: absolute;
+    top: -9px; //по шкале позиционируем круглешок/
+    //bottom: 50%;
+
+    width: 14px; //размеры круглешков
+    height: 15px;
+
+    background: #f2f2f2;
+    border: 2px solid #d22856;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;
+  }
+
+
+  &__toggle--grey {//круглешок закрашиваем
+    background-color: #f2f2f2;
+  }
 }
 
 
 @media (min-width: @tablet-width) {
-    
-    .range__bar{
-        width: 95%; 
-    }
-    
-    
-    .range__toggle:first-child{
-        top: -9px;
-    }
-    
-    
+  .range__bar {
+    width: 95%;
+  }
+
+
+  .range__toggle:first-child {
+    top: -9px;
+  }
 }
 
 
 @media (min-width: @desktop-width) {/*для >1200*/
-    .range__bar{
-        width: 90%; 
-    }
+  .range__bar {
+    width: 90%;
+  }
 }

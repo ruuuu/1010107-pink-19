@@ -1,82 +1,73 @@
-.rewiew{
-    position: relative;
-    margin: 0;
+.rewiew {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  &__author {
+    font-size: 18px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 30px;
+    letter-spacing: normal;
+  }
+
+
+  &__author-info {
+    display: none;
+  }
+
+  &__text {
     padding: 0;
-    text-align: center;
-    
-    &__author{
-        font-size: 18px;
-        font-weight: 700;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 30px;
-        letter-spacing: normal;
-    }
-    
-    
-    &__author-info{
-        display: none;
-    }
-    
-    &__text{
-        padding: 0;
-        line-height: 30px;
-        margin: 0;
-        margin-top: 15px;
-    }
-    
-    
+    line-height: 30px;
+    margin: 0;
+    margin-top: 15px;
+  }
 }
 
 
 @media (min-width: @tablet-width) {//>660px
-    
-    .rewiew{
-        display: flex;
-        flex-direction: column-reverse;//меняет метсами флекс элементы 
-    }
-    
-    
-    .rewiew__author{
-        font-size: 20px;
-    }
-    
-    
-    .rewiew__author-info{
-        display: block;
-        font-size: 14px;
-        line-height: 30px;
-        font-weight: 400;
-        font-stretch: normal;
-        font-style: normal;
-        letter-spacing: normal;
-    }
-    
-    
-    .rewiew__text{
-        margin-top: 0;
-        margin-bottom: 34px;
-        padding: 0;
-        font-size: 18px;
-    }
-    
+
+  .rewiew {
+    display: flex;
+    flex-direction: column-reverse;//меняет метсами флекс элементы
+  }
+
+
+  .rewiew__author {
+    font-size: 20px;
+  }
+
+
+  .rewiew__author-info {
+    display: block;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+  }
+
+
+  .rewiew__text {
+    margin-top: 0;
+    margin-bottom: 34px;
+    padding: 0;
+    font-size: 18px;
+  }
 }
 
 
-
-
 @media (min-width: @desktop-width) {/*для >1200*/
-    
-    .rewiew__author{
-        font-size: 24px;
-        line-height: 30px;
-    }
-    
-    .rewiew__author-info{
-        font-size: 18px;
-    }
-    
-    
-    
-    
+
+  .rewiew__author {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .rewiew__author-info {
+    font-size: 18px;
+  }
 }

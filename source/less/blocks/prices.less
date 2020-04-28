@@ -51,51 +51,46 @@
     transform: translateX(-280px);
     transition: 0.5s;
   }
-    
-    
-  &__control{// для кнпоок переключения для слайдера
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       padding: 0;
-       margin: 37px 0;
-       
- }
-    
-    
-  &__toogle{ //кнпоки переключения для слайдера*/
-      width: 13px;
-      height: 13px;
-      
-      margin: 0 6px;
-      padding: 0;
-      background-color: #283645;
-      opacity: 0.3;
-      border:  3px solid #ffffff;
-      border-radius: 50%;
-        outline: none;
-      cursor: pointer;
+
+
+  &__control {// для кнпоок переключения для слайдера
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 37px 0;
   }
-    
-    
-  &__toogle--active{
-      opacity: 1;
-      border: 3px solid #283645;
-      background-color: #ffffff;
-  } 
-    
+
+
+  &__toogle { //кнпоки переключения для слайдера*/
+    width: 13px;
+    height: 13px;
+
+    margin: 0 6px;
+    padding: 0;
+    background-color: #283645;
+    opacity: 0.3;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+  }
+
+
+  &__toogle--active {
+    opacity: 1;
+    border: 3px solid #283645;
+    background-color: #ffffff;
+  }
 }
-
-
-
 
 
 @media (min-width: @tablet-width) {/*>1200px*/
 
   .prices {
-     padding-top: 70px;
-     padding-bottom: 70px;
-      
+    padding-top: 70px;
+    padding-bottom: 70px;
+
 
     &::before {
       /*псевдоэлемент треугольник скошенный*/
@@ -108,28 +103,21 @@
 
     margin-top: 54px;
   }
-    
-  .prices__control{// для кнпоок переключения для слайдера
-      display: none;
-      
+
+  .prices__control {// для кнпоок переключения для слайдера
+    display: none;
   }
-    
 }
-
-
 
 
 @media (min-width: @desktop-width) {/*для >1200px*/
 
   .prices {
-      padding-top: 50px;
-       padding-bottom: 98px;
+    padding-top: 50px;
+    padding-bottom: 98px;
   }
 
   .prices__wrapper {
     margin-top: 110px;
   }
-    
-    
-    
 }
