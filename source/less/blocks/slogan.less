@@ -1,48 +1,231 @@
 .slogan {
 
   /*или 100%?*/
-  line-height: 2.14;
 
-  padding: 40px 20px;
-  font-size: 14px;
+
+  padding-top: 40px;
+
+  padding-bottom: 0;
+
   text-align: center;
   color: #283645;
 
   &__information {
     margin-bottom: 0;
     margin-top: 0;
+
+    font-size: 24px;
+  }
+
+  &__information:first-child {
+    margin-bottom: 40px;
+  }
+
+
+  //для photo.html:
+  &__photo {
+    padding-bottom: 40px;
+  }
+
+
+  &__information-photo {
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.14;
+    letter-spacing: normal;
+    text-align: center;
+
+    margin-bottom: 0;
+  }
+
+  &__information-photo:first-child {
+    margin-bottom: 0;
+  }
+
+  //для form.html:
+
+  &__form {
+    //padding-bottom: 40px;
+  }
+
+
+  &__information-form {
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.14;
+    letter-spacing: normal;
+    text-align: center;
+
+    margin-bottom: 0;
+  }
+
+  &__information-form:first-child {
+    margin-bottom: 0;
   }
 }
 
 
-@media (min-width: @tablet-width) {/*для >660px*/
+@media (min-width: @tablet-width) {
+  /*для >660px*/
+
   .slogan {
 
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 100px;
-    padding-bottom: 60px;
+
+    padding-top: 60px;
+    //padding-bottom: 60px;
   }
 
   .slogan__information {
+    font-size: 40px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+  }
+
+  .slogan__information:first-child {
+    margin-bottom: 0;
+  }
+
+
+  //для photo.html:
+  .slogan__photo {
+    // padding-bottom: 40px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 70px;
+    padding-top: 90px;
+  }
+
+
+  .slogan__information-photo {
     font-size: 18px;
-    line-height: 30px;
+
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: center;
+
+    margin-bottom: 0;
+  }
+
+  .slogan__information-photo:first-child {
+    margin-bottom: 0;
+  }
+
+
+  //для form.html:
+
+  .slogan__form {
+    padding-top: 70px;
+
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+
+  .slogan__information-form {
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: center;
+
+    margin-bottom: 0;
+  }
+
+  .slogan__information-form:first-child {
+    margin-bottom: 0;
   }
 }
 
-@media (min-width: @desktop-width) {/*для >1200px*/
+
+@media (min-width: @desktop-width) {
+  /*для >1200px*/
+
   .slogan {
 
     //padding-left: 50px;
     //padding-right: 50px;
-    padding-top: 100px;
-    padding-bottom: 60px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 80px;
+    padding-bottom: 50px;
     /*display: flex;/*для идеального центрирования*/
   }
 
   .slogan__information {
     /*margin: 100px auto;/*сделаем идеальное центрирование*/
-    font-size: 18px;
+    font-size: 50px;
     line-height: 30px;
+
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+  }
+
+
+  //для photo.html:
+  .slogan__photo {
+    // padding-bottom: 40px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 70px;
+    padding-top: 90px;
+  }
+
+
+  .slogan__information-photo {
+    font-size: 18px;
+
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: center;
+
+    margin-bottom: 0;
+  }
+
+  .slogan__information-photo:first-child {
+    margin-bottom: 0;
+  }
+
+
+  //для form.html:
+
+  .slogan__form {
+    padding-top: 70px;
+
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+
+  .slogan__information-form {
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: center;
+
+    margin-bottom: 0;
+  }
+
+  .slogan__information-form:first-child {
+    margin-bottom: 0;
   }
 }
