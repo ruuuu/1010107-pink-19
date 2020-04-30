@@ -24,6 +24,16 @@
   }
 
 
+  &__label:hover::before {//наведение на чекбокс
+    border-color: #283645;
+  }
+
+
+  &__label:active::before {//нажатие на чекбокс
+    border-color: #d22856;
+  }
+
+
   &__label::after { //для галочки в чекбоксе псевдоэлемент
     content: "";
     position: absolute;
@@ -37,6 +47,21 @@
     border-bottom: 2px solid #d22856;
     border-left: 2px solid #d22856;
 
+    transform: rotate(-45deg);
+  }
+
+  &__value:checked + .checkbox__label::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 9px;
+
+    min-width: 20px;
+    max-width: 21px;
+    min-height: 9px;
+    max-height: 10px;
+    border-bottom: 2px solid #d22856;
+    border-left: 2px solid #d22856;
     transform: rotate(-45deg);
   }
 }

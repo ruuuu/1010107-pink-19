@@ -54,6 +54,14 @@
   &__button-image {
     width: 48px;
     height: 48px;
+
+    &:hover {
+      fill: rgba(40, 54, 69, 0.5);
+    }
+
+    &:active {
+      fill: #d22856;
+    }
   }
 
   &__button-image--crop {
@@ -92,7 +100,7 @@
     top: 45px;
     left: -40px;
 
-    width: calc(100% + 50px);//100%
+    width: calc(100% + 80px);//100%
     height: 1px;
     background-color: rgba(40, 54, 69, 0.1);
   }
@@ -129,29 +137,57 @@
     color: #d22856;
     border: 3px solid #d22856;
     margin-bottom: 20px;
+
+    &:hover {
+      background-color: #d22856;
+      color: #ffffff;
+    }
+
+    &:active {
+      background-color: #d22856;
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
+
 
   &__btn-round {
     display: inline-block;
     padding: 17px 16px;
     box-sizing: border-box;
     vertical-align: middle;
+
     font-size: 18px;
-    font-weight: 500;
-    line-height: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
     text-align: center;
     border-radius: 30px;
+
     cursor: pointer;
     outline: none;
   }
 
 
-  &__btn-reset {//кнопка Отмнить
+  &__btn-reset {
+    //кнопка Отмнить
     //width: 260px;
     width: 100%;
     background-color: transparent;
     color: rgba(40, 54, 69, 0.1);
     border: 3px solid rgba(40, 54, 69, 0.1);
+
+
+    &:hover {
+      border: 3px solid rgba(40, 54, 69, 0.3);
+      color: rgba(40, 54, 69, 0.3);
+    }
+
+    &:active {
+      background-color: rgba(40, 54, 69, 0.3);
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 }
 
@@ -237,7 +273,7 @@
   .application__button-image--contrast {
     width: 16px;
     padding-left: 5px;
-    padding-top: 0;
+    padding-top: 5px;
   }
 
   .application__ranges-list {//ползунки
@@ -255,6 +291,7 @@
 
 
   .application__ranges-item {
+    //position: relative;
     display: flex;
     width: 100%;
 
@@ -263,7 +300,38 @@
     margin: 0;
     margin-top: 11px;
     margin-bottom: 35px;
+
     padding: 0;
+  }
+
+
+  .application__ranges-item::after {//песвдоэлемент гор серая полоска под ползунком
+    content: "";
+    position: absolute;
+
+    top: auto;//auto 45px
+    left: -40px;
+    bottom: -24px;
+
+    width: calc(100% + 54px);//74
+    height: 1px;
+    background-color: rgba(40, 54, 69, 0.1);
+  }
+
+
+  .application__ranges-item--crop .range__toggle {
+    left: 80%;
+    top: 6px;
+  }
+
+  .application__ranges-item--fill .range__toggle {
+    left: 30%;
+    top: 2px;
+  }
+
+  .application__ranges-item--contrast .range__toggle {
+    left: 60%;
+    top: 3px;
   }
 
 

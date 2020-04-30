@@ -1,6 +1,22 @@
 .photosblocks {
-  &__panorama-like {
-    display: none;
+  &__wrap-information-panorama {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+
+  &__auth {//флекс элемент
+    order: -1;
+    margin-bottom: 10px;
+  }
+
+
+  &__panorama-like {//флекс элемент
+    //display: none;
+    order: 1;
   }
 
 
@@ -52,7 +68,11 @@
   &__description {
     font-weight: 400;
     margin-bottom: 20px;
-    height: 100px;
+    max-height: 162px;
+
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    text-overflow: ellipsis; /* Добавляем многоточие */
   }
 
 
