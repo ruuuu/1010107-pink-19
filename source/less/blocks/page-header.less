@@ -12,17 +12,6 @@
   font-weight: 300;
   line-height: 1.71;
 
-  /*background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: center -80px;
-  background-size: cover;/*чтобы фон тянулся*/
-
-
-  @media (min-resolution: @retina-dpi),
-    (min-resolution: @retina-dppx) {
-    /*background-image: url("../img/bg-back-mobile@2x.jpg");
-    background-size: 640px auto; какой размер по ширине указывать?*/
-  }
 
   &__headblock {
     /* шапка */
@@ -33,7 +22,10 @@
     height: 66px;
 
     background-color: rgba(0, 0, 0, 0.3);
-    /*rgba(40, 54, 69, 0.3);*/
+  }
+
+  &__headblock--active {
+    background-color: #283645;
   }
 
 
@@ -146,12 +138,6 @@
 
     background: url("../img/bg-back-tablet@2x.jpg") 50% 0 no-repeat;
     background-size: cover;
-
-    /*@media (min-resolution: @retina-dpi),
-      (min-resolution: @retina-dppx) {
-      background-image: url("../img/bg-back-tablet@2x.jpg");
-      background-size: 2400px auto;
-      какой размер по ширине указывать?*/
   }
 
 
@@ -194,10 +180,11 @@
       margin-top: 0;
       min-height: 630px;
       background:
-        url("../img/iphone-hand-mobile@1x.png") right bottom no-repeat,
+        url("../img/iphone-hand-tablet@1x.png") right bottom no-repeat,
         none;
-      //url("../img/bg-back-tablet@2x.jpg") 0 0 no-repeat;
-      background-size: 460px auto, cover;
+
+
+      background-size: 460px auto, cover; //460
     }
   }
 }

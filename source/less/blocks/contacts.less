@@ -2,7 +2,7 @@
 
   background-color: #ffffff;
   padding-top: 50px;
-  padding-bottom: 50px;
+
   padding-left: 5px;
   padding-right: 5px;
   margin: 0 auto;
@@ -15,6 +15,17 @@
     font-weight: 300;
   }
 
+  &__email {
+    &:hover {
+      color: #283645;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: rgba(40, 54, 69, 0.3);
+      text-decoration: none;
+    }
+  }
 
   &__questin-text {
     color: #283645;
@@ -68,6 +79,11 @@
 
 
 @media (min-width: @tablet-width) {/*для >660px */
+
+  .contacts {
+    //padding-bottom: 50px;
+  }
+
 
   .contacts__questin-text {
     text-align: center;

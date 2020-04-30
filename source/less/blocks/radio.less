@@ -3,10 +3,12 @@
     display: none;
   }
 
+
   &__label {
     position: relative;// для  радиокнпоки
     padding-left: 70px;
   }
+
 
   &__label::before {//псевдоэдемент радиокнопка
     content: "";
@@ -24,6 +26,22 @@
 
     background-color: #ffffff;
   }
+
+
+  &__label:hover::before {//наведение на радиокнопки
+    border-color: #283645;
+  }
+
+
+  &__label:active::before {//нажатие на радиокнопки
+    border-color: #d22856;
+  }
+
+
+  &__value:checked + .radio__label:active::before {//вклченная радиокнопка
+    border-color: #d22856;
+  }
+
 
   &__value:checked + &__label::after {//псевдоэдемент маленький кружочек в радиокнпоке
     content: "";

@@ -1,6 +1,22 @@
 .photosblocks {
-  &__panorama-like {
-    display: none;
+  &__wrap-information-panorama {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+
+  &__auth {//флекс элемент
+    order: -1;
+    margin-bottom: 10px;
+  }
+
+
+  &__panorama-like {//флекс элемент
+    //display: none;
+    order: 1;
   }
 
 
@@ -52,6 +68,11 @@
   &__description {
     font-weight: 400;
     margin-bottom: 20px;
+    max-height: 162px;
+
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    text-overflow: ellipsis; /* Добавляем многоточие */
   }
 
 
@@ -174,13 +195,11 @@
     }
   }
 
-  //.photosblocks__item:nth-child(3n) {
-  //  //margin-right: 20px;
-  //}
-  //
-  //.photosblocks__item:nth-child(3n) {
-  //  //margin-right: 0;
-  //}
+  .photosblocks__item:last-child,
+  .photosblocks__item:nth-child(4),
+  .photosblocks__item:nth-child(5), {
+    margin-bottom: 0;
+  }
 
   .photosblocks__image {
     //width: 300px;/*размеры фотки*/
