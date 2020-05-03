@@ -508,7 +508,12 @@
 }
 
 
-@media (min-width: @desktop-width) {/*>1200px*/
+@media (min-width: @desktop-width) {/*>960px*/
+
+  .contest__form-wrapper {
+    margin: 0 auto;
+    max-width: 960px;//чтобы приу величении рамзера экарна,  блок центровался и маргины увеличивались
+  }
 
   .contest {
     //margin-top: 35px;
@@ -528,7 +533,7 @@
   .contest__wrapper--user {
     width: 435px;
     padding: 0;
-    padding-left: 130px;
+    //padding-left: 10px;//130
 
     margin: 0;
     margin-right: 70px;
@@ -537,8 +542,8 @@
   .contest__wrapper--progress {
     margin-top: 55px;
 
-    margin-left: 120px;
-    margin-right: 120px;
+    margin-left: 0;//10
+    margin-right: 0;//10
     padding-bottom: 60px;
   }
 
@@ -552,8 +557,8 @@
     margin: 0;
     margin-top: 55px;
 
-    margin-left: 120px;
-    margin-right: 120px;
+    margin-left: 0;//10
+    margin-right: 0;//10
 
     padding-top: 37px;
     padding-right: 58px;
@@ -573,17 +578,25 @@
   }
 
   .contest__wrapper--application {
-    width: 435px;
+    //min-width: 420px;//431
+    width: 420px;
+
+
+    //max-width: 431px;
     box-sizing: border-box;
 
     margin: 0;
+
     margin-top: 37px;
 
-    padding-top: 3px;
 
+    padding-top: 3px;
     padding-right: 10px;// было 10
     padding-bottom: 0;
-    padding-left: 74px;
+    padding-left: 74px;//74
+
+    flex-grow: 1;//если останется своб простов то флекс элемент будет его занимать расширяясь
+    flex-shrink: 0;
   }
 
   .contest__legend--application {
@@ -595,8 +608,8 @@
   .contest__wrapper--comment {
     margin: 0;
 
-    margin-left: 120px;
-    margin-right: 120px;
+    margin-left: 0;//10
+    margin-right: 0;//10
     margin-top: 64px;
   }
 
@@ -609,8 +622,8 @@
 
   .contest__wrapper--send {
     margin-top: 66px;
-    margin-left: 120px;
-    margin-right: 120px;
+    margin-left: 0;//10
+    margin-right: 0;//10
 
     padding: 0;
   }

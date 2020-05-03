@@ -11,14 +11,11 @@
   color: #283645;
 
   &__information {
-    margin-bottom: 0;
+    //margin-bottom: 0;
     margin-top: 0;
 
     font-size: 24px;
-  }
-
-  &__information:first-child {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
 
@@ -69,14 +66,13 @@
 }
 
 
-@media (min-width: @tablet-width) {
-  /*для >660px*/
+@media (min-width: @tablet-width) {/*для >660px*/
 
   .slogan {
 
 
     padding-top: 60px;
-    //padding-bottom: 60px;
+    padding-bottom: 20px;
   }
 
   .slogan__information {
@@ -91,6 +87,11 @@
 
   .slogan__information:first-child {
     margin-bottom: 0;
+  }
+
+  .slogan__information--smallgap {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
 
@@ -150,8 +151,7 @@
 }
 
 
-@media (min-width: @desktop-width) {
-  /*для >1200px*/
+@media (min-width: @desktop-width) {/*для >960px*/
 
   .slogan {
 
@@ -160,18 +160,25 @@
     padding-left: 0;
     padding-right: 0;
     padding-top: 80px;
-    padding-bottom: 50px;
+    padding-bottom: 0;
     /*display: flex;/*для идеального центрирования*/
   }
 
   .slogan__information {
     /*margin: 100px auto;/*сделаем идеальное центрирование*/
     font-size: 50px;
-    line-height: 30px;
-
+    font-weight: 300;
     font-stretch: normal;
     font-style: normal;
+    line-height: normal;
     letter-spacing: normal;
+    text-align: center;
+  }
+
+
+  .slogan__information--smallgap {
+    padding-left: 117px;
+    padding-right: 117px;
   }
 
 

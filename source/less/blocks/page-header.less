@@ -24,7 +24,8 @@
     background-color: rgba(0, 0, 0, 0.3);
   }
 
-  &__headblock--active {
+
+  &__headblock--active {//когда меню открыто шапка долна быть цвета меню
     background-color: #283645;
   }
 
@@ -127,17 +128,37 @@
   }
 }
 
+//ретинизация фона  для мобилки :
+/*@media
+    (min-resolution: @retina-dpi),
+    (min-resolution: @retina-dppx) {
+        .page-header__about-app::before {
+            url("../img/iphone-hand-mobile@2x.png") 50% bottom no-repeat,
+            url("../img/bg-back-mobile@2x.jpg") 0 0 no-repeat;
+            background-size: 280px auto, cover;
+        }
 
-@media (min-width: @tablet-width) {
-  /*>660px*/
+}*/
+
+
+@media (min-width: @tablet-width) {/*>660px*/
 
 
   .page-header {
     position: relative;
     /*для соц сей и телефона*/
 
-    background: url("../img/bg-back-tablet@2x.jpg") 50% 0 no-repeat;
+    background: url("../img/bg-back-tablet@1x.jpg") 50% 0 no-repeat;
     background-size: cover;
+  }
+
+  //ретинизация фона для планшета :
+  @media (min-resolution: @retina-dpi),
+    (min-resolution: @retina-dppx) {
+    .page-header {
+      background: url("../img/bg-back-tablet@2x.jpg") 50% 0 no-repeat;
+      background-size: cover;
+    }
   }
 
 
@@ -173,18 +194,31 @@
   .page-header__about-app {
     //margin-top: -110px;
     //margin-top: 0;
-    max-width: 620px;
+    max-width: 640px;
     margin: 0 auto;
 
     &::before {
       margin-top: 0;
       min-height: 630px;
-      background:
-        url("../img/iphone-hand-tablet@1x.png") right bottom no-repeat,
+      background:                               //right bottom
+        url("../img/iphone-hand-tablet@1x.png") left  -30px bottom  no-repeat,
         none;
 
 
-      background-size: 460px auto, cover; //460
+      //background-size: 460px auto, cover; //460
+    }
+  }
+
+  //рука с телеофном для планшета:
+  @media (min-resolution: @retina-dpi),
+    (min-resolution: @retina-dppx) {
+    .page-header__about-app::before {
+      margin-top: 0;
+      //min-height: 630px;
+      background:        //right bottom
+                url("../img/iphone-hand-tablet@2x.png") left  30px bottom  no-repeat,
+        none;
+      background-size: 660px auto, cover;
     }
   }
 }
@@ -192,20 +226,22 @@
 
 @media (min-width: @desktop-width) {
 
-  /*>1200px*/
+  /*>960px*/
 
   .page-header {
 
     background: url("../img/bg-back-desktop@1x.jpg") 50% 0 no-repeat;
     background-size: cover;
-
-    //@media (min-resolution: @retina-dpi),
-    //(min-resolution: @retina-dppx) {
-    //background-image: url("../img/bg-back-desktop@2x.jpg");
-    //background-size: 5120px auto;
-    /*какой размер по ширине указывать?*/
   }
 
+  //ретинизация фона для декстопа :
+  @media (min-resolution: @retina-dpi),
+    (min-resolution: @retina-dppx) {
+    .page-header {
+      background: url("../img/bg-back-desktop@2x.jpg") 50% 0 no-repeat;
+      background-size: cover;
+    }
+  }
 
   .page-header__headblock {
     height: 110px;
@@ -213,16 +249,26 @@
     width: auto;
     /*тянется на всю ширину*/
 
-    padding-left: 130px;
-    padding-right: 130px;
+    padding-left: 40px;//130
+
+    padding-right: 40px;//130
+  }
+
+  .page-header__headblock-photo {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
 
   .page-header__logo {
-    left: 130px;
+    left: 50px;//130
 
     width: 146px;
     height: 40px;
+  }
+
+  .page-header__logo-photo {
+    left: 10px;//130
   }
 
 
@@ -240,14 +286,26 @@
 
 
   .page-header__about-app {
-    max-width: 1200px;
+    max-width: 960px;//1200
 
     &::before {
       min-height: 740px;
 
-      background:
-        url("../img/iphone-hand-desktop@1x.png") right bottom no-repeat,
+      background:                              //right bottom
+        url("../img/iphone-hand-desktop@1x.png") top 99px left 26px no-repeat,
         none;
+    }
+  }
+  //рука с телеофном для декстопа:
+  @media (min-resolution: @retina-dpi),
+    (min-resolution: @retina-dppx) {
+    .page-header__about-app::before {
+
+      min-height: 740px;
+      background:        //right bottom
+                url("../img/iphone-hand-desktop@2x.png") top 99px  no-repeat,
+        none;
+      //background-size: 700px auto, cover;
     }
   }
 }

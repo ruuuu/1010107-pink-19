@@ -12,7 +12,7 @@
         <header class="page-header">
             <div class="page-header__headblock">
                 <!-- шапка-->
-                <a class="page-header__logo" href="index.html">
+                <a class="page-header__logo page-header__logo-photo" href="index.html">
                     <!--<picture>
 <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
 <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
@@ -100,7 +100,8 @@
             <section class="slogan container slogan__form">
                 <p class="slogan__information slogan__information-form">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
             </section>
-            <form class="contest" action="https://echo.htmlacademy.ru" method="post">
+            <section  class="contest__form-wrapper">
+              <form class="contest" action="https://echo.htmlacademy.ru" method="post">
                 <fieldset class="contest__wrapper contest__wrapper--user"><!-- фио-->
                     <legend class="visually-hidden">Введите ФИО</legend>
                     <p class="contest__user-wrapper">
@@ -200,9 +201,10 @@
                     </p>
                 </div>
             </form>
+          </section>
         </main>
         <footer class="page-footer  container">
-            <div class="page-footer__wrapper  page-footer-index">
+            <div class="page-footer__wrapper  page-footer-index page-footer__form">
                 <!-- page-footer__index нужен чтобы для 320  убрать последнюю часть подвала-->
                 <!-- обертка для подвала-->
                 <div class="page-footer__logo">
