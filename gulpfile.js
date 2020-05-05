@@ -1,12 +1,17 @@
 "use strict";
 
 var gulp = require("gulp");
+var less = require("gulp-less");
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
-var less = require("gulp-less");
+var rename = require("gulp-rename");
+var imagemin = require("gulp-imagemin");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
+var csso = require("gulp-csso");
+var webp = require("gulp-webp");
 var server = require("browser-sync").create();
+var del = require("del");
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
@@ -14,12 +19,59 @@ gulp.task("css", function () {
     .pipe(sourcemap.init())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer()//автопрефиксы добавили дл разных браузеров
     ]))
+    .pipe(csso())
+    .pipe(rename("style.min.css"))//минификация
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
+
+//gulp.task("html", function () {
+  // return gulp.src("source/*.html")
+  //  .pipe(gulp.dest("build"));
+//});
+
+gulp.task("images", function () {
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
+   .pipe(imagemin([
+      imagemin.optipng({optimmizationLevel: 3}),
+      imagemin.mozjpeg({quality: 75, progressive: true}),
+      imagemin.svgo()
+
+    ]))
+
+    .pipe(gulp.dest("source/img"));
+});
+
+
+gulp.task("webp", function () {
+  return gulp.src("source/img/**/*.{png,jpg}")
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("source/img"));
+});
+
+gulp.task("clean", function () {
+  return del("build");//чистит папку build
+});
+
+gulp.task("copy", function () {
+  return gulp.src([
+    "source/fonts/**/*.{woff,woff2}",
+    "source/img/**",
+    "source/js/**",
+    "source/*.html",//сама написала
+    "source/*.ico",
+  ], {
+    base: "source"
+  })
+  .pipe(gulp.dest("build"));
+
+});
+
+
+
 
 gulp.task("server", function () {
   server.init({
@@ -34,4 +86,11 @@ gulp.task("server", function () {
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
+gulp.task("build", gulp.series(//запускает последовательность задач
+  "clean",//чистит папку build
+  "copy",//копируе все файлы в папку build
+  "css"//создает style.min.css
+));
+
+//gulp.task("build", gulp.series("css"));
 gulp.task("start", gulp.series("css", "server"));
