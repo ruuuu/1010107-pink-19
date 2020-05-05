@@ -22,7 +22,7 @@
     background-color: transparent;/*прозрачный  у бургера*/
 
     width: 50px;/*размеры кнопки бургера*/
-    height: 24px;
+    height: 25px;
 
 
     cursor: pointer;
@@ -40,7 +40,7 @@
 
     position: absolute;
     width: 50px;/*размер одной гори полосы*/
-    height: 2px;
+    height: 4px;
 
     top: 0;
     left: 0;
@@ -90,6 +90,7 @@
       height: 4px;
 
       background-color: #ffffff;
+      outline: none;
     }
 
     &::before {
@@ -133,7 +134,7 @@
 }
 
 
-@media (max-width: @mobile-planshet-width-only) { /*максимум 1200px меню открыватеся и закрывается толкь на мобилках и планшетах*/
+@media (max-width: @mobile-planshet-width-only) { /*максимум 960px меню открыватеся и закрывается толкь на мобилках и планшетах*/
 
   .main-nav--closed .site-list__item {/*меню закрыто, пункты не отобраажем*/
     display: none;
@@ -155,7 +156,8 @@
   }
 
   .main-nav--opened .main-nav__toggle {/*кнопка крестик*/
-    top: -62px;
+    top: -68px;
+    outline: none;
   }
 
   .main-nav--closed .main-nav__toggle {/*бургер кнопка*/

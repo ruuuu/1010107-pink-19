@@ -178,7 +178,7 @@
 }
 
 
-@media (min-width: @desktop-width) {/*для >1200*/
+@media (min-width: @desktop-width) {/*для >960*/
 
   .page-footer {
 
@@ -187,14 +187,30 @@
 
     &__wrapper {/*флекбокс*/
 
-      padding-left: 130px;
-      padding-right: 130px;
+      padding-left: 40px;//130
+      padding-right: 40px;//130
       padding-top: 70px;
       padding-bottom: 70px;
 
       &--index {/* или вот так .page-footer__wrapper--index*/
         display: flex;
       }
+
+      &--padding {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+
+    .page-footer__wrapper-photo {
+      padding-left: 10px;
+
+      padding-right: 10px;
+    }
+
+    &__form {
+      padding-left: 10px;
+      padding-right: 10px;
     }
 
     &__logo {

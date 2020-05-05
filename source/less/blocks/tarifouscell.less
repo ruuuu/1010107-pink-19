@@ -1,4 +1,4 @@
-.tariffs {
+.tarifouscell {
 
   display: block;
   width: 840px;
@@ -145,11 +145,11 @@
   }
 
 
-  &__feature-value--on .tariffs__feature-icon {
+  &__feature-value--on .tarifouscell__feature-icon {
     fill: #3dc644;
   }
 
-  &__feature-value--off .tariffs__feature-icon {
+  &__feature-value--off .tarifouscell__feature-icon {
     fill: #f25b26;
   }
 }
@@ -159,19 +159,19 @@
   /*>660px*/
 
 
-  .tariffs {
+  .tarifouscell {
     width: 620px;/*53*4*/
   }
 
 
-  .tariffs__header {
+  .tarifouscell__header {
     min-width: 155px;
     padding-top: 9px;
     padding-bottom: 10px;
   }
 
 
-  .tariffs__title {
+  .tarifouscell__title {
     font-size: 16px;
     line-height: 30px;
     text-transform: uppercase;
@@ -181,7 +181,7 @@
   }
 
 
-  .tariffs__value {
+  .tarifouscell__value {
     margin: 0;
     padding: 0;
 
@@ -191,7 +191,7 @@
   }
 
 
-  .tariffs__header--hit {/*хит марка*/
+  .tarifouscell__header--hit {/*хит марка*/
 
     background-image: url("../img/bg-hit-tablet.svg");
 
@@ -219,7 +219,7 @@
   }
 
 
-  .tariffs__option--feature {
+  .tarifouscell__option--feature {
     min-width: 153px;
     margin: 0;
     padding: 15px;
@@ -228,7 +228,7 @@
     border: 2px solid #f2f2f2;
   }
 
-  .tariffs__option {
+  .tarifouscell__option {
     padding-top: 2px;
     padding-bottom: 3px;
 
@@ -244,40 +244,40 @@
   }
 
 
-  .tariffs__feature {
+  .tarifouscell__feature {
     display: block;
   }
 
-  .tariffs__feature-wrapper {/*ячейка*/
+  .tarifouscell__feature-wrapper {/*ячейка*/
 
     justify-content: center;
     align-items: center;
   }
 
-  .tariffs__feature-name {
+  .tarifouscell__feature-name {
     display: none;
   }
 
-  .tariffs__feature-value--off {/*крестик*/
+  .tarifouscell__feature-value--off {/*крестик*/
     margin-top: 5px;
   }
 }
 
 
-@media (min-width: @desktop-width) {/*>1200px*/
+@media (min-width: @desktop-width) {/*>960px*/
 
-  .tariffs {
-    width: 960px;/*53*4*/
+  .tarifouscell {
+    width: 936px;/*53*4*/
   }
 
-  .tariffs__header {
+  .tarifouscell__header {
     min-width: 236px;
     padding-top: 15px;
     padding-bottom: 23px;
   }
 
 
-  .tariffs__value {
+  .tarifouscell__value {
     font-size: 24px;
     font-weight: 300;
     font-stretch: normal;
@@ -286,16 +286,16 @@
     letter-spacing: normal;
   }
 
-  .tariffs__option {
+  .tarifouscell__option {
     font-size: 18px;
     padding: 11px 25px;
   }
 
-  .tariffs__feature {
+  .tarifouscell__feature {
     //text-transform: lowercase;
   }
 
-  .tariffs__feature-value {/*иконки галочки или кретсика*/
+  .tarifouscell__feature-value {/*иконки галочки или кретсика*/
     margin-top: 5px;
   }
 }

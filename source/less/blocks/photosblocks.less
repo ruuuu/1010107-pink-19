@@ -1,10 +1,7 @@
 .photosblocks {
-  &__wrap-information-panorama {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #f2f2f2;
-    padding: 20px;
+  &__wrapper-panorama {
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
 
@@ -25,14 +22,21 @@
     margin-top: 20px;
   }
 
+  &__item:last-child {
+    margin-bottom: 0;
+  }
 
-  &__item {
+
+  &__time {
     box-sizing: border-box;
     margin-bottom: 20px;
     //background-color: #f2f2f2;
     //margin-bottom: 20px;
     /*расстояние между карточками*/
     /*box-sizing: border-box;*/
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
   }
 
 
@@ -45,6 +49,8 @@
 
 
   &__wrap-information {
+    max-height: 303px;
+
     display: flex;
     flex-direction: column;/*главная ось сверху вниз*/
 
@@ -58,19 +64,13 @@
     font-weight: bold;
   }
 
-  &__time {
-
-    font-size: 12px;
-    font-weight: 300;
-    text-transform: uppercase;
-  }
 
   &__description {
     font-weight: 400;
     margin-bottom: 20px;
-    max-height: 162px;
+    max-height: 60px;
 
-    white-space: nowrap; /* Запрещаем перенос строк */
+    //white-space: nowrap; /* Запрещаем перенос строк */
     overflow: hidden; /* Обрезаем все, что не помещается в область */
     text-overflow: ellipsis; /* Добавляем многоточие */
   }
@@ -107,6 +107,33 @@
     justify-content: space-between;
   }
 
+  .photosblocks__wrapper-panorama {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    //min-height: 0;
+
+
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .photosblocks-panorama {//флекс элемент
+    margin-right: 20px;
+    flex-grow: 1;
+  }
+
+  .photosblocks__description-panorama {//флекс элемент
+    order: 1;
+    //min-height: 0;
+    margin-bottom: 0;
+  }
+
+  .photosblocks__wrap-for-like-panorama {
+    width: 118px;
+  }
+
+
   .photosblocks__panorama-like {
     width: 118px;
   }
@@ -122,7 +149,7 @@
 
 
   .photosblocks__item {/* флекс элмент-карточка*/
-    width: 50%;
+    width: 50%; //100% /2=50%
     //margin-right: 20px;
     margin-bottom: 20px;
 
@@ -133,6 +160,12 @@
     &:nth-child(odd) {
       padding-right: 10px;
     }
+  }
+
+
+  .photosblocks__item:nth-child(5),
+  .photosblocks__item:nth-child(6) {
+    margin-bottom: 0;
   }
 
   .photosblocks__wrap-for-like {/*флексбокс*/
@@ -155,29 +188,34 @@
 }
 
 
-@media (min-width: @desktop-width) {/*для >1200*/
+@media (min-width: @desktop-width) {/*для >960*/
 
   .photosblocks {
     /*max-width: 940px;/* 300+300+20*2 тогда скролл не появится*/
-
+    margin: 0 auto;
     padding: 0;
-    padding-left: 130px;
-    padding-right: 130px;
+    padding-left: 10px; //130px;
+    padding-right: 10px; //130px;
   }
 
+  .photosblocks__wrapper-panorama {
+
+    margin: 0 auto;
+    max-width: 880px;
+  }
 
   .photosblocks__list {
     /*(300*3+20+20)*/
 
     display: flex;
-    justify-content: flex-start; /*space-between*/
+    justify-content: flex-start;
     flex-wrap: wrap; /*можно переносить флекс элементы*/
   }
 
 
   .photosblocks__item {/* флекс элмент-карточка*/
-    width: 33.3%;
-    //margin-right: 20px;
+    width: 33.3%; //100/3=33
+
     margin-bottom: 60px;
 
     &:nth-child(3n+2) {
@@ -195,9 +233,9 @@
     }
   }
 
-  .photosblocks__item:last-child,
   .photosblocks__item:nth-child(4),
-  .photosblocks__item:nth-child(5), {
+  .photosblocks__item:nth-child(5),
+  .photosblocks__item:nth-child(6), {
     margin-bottom: 0;
   }
 
