@@ -35,7 +35,7 @@ gulp.task("css", function () {
 
 gulp.task("images", function () {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
-   .pipe(imagemin([
+    .pipe(imagemin([
       imagemin.optipng({optimmizationLevel: 3}),
       imagemin.mozjpeg({quality: 75, progressive: true}),
       imagemin.svgo()
