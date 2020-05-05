@@ -22,14 +22,21 @@
     margin-top: 20px;
   }
 
+  &__item:last-child {
+    margin-bottom: 0;
+  }
 
-  &__item {
+
+  &__time {
     box-sizing: border-box;
     margin-bottom: 20px;
     //background-color: #f2f2f2;
     //margin-bottom: 20px;
     /*расстояние между карточками*/
     /*box-sizing: border-box;*/
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
   }
 
 
@@ -57,12 +64,6 @@
     font-weight: bold;
   }
 
-  &__time {
-
-    font-size: 12px;
-    font-weight: 300;
-    text-transform: uppercase;
-  }
 
   &__description {
     font-weight: 400;
@@ -161,6 +162,12 @@
     }
   }
 
+
+  .photosblocks__item:nth-child(5),
+  .photosblocks__item:nth-child(6) {
+    margin-bottom: 0;
+  }
+
   .photosblocks__wrap-for-like {/*флексбокс*/
     display: flex;
     justify-content: space-between;
@@ -226,9 +233,9 @@
     }
   }
 
-  .photosblocks__item:last-child,
   .photosblocks__item:nth-child(4),
-  .photosblocks__item:nth-child(5), {
+  .photosblocks__item:nth-child(5),
+  .photosblocks__item:nth-child(6), {
     margin-bottom: 0;
   }
 

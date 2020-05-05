@@ -1,4 +1,4 @@
-.contest {
+.formma {
   &__wrapper {
     position: relative;
     margin: 0;
@@ -266,6 +266,10 @@
     color: #d22856;
   }
 
+  &__required-label-desctop {
+    display: none;
+  }
+
   &__required-hidden {
     display: none;
   }
@@ -275,25 +279,25 @@
 @media (min-width: @tablet-width) {
   /*>660px*/
 
-  .contest {
+  .formma {
     display: flex;
     flex-wrap: wrap;
   }
 
 
-  .contest__wrapper {
+  .formma__wrapper {
     width: 100%;
   }
 
 
-  .contest__wrapper--user {
+  .formma__wrapper--user {
     order: 0;
     padding-top: 15px;
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  .contest__user-wrapper {
+  .formma__user-wrapper {
     display: flex;
     align-items: center;
 
@@ -303,20 +307,20 @@
     padding-top: 44px;
   }
 
-  .contest__label {
+  .formma__label {
     margin: 0;
     padding: 0;
     padding-right: 20px;
   }
 
 
-  .contest__input {
+  .formma__input {
     padding-right: 19px;
     padding-left: 19px;
   }
 
 
-  .contest__wrapper--progress {
+  .formma__wrapper--progress {
 
     background-color: #ffffff;
     border: 2px solid #e5e5e5;
@@ -329,29 +333,29 @@
     margin: 30px 20px;
   }
 
-  .contest__legend {
+  .formma__legend {
     position: static;
     padding-left: 25px;
     padding-right: 25px;
   }
 
 
-  .contest__legend--progress {
+  .formma__legend--progress {
     padding-left: 30px;
     padding-right: 30px;
   }
 
-  .contest__progress-list {
+  .formma__progress-list {
     padding-top: 0;
   }
 
-  .contest__progress-item {
+  .formma__progress-item {
     margin: 0;
     margin-top: 51px;
   }
 
 
-  .contest__wrapper--contacts {
+  .formma__wrapper--contacts {
     background-color: #ffffff;
     border: 2px solid #e5e5e5;
 
@@ -365,19 +369,19 @@
   }
 
 
-  .contest__legend--contacts {
+  .formma__legend--contacts {
     display: block;
 
     padding-left: 30px;
     padding-right: 30px;
   }
 
-  .contest__contacts-wrapper {
+  .formma__contacts-wrapper {
     display: flex;
     flex-direction: column-reverse;
   }
 
-  .contest__label--tel {
+  .formma__label--tel {
     position: relative;//иконкку телеофна будем позиционировать отнсиельно этого эл-та
     margin-top: 8px;
     margin-right: 0;
@@ -386,7 +390,7 @@
   }
 
 
-  .contest__label--tel::after {//псевдоэлемент дял иконки телеофна
+  .formma__label--tel::after {//псевдоэлемент дял иконки телеофна
     content: "";
     position: absolute;
     top: -72px;
@@ -402,7 +406,7 @@
     background-repeat: no-repeat;
   }
 
-  .contest__label--email {
+  .formma__label--email {
     position: relative;//позционировать будем иокнку мейла отнсительно этого элемента
 
     margin-top: 8px;
@@ -411,7 +415,7 @@
     margin-left: 20px;
   }
 
-  .contest__label--email::after {//псевдоэлемент дял иконки мейла
+  .formma__label--email::after {//псевдоэлемент дял иконки мейла
     content: "";
     position: absolute;
     top: -72px;
@@ -427,7 +431,7 @@
     background-repeat: no-repeat;
   }
 
-  .contest__wrapper--application {
+  .formma__wrapper--application {
     background-color: #ffffff;
     border: 2px solid #e5e5e5;
 
@@ -440,11 +444,11 @@
     margin: 30px 20px;
   }
 
-  .contest__application-list {
+  .formma__application-list {
     padding-top: 0;
   }
 
-  .contest__wrapper--comment {
+  .formma__wrapper--comment {
     background-color: #ffffff;
     border: 2px solid #e5e5e5;
 
@@ -458,7 +462,7 @@
     padding-right: 58px;
   }
 
-  .contest__label--comment {
+  .formma__label--comment {
     width: 185px;
 
     padding: 0 36px;
@@ -472,7 +476,7 @@
     margin-right: auto;
   }
 
-  .contest__comment-text {//текстария
+  .formma__comment-text {//текстария
 
     padding-left: 19px;
     padding-right: 19px;
@@ -482,7 +486,7 @@
     resize: none;
   }
 
-  .contest__wrapper--send {
+  .formma__wrapper--send {
     display: flex;
     align-items: center;
 
@@ -492,30 +496,34 @@
     padding: 38px 20px;
   }
 
-  .contest__btn-wrapper {
+  .formma__btn-wrapper {
     padding: 0;
     margin: 0;
   }
 
-  .contest__btn-submit {
+  .formma__btn-submit {
     width: 300px;
   }
 
-  .contest__required-text {
+  .formma__required-text {
     margin: 0;
     padding: 0;
+  }
+
+  .formma__required-label-desctop {
+    display: none;
   }
 }
 
 
 @media (min-width: @desktop-width) {/*>960px*/
 
-  .contest__form-wrapper {
+  .formma__form-wrapper {
     margin: 0 auto;
     max-width: 960px;//чтобы приу величении рамзера экарна,  блок центровался и маргины увеличивались
   }
 
-  .contest {
+  .formma {
     //margin-top: 35px;
     margin-right: 10px;
     margin-bottom: 0;
@@ -525,12 +533,12 @@
     line-height: 30px;
   }
 
-  .contest__wrapper {
+  .formma__wrapper {
     margin: 0;
   }
 
 
-  .contest__wrapper--user {
+  .formma__wrapper--user {
     width: 435px;
     padding: 0;
     //padding-left: 10px;//130
@@ -539,7 +547,7 @@
     margin-right: 70px;
   }
 
-  .contest__wrapper--progress {
+  .formma__wrapper--progress {
     margin-top: 55px;
 
     margin-left: 0;//10
@@ -547,13 +555,13 @@
     padding-bottom: 60px;
   }
 
-  .contest__progress-list {
+  .formma__progress-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  .contest__wrapper--contacts {
+  .formma__wrapper--contacts {
     margin: 0;
     margin-top: 55px;
 
@@ -566,18 +574,18 @@
     padding-left: 58px;
   }
 
-  .contest__contacts-wrapper-col {
+  .formma__contacts-wrapper-col {
     display: flex;
     justify-content: space-between;
   }
 
-  .contest__contacts-wrapper {
+  .formma__contacts-wrapper {
     width: 375px;
     margin: 0;
     padding: 0;
   }
 
-  .contest__wrapper--application {
+  .formma__wrapper--application {
     //min-width: 420px;//431
     width: 420px;
 
@@ -599,13 +607,13 @@
     flex-shrink: 0;
   }
 
-  .contest__legend--application {
+  .formma__legend--application {
     width: 330px;
     padding-right: 5px;
     padding-left: 5px;
   }
 
-  .contest__wrapper--comment {
+  .formma__wrapper--comment {
     margin: 0;
 
     margin-left: 0;//10
@@ -614,13 +622,22 @@
   }
 
 
-  .contest__comment-text {
+  .formma__comment-text {
     margin-top: 28px;
     margin-bottom: 19px;
     height: 128px;
   }
 
-  .contest__wrapper--send {
+  .formma__required-label {
+    display: none;
+  }
+
+  .formma__required-label-desctop {
+    display: block;
+  }
+
+
+  .formma__wrapper--send {
     margin-top: 66px;
     margin-left: 0;//10
     margin-right: 0;//10
@@ -628,7 +645,7 @@
     padding: 0;
   }
 
-  .contest__required-hidden {
+  .formma__required-hidden {
     display: inline;
   }
 }
