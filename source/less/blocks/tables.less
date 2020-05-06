@@ -1,0 +1,128 @@
+.tables {
+
+  position: relative;
+  /*для псевдоэлемента треугольник скошенный*/
+  width: 100%;/*тянется на всю ширину*/
+
+
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+
+  padding-top: 97px;
+  background-color: #f2f2f2;
+
+  overflow: hidden;
+  box-sizing: border-box;
+
+
+  background-image: url("../img/bg-triangle-white.svg");/*ширина у кратинки 1200px*/
+  background-repeat: no-repeat;
+  background-position: top left;
+
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    margin: 0;
+    margin-top: 60px;
+    overflow: hidden;
+  }
+
+
+  &__tarifouscell {
+    transform: translateX(0);
+  }
+
+  &__tarifouscell--base {
+    transform: translateX(280px);
+    transition: 0.5s;
+  }
+
+  &__tarifouscell--standart {
+    transform: translateX(0);
+    transition: 0.5s;
+  }
+
+  &__tarifouscell--unlim {
+    transform: translateX(-280px);
+    transition: 0.5s;
+  }
+
+
+  &__control {// для кнпоок переключения для слайдера
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 37px 0;
+  }
+
+
+  &__toogle { //кнпоки переключения для слайдера*/
+    width: 13px;
+    height: 13px;
+
+    margin: 0 6px;
+    padding: 0;
+    background-color: #283645;
+    opacity: 0.3;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+  }
+
+
+  &__toogle--active {
+    opacity: 1;
+    border: 3px solid #283645;
+    background-color: #ffffff;
+  }
+}
+
+
+@media (min-width: @tablet-width) {/*>660px*/
+
+  .tables {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+
+    &::before {
+      /*псевдоэлемент треугольник скошенный*/
+
+      height: 50px;
+    }
+  }
+
+  .tables__wrapper {
+
+    margin-top: 54px;
+  }
+
+  .tables__control {// для кнпоок переключения для слайдера
+    display: none;
+  }
+}
+
+
+@media (min-width: @desktop-width) {/*для >960px*/
+
+  .tables {
+    //padding: 0;
+    padding-top: 50px;
+    padding-bottom: 98px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .tables__wrapper {
+    margin-top: 110px;
+  }
+}
