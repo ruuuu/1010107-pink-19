@@ -34,7 +34,7 @@ gulp.task("css", function () {
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
-    .pipe(posthtml())
+    //.pipe(posthtml())
     .pipe(gulp.dest("build"));
 });
 
@@ -91,7 +91,7 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
-  gulp.watch("source/*.html", gulp.series("html", "refresh"));//заменить на refresh  on("change", server.reload)
+  gulp.watch("source/*.html", gulp.series("refresh"));//заменить на refresh  on("change", server.reload)
 });
 
 
@@ -109,6 +109,6 @@ gulp.task("build", gulp.series(//запускает последовательн
 ));
 
 
-gulp.task("build", gulp.series("css", "html"));//build запускает таски  "css" потом  "html"
+//gulp.task("build", gulp.series("css", "html"));//build запускает таски  "css" потом  "html"
 
 gulp.task("start", gulp.series("build", "server"));//сперва запустится здача build потом  задача server
