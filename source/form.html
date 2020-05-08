@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Пинк</title>
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/style.min.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header class="page-header">
@@ -262,6 +262,7 @@
                 else {
                     navMain.classList.remove('main-nav--opened'); //убираем крестик
                     navMain.classList.add('main-nav--closed'); //добавляем бургер
+                    header.classList.remove('page-header__headblock--active');//чтобы цвет был прежний
                 }
             });
         </script>
@@ -270,6 +271,6 @@
 
 
 
-        <script src="js/picturefill.js"></script>
+        <script src="js/picturefill.min.js"></script>
     </body>
 </html>
