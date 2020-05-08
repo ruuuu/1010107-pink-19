@@ -1,13 +1,17 @@
 .clock {
 
-  display: none; /*для < 660px  этот блок не отобраажем*/
+  display: none;
+  /*для < 660px  этот блок не отобраажем*/
 }
 
 
-@media (min-width: @tablet-width) {/*>660px*/
+@media (min-width: @tablet-width) {
+  /*>660px*/
 
-  .clock { /*флекбокс*/
-    max-width: 660px;/*чтобы резинился блок*/
+  .clock {
+    /*флекбокс*/
+    max-width: 660px;
+    /*чтобы резинился блок*/
     /*ширину не задаем*/
 
     margin-bottom: 90px;
@@ -19,48 +23,57 @@
     /*justify-content: space-between;*/
     flex-wrap: nowrap;
 
-    position: relative;/*позицоировать будем круг розовый с цифрой*/
+    position: relative;
+    /*позицоировать будем круг розовый с цифрой*/
   }
 
 
-  .clock__icon {/*флекс элемент*/
+  .clock__icon {
+    /*флекс элемент*/
 
     display: block;
 
     background-image: url("../img/icon-timer.svg");
-    background-size: cover; /* изображение подстроится под размер контенйра*/
+    background-size: cover;
+    /* изображение подстроится под размер контенйра*/
 
     width: 238px;
     height: 276px;
 
-    flex-grow: 1;/*чтобы круг увеличивался с увеличением ширины экрана*/
+    flex-grow: 1;
+    /*чтобы круг увеличивался с увеличением ширины экрана*/
     flex-shrink: 0;
-    flex-basis: auto;/*тоже самое что и  width*/
+    flex-basis: auto;
+    /*тоже самое что и  width*/
 
 
-    &::before {/*псевдоэлемент- розовый круг*/
+    &::before {
+      /*псевдоэлемент- розовый круг*/
       content: "";
       position: absolute;
 
-      top: 110px;
-      left: 35px;
+      top: 115px;
+      left: 36px;
 
-      width: 180px;/*размеры круга*/
-      height: 180px;
+      width: 175px;
+      /*размеры круга*/
+      height: 175px;
 
       border: 15px solid #d22856;
       border-radius: 50%;
     }
 
 
-    &::after {/*для цифры 24*/
+    &::after {
+      /*для цифры 24*/
       content: "24";
       position: absolute;
 
       top: 130px;
       left: 80px;
 
-      width: 106px;/*размеры цифры*/
+      width: 106px;
+      /*размеры цифры*/
 
       height: 70px;
       color: #d22856;
@@ -77,14 +90,16 @@
   }*/
 
 
-  .clock__wrapper {/*флекс элемент*/
+  .clock__wrapper {
+    /*флекс элемент*/
 
     padding-top: 60px;
     padding-left: 70px;
 
     flex-grow: 1;
     flex-shrink: 1;
-    flex-basis: auto;/*тоже самое чтои  width*/
+    flex-basis: auto;
+    /*тоже самое чтои  width*/
   }
 
   .clock__title {
@@ -110,15 +125,19 @@
 }
 
 
-@media (min-width: @desktop-width) {/*>960px*/
+@media (min-width: @desktop-width) {
+  /*>960px*/
 
   .clock {
-    max-width: 960px;/*чтобы резинился блок*/
+    max-width: 960px;
+    /*чтобы резинился блок*/
 
     display: flex;
 
     justify-content: flex-start;
     flex-wrap: nowrap;
+
+    margin-bottom: 40px;
 
     padding-left: 40px;
     padding-right: 40px;
@@ -129,23 +148,29 @@
   }
 
 
-  .clock__icon {/*флекс элемент*/
+  .clock__icon {
+    /*флекс элемент*/
     width: 298px;
     height: 345px;
 
-    margin-right: 70px;/*добавила*/
-    flex-grow: 0;/*чтобы круг увеличивался с увеличением ширины экрана*/
+    margin-right: 70px;
+    /*добавила*/
+    flex-grow: 0;
+    /*чтобы круг увеличивался с увеличением ширины экрана*/
     flex-shrink: 0;
-    flex-basis: auto;/*тоже самое что и  width*/
+    flex-basis: auto;
+    /*тоже самое что и  width*/
 
-    &::before {/*псевдоэлемент- розовый круг*/
+    &::before {
+      /*псевдоэлемент- розовый круг*/
       content: "";
       position: absolute;
 
       top: 70px;
       left: 65px;
 
-      width: 221px;/*размеры круга*/
+      width: 221px;
+      /*размеры круга*/
       height: 221px;
 
       border: 15px solid #d22856;
@@ -171,7 +196,8 @@
   }
 
 
-  .clock__wrapper {/*флекс элемент*/
+  .clock__wrapper {
+    /*флекс элемент*/
     width: 525px;
     padding-top: 95px;
     padding-left: 0;
