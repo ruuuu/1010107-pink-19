@@ -13,7 +13,6 @@
     letter-spacing: normal;
   }
 
-
   &__author-info {
     display: none;
   }
@@ -26,19 +25,16 @@
   }
 }
 
-
 @media (min-width: @tablet-width) {//>660px
-
   .rewiew {
     display: flex;
     flex-direction: column-reverse;//меняет метсами флекс элементы
+    max-width: 690px;
   }
-
 
   .rewiew__author {
     font-size: 20px;
   }
-
 
   .rewiew__author-info {
     display: block;
@@ -50,7 +46,6 @@
     letter-spacing: normal;
   }
 
-
   .rewiew__text {
     margin-top: 0;
     margin-bottom: 34px;
@@ -59,8 +54,10 @@
   }
 }
 
-
-@media (min-width: @desktop-width) {/*для >1200*/
+@media (min-width: @desktop-width) {/*для >960*/
+  .rewiew {
+    max-width: 690px;
+  }
 
   .rewiew__author {
     font-size: 24px;

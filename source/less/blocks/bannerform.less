@@ -8,7 +8,6 @@
   //display: flex;/*чтоб центровать надпись на баннере*/
   //justify-content: center;
   //align-items: center;
-
   //position: relative;/*тект будем поверх него размещать */
   //background-image: url("../img/back-mobile.jpg");/*back-mobile.jpg*/
   //background-size: cover;
@@ -17,17 +16,12 @@
 
 
   &__title {
-
-    position: absolute;
-
-    padding-left: 30px;
-    padding-right: 30px;
-
-
-    top: 40px;
+    position: static;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 35px;
+    margin-bottom: 30px;
     text-align: center;
-
-
     /*z-index: 50;*/
     color: #ffffff;
     font-size: 24px;
@@ -50,11 +44,13 @@
   // }
 
   .bannerform__title {
-    top: 50px;
+    position: static;
     font-size: 50px;
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-bottom: 300px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 30px;
+    margin-top: 35px;
+
   }
 }
 
@@ -67,8 +63,11 @@
   //}
 
   .bannerform__title {
-    top: 80px;
-    padding-left: 20px;
-    padding-right: 20px;
+    position: static;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
   }
 }
