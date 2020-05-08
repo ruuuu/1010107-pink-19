@@ -168,6 +168,7 @@
                     <div class="formma__wrapper formma__wrapper--send"><!--Кнопка Отправить форму-->
                         <p class="formma__btn-wrapper">
                             <button type="submit" class="formma__btn-submit btn btn-submit">Отправить форму</button>
+
                         </p>
                         <p class="formma__required-text">
                             <span class="formma__required-label">*</span> — обязательные <span class="formma__required-hidden">для заполнения </span>поля
@@ -182,11 +183,13 @@
                         </p>
                         <p class="modal__text">
                             Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+
                         </p>
                         <div class="modal__bg-err">
                             <button class="formma__button button modal__button modal__button--err" type="submit">Ок</button>
                         </div>
                     </div>
+
 
                     <div class="formma__modal modal modal--ok">
                         <p class="modal__title">
@@ -199,6 +202,7 @@
                             <button class="formma__button button modal__button modal__button--ok" type="submit">Закрыть окно</button>
                         </div>
                     </div>
+
                 </form>
             </section>
 
@@ -262,7 +266,9 @@
                 else {
                     navMain.classList.remove('main-nav--opened'); //убираем крестик
                     navMain.classList.add('main-nav--closed'); //добавляем бургер
+
                     header.classList.remove('page-header__headblock--active');//чтобы цвет был прежний
+
                 }
             });
         </script>
