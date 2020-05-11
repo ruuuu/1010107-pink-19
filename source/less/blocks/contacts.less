@@ -1,7 +1,7 @@
 .contacts {
 
   background-color: #ffffff;
-  padding-top: 50px;
+  padding-top: 45px;//50
 
   padding-left: 5px;
   padding-right: 5px;
@@ -10,9 +10,13 @@
   &__text {
     font-size: 24px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 2px;//25
     color: #d22856;
     font-weight: 300;
+  }
+
+  &__item {
+    margin-bottom: 26px;
   }
 
   &__email {
@@ -31,9 +35,13 @@
     color: #283645;
   }
 
+  &__questin-text:nth-child(2) {
+    margin-bottom: 20px;
+  }
+
 
   &__title {
-    margin-bottom: 10px;
+    margin-bottom: 0;//10
     font-size: 18px;
     text-align: center;
     font-weight: bold;
@@ -88,7 +96,7 @@
 
 @media (min-width: @tablet-width) {/*для >660px*/
   .contacts {
-    //padding-bottom: 50px;
+    padding-top: 45px;//45
   }
 
   .contacts__questin-text {
@@ -98,14 +106,20 @@
     font-weight: 300;
   }
 
+  .contacts__questin-text:nth-child(2) {
+    display: block;
+    margin-top: -10px;
+  }
 
   .contacts__list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 10px;//50
+    padding-right: 0;//50
+    padding-top: 25px;
+    margin-bottom: 25px;
   }
 
   .contacts__item {
@@ -116,7 +130,7 @@
 
   .contacts__item:nth-child(3) {
     margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 45px;//30
   }
 
   .contacts__map {
@@ -154,12 +168,15 @@
 
 
 @media (min-width: @desktop-width) {/*>960px*/
+  .contacts {
+    padding-top: 35px;
+  }
 
   .contacts__questin-text {
     font-size: 50px;
     //padding-left: 340px;
     //padding-right: 340px;
-    margin-bottom: 70px;
+    margin-bottom: 0;//70
   }
 
   .contacts__list {
@@ -168,6 +185,7 @@
     flex-wrap: wrap;
     padding-left: 40px;//148
     padding-right: 40px;//148
+    padding-top: 35px;
   }
 
   .contacts__item {
@@ -190,6 +208,10 @@
     margin: 0;
     padding-top: 0;
     order: -1;
+  }
+
+  .contacts__text {
+    margin-top: 20px;
   }
 
   .contacts__map {

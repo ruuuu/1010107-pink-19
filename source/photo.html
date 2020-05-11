@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Пинк</title>
+        <link rel="preload" href="./fonts/opensans.woff2" as="font" crossorigin="anonymous">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.min.css">
     </head>
@@ -53,8 +54,8 @@
             </div>
         </header>
         <main class="page-main">
-            <section class="slogan container slogan__photo">
-                <p class="slogan__information slogan__information-photo">
+            <section class="slogan container slogan__photo slogan__photo-top">
+                <p class="slogan__information slogan__information-photo slogan__information-photo-top">
                     Взгляните на фотографии, которые выкладывают пользователи!
                     Видите, как не хватает ваших?
                 </p>
@@ -76,7 +77,7 @@
                             <span class="photosblocks__time">(5 минут назад)</span>
                         </p>
                         <p class="photosblocks__description photosblocks__description-panorama">
-                            Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
+                            Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте вопросы!
                         </p>
                         <div class="photosblocks__wrap-for-like photosblocks__wrap-for-like-panorama">
                             <a class="photosblocks__like-link" href="">
@@ -95,18 +96,21 @@
                 <ul class="photosblocks__list">
                     <li class="photosblocks__item">
                         <picture>
-                            <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-drumset-desktop.webp 1x, img/photo-drumset-desktop@2x.webp 2x">
-                            <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-drumset-tablet.webp 1x, img/photo-drumset-tablet@2x.webp 2x">
-                            <source type="image/webp" srcset="img/photo-drumset-mobile.webp 1x, img/photo-drumset-mobile@2x.webp 2x">
-                            <source media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
-                            <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
-                            <img class="photosblocks__image" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="photo">
+                            <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-car-desktop.webp 1x, img/photo-car-desktop@2x.webp 2x">
+                            <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-car-tablet.webp 1x, img/photo-car-tablet@2x.webp 2x">
+
+                            <source type="image/webp" srcset="img/photo-car-mobile.webp 1x, img/photo-car-mobile@2x.webp 2x">
+                            <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+
+                            <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+
+                            <img class="photosblocks__image" src="img/photo1.jpg" srcset="img/photo-car-mobile@1x.jpg 1x, img/photo-car-mobile@2x.jpg 2x" alt="photo">
                         </picture>
                         <div class="photosblocks__wrap-information">
                             <div>
-                                <b class="photosblocks__author">Анна</b>
+                                <b class="photosblocks__author">Левон</b>
 
-                                <span class="photosblocks__time">(7 минут назад)</span>
+                                <span class="photosblocks__time">(5 минут назад)</span>
 
                             </div>
                             <p class="photosblocks__description">
@@ -122,20 +126,20 @@
                     </li>
                     <li class="photosblocks__item">
                         <picture>
-                            <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-car-desktop.webp 1x, img/photo-car-desktop@2x.webp 2x">
-                            <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-car-tablet.webp 1x, img/photo-car-tablet@2x.webp 2x">
-                            <source type="image/webp" srcset="img/photo-car-mobile.webp 1x, img/photo-car-mobile@2x.webp 2x">
-                            <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
-                            <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
-                            <img class="photosblocks__image" src="img/photo1.jpg" srcset="img/photo-car-mobile@1x.jpg 1x, img/photo-car-mobile@2x.jpg 2x" alt="photo">
+                            <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-drumset-desktop.webp 1x, img/photo-drumset-desktop@2x.webp 2x">
+                            <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-drumset-tablet.webp 1x, img/photo-drumset-tablet@2x.webp 2x">
+                            <source type="image/webp" srcset="img/photo-drumset-mobile.webp 1x, img/photo-drumset-mobile@2x.webp 2x">
+                            <source media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+                            <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+                            <img class="photosblocks__image" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="photo">
                         </picture>
                         <div class="photosblocks__wrap-information">
                             <div>
-                                <b class="photosblocks__author">Анна</b>
-                                <span class="photosblocks__time">(5 минут назад)</span>
+                                <b class="photosblocks__author">Антон</b>
+                                <span class="photosblocks__time">(12 часов назад)</span>
                             </div>
                             <p class="photosblocks__description">
-                                Вчера он на луну летал, сегодня в руки к нам попал.
+                                Соседи будут рады!.
                             </p>
                             <div class="photosblocks__wrap-for-like">
                                 <a class="photosblocks__like-link" href="">
@@ -156,11 +160,11 @@
                         </picture>
                         <div class="photosblocks__wrap-information">
                             <div>
-                                <b class="photosblocks__author">Анна</b>
-                                <span class="photosblocks__time">(5 минут назад)</span>
+                                <b class="photosblocks__author">Борис</b>
+                                <span class="photosblocks__time">(20 часов назад)</span>
                             </div>
                             <p class="photosblocks__description">
-                                Вчера он на луну летал, сегодня в руки к нам попал.
+                                Здесь могла быть ваша цитата о высоком и вечном.
                             </p>
                             <div class="photosblocks__wrap-for-like">
                                 <a class="photosblocks__like-link" href="">
@@ -182,11 +186,11 @@
                         </picture>
                         <div class="photosblocks__wrap-information">
                             <div>
-                                <b class="photosblocks__author">Анна</b>
-                                <span class="photosblocks__time">(5 минут назад)</span>
+                                <b class="photosblocks__author">Сергей </b>
+                                <span class="photosblocks__time">(25 часов назад)</span>
                             </div>
                             <p class="photosblocks__description">
-                                Вчера он на луну летал, сегодня в руки к нам попал.
+                                Самая кубанская в мире!
                             </p>
                             <div class="photosblocks__wrap-for-like">
                                 <a class="photosblocks__like-link" href="">
@@ -208,11 +212,11 @@
                         </picture>
                         <div class="photosblocks__wrap-information">
                             <div>
-                                <b class="photosblocks__author">Анна</b>
-                                <span class="photosblocks__time">(5 минут назад)</span>
+                                <b class="photosblocks__author">Максим</b>
+                                <span class="photosblocks__time">(40 часов назад)</span>
                             </div>
                             <p class="photosblocks__description">
-                                Вчера он на луну летал, сегодня в руки к нам попал.
+                              Где снег-то?
                             </p>
                             <div class="photosblocks__wrap-for-like">
                                 <a class="photosblocks__like-link" href="">
@@ -234,11 +238,11 @@
                         </picture>
                         <div class="photosblocks__wrap-information">
                             <div>
-                                <b class="photosblocks__author">Анна</b>
-                                <span class="photosblocks__time">(5 минут назад)</span>
+                                <b class="photosblocks__author">Надежда</b>
+                                <span class="photosblocks__time">(45 часов назад)</span>
                             </div>
                             <p class="photosblocks__description">
-                                Вчера он на луну летал, сегодня в руки к нам попал.
+                                Всем GM и взаимные лайки!
                             </p>
                             <div class="photosblocks__wrap-for-like">
                                 <a class="photosblocks__like-link" href="">
@@ -250,7 +254,7 @@
                     </li>
                 </ul>
             </section>
-            <section class="slogan container slogan__photo">
+            <section class="slogan container slogan__photo slogan__photo-bottom">
                 <p class="slogan__information slogan__information-photo">
                     Затмите их всех!
                 </p>

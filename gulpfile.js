@@ -69,7 +69,7 @@ gulp.task("copy", function () {
     "source/img/**",
     "source/js/**",
     "source/*.html",//сама написала
-    "source/*.ico",
+    "source/*.ico"
   ], {
     base: "source"
   })
@@ -90,8 +90,7 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
-  gulp.watch("source/*.html", gulp.series("refresh"));//заменить на refresh  on("change", server.reload)
-
+  gulp.watch("source/*.html", gulp.series("html", "refresh"));//заменить на refresh  on("change", server.reload)
 });
 
 
