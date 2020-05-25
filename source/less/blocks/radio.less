@@ -1,62 +1,61 @@
-.radio {
-  &__value {
-    display: none;
-  }
+
+.radio__value {
+  display: none;
+}
 
 
-  &__label {
-    position: relative;// для  радиокнпоки
-    padding-left: 70px;
-  }
+.radio__label {
+  position: relative;// для  радиокнпоки
+  padding-left: 70px;
+}
 
 
-  &__label::before {//псевдоэдемент радиокнопка
-    content: "";
-    position: absolute;
+.radio__label::before {//псевдоэдемент радиокнопка
+  content: "";
+  position: absolute;
 
-    top: -6px;
-    left: 0;
+  top: -6px;
+  left: 0;
 
-    width: 39px;//размеры круглешка
-    height: 39px;
+  width: 39px;//размеры круглешка
+  height: 39px;
 
-    box-sizing: border-box;
-    border: 2px solid #e5e5e5;
-    border-radius: 50%;
+  box-sizing: border-box;
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
 
-    background-color: #ffffff;
-  }
-
-
-  &__label:hover::before {//наведение на радиокнопки
-    border-color: #283645;
-  }
+  background-color: #ffffff;
+}
 
 
-  &__label:active::before {//нажатие на радиокнопки
-    border-color: #d22856;
-  }
+.radio__label:hover::before {//наведение на радиокнопки
+  border-color: #283645;
+}
 
 
-  &__value:checked + .radio__label:active::before {//вклченная радиокнопка
-    border-color: #d22856;
-  }
+.radio__label:active::before {//нажатие на радиокнопки
+  border-color: #d22856;
+}
 
 
-  &__value:checked + &__label::after {//псевдоэдемент маленький кружочек в радиокнпоке
-    content: "";
-    position: absolute;
+.radio__value:checked + .radio__label:active::before {//вклченная радиокнопка
+  border-color: #d22856;
+}
 
-    top: 6px;
-    left: 12px;
 
-    width: 15px;//размеры круглешка
-    height: 15px;
+.radio__value:checked + .radio__label::after {//псевдоэдемент маленький кружочек в радиокнпоке
+  content: "";
+  position: absolute;
 
-    border-radius: 50%;
+  top: 6px;
+  left: 12px;
 
-    background-color: #d22856;
-  }
+  width: 15px;//размеры круглешка
+  height: 15px;
+
+  border-radius: 50%;
+
+  background-color: #d22856;
 }
 
 

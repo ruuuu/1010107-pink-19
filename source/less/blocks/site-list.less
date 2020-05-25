@@ -1,55 +1,41 @@
 .site-list {
-
   font-weight: bold;
+}
 
+.site-list__item {//li
+  font-size: 18px;
+}
 
-  &__item {//li
-    font-size: 18px;
+.site-list__item-link { /*a*/
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  line-height: 24px;
+  box-shadow: 0 1px 0 0 var(--black), inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+
+  &:hover {
+    color: #d22856;
   }
 
-
-  &__item-link { /*a*/
-
-    display: block;
-    padding-top: 15px;
-    padding-bottom: 15px;
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-
-    color: #ffffff;
-    line-height: 24px;
-
-    box-shadow: 0 1px 0 0 var(--black), inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
-
-    &:hover {
-      color: #d22856;
-    }
-
-    &:active {
-      color: rgba(210, 40, 86, 0.3);
-    }
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
   }
 }
 
-
 @media (min-width: @tablet-width) {/*>660px*/
-
   .site-list { /*меню*/
     width: auto;/*займет всю возможную ширину*/
   }
 }
 
-
 @media (min-width: @desktop-width) {/*>1200px*/
-
   .site-list {
-
     display: flex;
     flex-direction: row;
-
     flex-wrap: wrap;
-
     justify-content: space-between;
     flex-grow: 1;
     /*ширина содержимого*/
@@ -58,38 +44,32 @@
     position: absolute;
     top: -120px;/*чтоб меню поднялось*/
     margin-left: 140px;//160
-
     font-weight: normal;
   }
-
 
   .site-list__item {//li
     margin-right: 90px;
     color: #ffffff;
     background-color: transparent;
-
-    &:last-child {
-      margin-right: 0;/*у последнего item убираем отступ*/
-    }
-
-    &--active {/*подчеркивание под пукнтом меню*/
-      position: relative;
-
-      &::after {
-        content: "";
-
-        position: absolute;
-        right: 0;
-        bottom: -10px;
-        left: 0;
-
-        height: 3px;
-
-        background: white;
-      }
-    }
   }
 
+  .site-list__item:last-child {
+    margin-right: 0;/*у последнего item убираем отступ*/
+  }
+
+  .site-list__item--active {/*подчеркивание под пукнтом меню*/
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -10px;
+      left: 0;
+      height: 3px;
+      background: white;
+    }
+  }
 
   .site-list__item-link {
     //a
@@ -99,17 +79,13 @@
     padding: 0;
     padding-top: 48px;
     /*padding-bottom: ;*/
-
     color: rgba(255, 255, 255, 1); //#ffffff;
-
     font-size: 18px;
     line-height: 1;
-
     background: none;
     /*фон убрали*/
     border: none;
   }
-
 
   .site-list__item a[href] {
     &:hover {
@@ -119,7 +95,6 @@
 
     &:active {
       color: rgba(255, 255, 255, 0.3);
-
       background-color: #000000;
       opacity: 0.3;
     }

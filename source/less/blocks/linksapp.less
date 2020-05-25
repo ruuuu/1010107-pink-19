@@ -1,109 +1,82 @@
 .linksapp {
-
-  //padding-left: 20px;
-  //padding-right: 20px;
   color: #ffffff;//#ffffff
-
   padding-top: 0;//28
   padding-bottom: 35px;
-
   max-width: 280px;
   margin: 0 auto;
+}
 
+.linksapp__download { /*ссылка Скачать приложение*/
+  display: block;
+  font-weight: bold;
+  padding: 12px 10px;
+  text-align: center;
+  margin-bottom: 30px;
+  border: 3px solid #ffffff;
+  border-radius: 30px;
+  color: white;
+  font-size: 18px;
+  line-height: 18px;
 
-  &__download { /*ссылка Скачать приложение*/
-
-    display: block;
-
-    font-weight: bold;
-    padding: 12px 10px;
-    text-align: center;
-
-    margin-bottom: 30px;
-
-    border: 3px solid #ffffff;
-    border-radius: 30px;
-
-    color: white;
-    font-size: 18px;
-    line-height: 18px;
-
-    &:hover {
-      background-color: #ffffff;
-      color: #d22856;
-    }
-
-    &:active {
-      background-color: #ffffff;
-      color: rgba(210, 40, 86, 0.3);
-    }
+  &:hover {
+    background-color: #ffffff;
+    color: #d22856;
   }
 
-
-  &__title {
-    position: absolute;
-    top: 20px;//95px
-    left: 10px;//0
-    right: 0;
-
-
-    //padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-
-    /*z-index: 50;*/
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 24px;
-
-    font-stretch: normal;
-    font-style: normal;
-
-    letter-spacing: normal;
-  }
-
-
-  &__list {
-
-    display: flex;
-    width: 206px;/* auto будет тянутся на всю ширину*/
-    justify-content: space-between;
-    margin: 0 auto;
-    align-items: baseline;
-    margin-bottom: 20px;//30
-  }
-
-
-  &__item {/*флекс элемент*/
-    width: 43px;
-  }
-
-
-  &__links-information {
-    font-size: 14px;
-    font-weight: 300;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.71;
-    letter-spacing: normal;
-    text-align: center;
+  &:active {
+    background-color: #ffffff;
+    color: rgba(210, 40, 86, 0.3);
   }
 }
 
+.linksapp__title {
+  position: absolute;
+  top: 20px;//95px
+  left: 10px;//0
+  right: 0;
+  //padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  /*z-index: 50;*/
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 24px;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+}
+
+.linksapp__list {
+  display: flex;
+  width: 206px;/* auto будет тянутся на всю ширину*/
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: baseline;
+  margin-bottom: 20px;//30
+}
+
+.linksapp__item {/*флекс элемент*/
+  width: 43px;
+}
+
+.linksapp__links-information {
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+  text-align: center;
+}
 
 @media (min-width: @tablet-width) {/*для >660px */
-
   .linksapp {
-
-
     position: absolute;
-
     top: -74px;
     left: 10px;// было 0
     bottom: 0;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -111,7 +84,6 @@
     padding-top: 0;
     padding-bottom: 0;
   }
-
 
   .linksapp__title {
     position: static;
@@ -126,7 +98,6 @@
     letter-spacing: normal;
   }
 
-
   .linksapp__download {
     flex-grow: 1;
     flex-shrink: 0;
@@ -135,7 +106,6 @@
     margin-top: 40px;
   }
 
-
   .linksapp__list {
     flex-grow: 1;
     flex-shrink: 0;
@@ -143,12 +113,10 @@
     margin-bottom: 20px;
   }
 
-
   .linksapp__links-information {
     //flex-grow: 1;
     //flex-shrink: 0;
     //flex-basis: auto;
-
     font-size: 18px;
     line-height: 1.33;
     width: 300px;/*чтоб текст не расползался с увеличенем экрана*/
@@ -156,11 +124,8 @@
   }
 }
 
-
 @media (min-width: @desktop-width) {/*>1200px*/
-
   .linksapp {
-
     left: 130px;
   }
 
@@ -176,14 +141,9 @@
     margin-bottom: 70px;
   }
 
-
   .linksapp__list {
-
     margin-bottom: 70px;
   }
-
-
   /*.linksapp__links-information{
-
   }*/
 }

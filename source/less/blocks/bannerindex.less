@@ -1,62 +1,46 @@
 .bannerindex {
-
-
   /*min-width: 320px;*/
   /*размеры картинки или пиcать 100% взять от родителя*/
   height: 462px;
-
-  display: flex;/*чтоб отценровать надпись */
+  display: flex;
+  /*чтоб отценровать надпись */
   justify-content: center;
   align-items: center;
-
-  position: relative;/*текст будем поверх него размещать и картинку-руку*/
-
-
-  &__hand {
-    width: auto;
-    /*258px*/
-    display: block;
-
-    position: absolute;
-
-    top: 170px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-
-
-    height: 286px;
-  }
-
-  &__title {
-
-
-    //position: absolute;
-
-    padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-
-    top: 0;
-    bottom: 0;
-    /*left: width/2;*/
-
-
-    /*z-index: 50;*/
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 24px;
-
-    font-stretch: normal;
-    font-style: normal;
-
-    letter-spacing: normal;
-  }
+  position: relative;
+  /*текст будем поверх него размещать и картинку-руку*/
 }
 
+.bannerindex__hand {
+  width: auto;
+  /*258px*/
+  display: block;
+  position: absolute;
+  top: 170px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 286px;
+}
+
+.bannerindex__title {
+  //position: absolute;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  /*left: width/2;*/
+  /*z-index: 50;*/
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 24px;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+}
 
 @media (min-width: @tablet-width) {
   .bannerindex {
@@ -69,13 +53,11 @@
 
   .bannerindex__title {
     position: absolute;
-
-    width: 186px;/*чтобы текст не расползался*/
-
+    width: 186px;
+    /*чтобы текст не расползался*/
     top: 90px;
     left: 80px;
     font-size: 40px;
-
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
@@ -83,19 +65,17 @@
   }
 }
 
-
-@media (min-width: @desktop-width) {/*>1200px*/
-
+@media (min-width: @desktop-width) {
+  /*>1200px*/
   .bannerindex {
     height: 854px;
   }
 
   .bannerindex__title {
-    width: 231px; /*чтобы текст не расползался*/
-
+    width: 231px;
+    /*чтобы текст не расползался*/
     top: 90px;
     left: 166px;
-
     font-size: 50px;
   }
 }

@@ -1,257 +1,230 @@
 .page-footer {
-
   background-color: #ffffff;
+}
 
+.page-footer__map {
+  position: relative;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  width: 100%;/*размер карты*/
+  height: 167px;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-position: center center;
 
-  &__map {
-    position: relative;
-
-    background-image: url("../img/bg-map-mobile@1x.png");
-    width: 100%;/*размер карты*/
-    height: 167px;
-
-    background-color: #000000;
-
+  &::before {/*псевдоэлемнет для белого треугольника*/
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-image: url("../img/bg-triangle-white-footer.svg");
     background-repeat: no-repeat;
     background-position: center center;
-
-    &::before {/*псевдоэлемнет для белого треугольника*/
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-
-      width: 100%;
-      height: 60px;
-
-      background-image: url("../img/bg-triangle-white-footer.svg");
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 100%;
-    }
-  }
-
-
-  &__wrapper {
-    /*display: none; для мобилок не отображаем*/
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background-color: white;
-
-    &--index {
-      /*нужен чтобы для 320  убрать последнюю часть подвала*/
-      display: none;
-    }
-  }
-
-
-  &__logo {
-    /*width: 147px; ширина содержимого*/
-
-    margin-bottom: 30px;
-  }
-
-
-  &__logo-mobiletablet-icon {/*для мобилки и планшета отображаем*/
-    display: block;
-  }
-
-  &__logo-decstop-icon {/*для дектопа не отображаем*/
-    display: none;
-  }
-
-
-  &__logo-mobiletablet-icon-footer:hover {/* для моб+планшет при наведении*/
-    fill: #d22856;
-  }
-
-  &__logo-mobiletablet-icon-footer:active {/*для моб+планшет при нажатии*/
-    fill: rgba(40, 54, 69, 0.1);
-  }
-
-
-  &__logo-decstop-icon-footer:hover {/*для декстопа*/
-    fill: #d22856;
-  }
-
-  &__logo-decstop-icon-footer:active {/*для декстопа*/
-    fill: rgba(40, 54, 69, 0.1);
-  }
-
-
-  &__social {
-
-    width: 178px; /*ширина содержимого*/
-
-    margin-bottom: 30px;
-  }
-
-
-  &__copyright {
-
-    //width: 168px;/*ширина содержимого*/
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 14px;
-    line-height: 18px;
+    background-size: 100%;
   }
 }
 
+.page-footer__wrapper {
+  /*display: none; для мобилок не отображаем*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: white;
+
+  &--index {
+    /*нужен чтобы для 320  убрать последнюю часть подвала*/
+    display: none;
+  }
+}
+
+.page-footer__logo {
+  /*width: 147px; ширина содержимого*/
+  margin-bottom: 30px;
+}
+
+.page-footer__logo-link {
+  fill: #283645;
+
+  &:hover {
+    fill: #d22856;
+  }
+
+  &:active {
+    fill: rgba(40, 54, 69, 0.1);
+  }
+}
+
+.page-footer__logo-mobiletablet-icon {/*для мобилки и планшета отображаем*/
+  display: block;
+}
+
+.page-footer__logo-decstop-icon {/*для дектопа не отображаем*/
+  display: none;
+}
+
+.page-footer__logo-mobiletablet-icon-footer {
+  fill: #d22856;
+}
+
+.page-footer__logo-mobiletablet-icon-footer:hover {/* для моб+планшет при наведении*/
+  // fill: #d22856;
+}
+
+.page-footer__logo-mobiletablet-icon-footer:active {/*для моб+планшет при нажатии*/
+  //fill: rgba(40, 54, 69, 0.1);
+}
+
+.page-footer__social {
+  width: 178px; /*ширина содержимого*/
+  margin-bottom: 30px;
+}
+
+.page-footer__copyright {
+  //width: 168px;/*ширина содержимого*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 18px;
+}
 
 @media (min-width: @tablet-width) {/*для >660px;*/
 
-  .page-footer {
-    &__map {
-      @media (min-width: 768px) and (min-resolution: 144dpi),
-        (min-width: 768px) and (min-resolution: 1.5dppx) {
-
-        background-image: url("../../img/bg-map-tablet@2x.jpg");
-        background-size: 100% 848px;
-        background-position: center 0;
-      }
-
-
-      &::before {/*псевдоэлемнет для белого треугольника*/
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-
-        width: 305px;
-        height: 60px;
-
-        background-image: url("../../img/");
-        background-repeat: no-repeat;
-        background-position: center 0;
-        background-size: auto;
-      }
+  .page-footer__map {
+    @media (min-width: 768px) and (min-resolution: 144dpi),
+      (min-width: 768px) and (min-resolution: 1.5dppx) {
+      background-image: url("../../img/bg-map-tablet@2x.jpg");
+      background-size: 100% 848px;
+      background-position: center 0;
     }
+  }
 
+  .page-footer::before {/*псевдоэлемнет для белого треугольника*/
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 305px;
+    height: 60px;
+    background-image: url("../../img/");
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: auto;
+  }
 
-    &__wrapper {/*флексбокс*/
-
+  .page-footer__wrapper {/*флексбокс*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    /*тянется по ширине экрана, 660px*/
+    &--index {
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-
-      width: auto;
-      /*тянется по ширине экрана, 660px*/
-
-      &--index {
-        display: flex;
-        padding-left: 10px;//добавила
-        padding-right: 10px;
-      }
+      padding-left: 10px;//добавила
+      padding-right: 10px;
     }
+  }
 
+  .page-footer__logo {/*флекс элемент*/
+    /*width: 147px;*/
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: -20px;
+  }
 
-    &__logo {/*флекс элемент*/
-      /*width: 147px;*/
-      padding: 0;
+  .page-footer__social {/*флекс элемент*/
+    /*width: 170px;*/
+    padding: 0;
+    margin-bottom: 0;
+  }
 
-      margin-bottom: 0;
-      margin-top: -20px;
-    }
-
-
-    &__social {/*флекс элемент*/
-      /*width: 170px;*/
-      padding: 0;
-      margin-bottom: 0;
-    }
-
-
-    &__copyright {/*флекс элемент*/
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-
-      padding: 0;
-      margin-bottom: 0;
-    }
+  .page-footer__copyright {/*флекс элемент*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 0;
   }
 }
 
-
 @media (min-width: @desktop-width) {/*для >960*/
-
   .page-footer {
-
     padding-left: 0;
     padding-right: 0;
+  }
 
+  .page-footer__wrapper {/*флекбокс*/
+    padding-left: 40px;//130
+    padding-right: 40px;//130
+    padding-top: 50px;//70
+    padding-bottom: 50px;
 
-    &__wrapper {/*флекбокс*/
-
-      padding-left: 40px;//130
-      padding-right: 40px;//130
-      padding-top: 50px;//70
-      padding-bottom: 50px;
-
-      &--index {/* или вот так .page-footer__wrapper--index*/
-        display: flex;
-      }
-
-      &--padding {
-        padding-left: 40px;
-        padding-right: 40px;
-      }
-    }
-
-    .page-footer__wrapper-photo {
-      padding-left: 10px;
-
-      padding-right: 10px;
-      padding-top: 95px;
-    }
-
-    &__form {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-
-    &__logo {
-      /*флекс элемент*/
-      /*width: 147px;*/
-      padding: 0;
-      margin-bottom: 0;
-    }
-
-
-    &__logo-mobiletablet-icon {/*для мобилки и планшета отображаем*/
-      display: none;
-    }
-
-    &__logo-decstop-icon {/*для дектопа не отображаем*/
-      display: block;
-    }
-
-
-    &__social {
-      /*флекс элемент*/
-      /*width: 170px;*/
-      padding: 0;
-      margin-bottom: 0;
-    }
-
-    &__copyright {
-      /*флекс элемент*/
-      width: 150px;
+    &--index {/* или вот так .page-footer__wrapper--index*/
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      padding: 0;
-      margin-bottom: 0;
     }
+
+    &--padding {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  .page-footer__wrapper-photo {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 95px;
+  }
+
+  .page-footer__form {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .page-footer__logo {
+    /*флекс элемент*/
+    /*width: 147px;*/
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .page-footer__logo-link {
+    fill: #283645;
+
+    &:hover {
+      fill: #d22856;
+    }
+
+    &:active {
+      fill: rgba(40, 54, 69, 0.1);
+    }
+  }
+
+  .page-footer__logo-mobiletablet-icon {/*для мобилки и планшета  не отображаем*/
+    display: none;
+  }
+
+  .page-footer__logo-decstop-icon {/*для дектопа  отображаем*/
+    display: block;
+  }
+
+  .page-footer__social {
+    /*флекс элемент*/
+    /*width: 170px;*/
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .page-footer__copyright {
+    /*флекс элемент*/
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 0;
   }
 }

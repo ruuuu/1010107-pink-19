@@ -1,39 +1,40 @@
 .social {
   width: 178px;
+}
 
+.social__list {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
 
-  &__list {
+.social__item {
+  /*стили будут*/
+}
 
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+.social__button {
+  display: flex;
+  /*Чтобы выравнять иконки в кнопках делам каждую кнопку флес конте-ом*/
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  background-color: #fefefe;
+  border: 3px solid  rgba(40, 54, 69, 0.1);
+  border-radius: 30px;
+  fill: #d22856;
+
+  &:hover {/*при наведении кнопку*/
+    border: 3px solid  #283645;
   }
 
-  &__item {
-    /*стили будут*/
+  &:active {/*принажатии н кнопку*/
+    border: 3px solid rgba(40, 54, 69, 0.2);
   }
+}
 
-
-  &__button {
-    display: flex;
-    /*Чтобы выравнять иконки в кнопках делам каждую кнопку флес конте-ом*/
-
-    align-items: center;
-    justify-content: center;
-    width: 46px;
-    height: 46px;
-
-    background-color: #fefefe;
-    border: 3px solid  rgba(40, 54, 69, 0.1);
-    border-radius: 30px;
-
-
-    &:hover {/*при наведении кнопку*/
-      border: 3px solid  #283645;
-    }
-
-    &:active {/*принажатии н кнопку*/
-      border: 3px solid rgba(40, 54, 69, 0.2);
-    }
+.social__button--soc {
+  &:active {
+    fill: rgba(210, 40, 86, 0.3);
   }
 }

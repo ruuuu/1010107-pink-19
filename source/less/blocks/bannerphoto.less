@@ -1,46 +1,36 @@
 .bannerphoto {
-
-
   /*min-width: 320px;*/
   /*размеры картинки или пиcать 100% взять от родителя*/
   height: 170px;//190
   //background: url("../img/bg-back-mobile@1x.jpg") 50% 0 no-repeat;
-
   background: url("../img/bg-back-mobile@1x.jpg") 50% 20% no-repeat;
   background-size: cover;
-
   //background-position:  top center;
-  //background-position: center;
-
-
-  &__title {
-
-    position: static;
-
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: -40px;//-30
-    margin-bottom: 10px;
-    text-align: center;
-
-    /*z-index: 50;*/
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: 300;
-
-
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-  }
 }
 
+.bannerphoto__title {
+  position: static;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: -40px;//-30
+  margin-bottom: 10px;
+  text-align: center;
+  /*z-index: 50;*/
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
 
-@media (min-width: @tablet-width) {
+@media (min-width: @tablet-width) {//>660
   .bannerphoto {
     background-image: none;
-    height: 320px;//340
+    min-height: 320px;//если будет больше текста, то он не будет выпадать из блока
+    //padding-top: 20px;
+    //padding-bottom: 20px;
     background-position: 0 -175px;
     /*поднимаем фон вверх под шапку*/
   }
@@ -52,7 +42,6 @@
     font-size: 50px;
   }
 }
-
 
 @media (min-width: @desktop-width) {
   .bannerphoto {

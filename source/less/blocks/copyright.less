@@ -1,53 +1,43 @@
 .copyright {
-
   display: flex;
-
-
-  &__text {/*флекс элемент*/
-
-    display: block;
-    margin-right: 20px;
-
-    font-size: 14px;
-    line-height: 18px;
-
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-
-    letter-spacing: normal;
-  }
-
-  &__link {
-    display: block;
-  }
-
-
-  &__icon:hover {
-    fill: #283645;
-  }
-
-
-  &__icon:active {
-    /*при наведении на лого*/
-    fill: rgba(40, 54, 69, 0.3);
-  }
 }
 
+.copyright__text {/*флекс элемент*/
+  display: block;
+  margin-right: 20px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+}
+
+.copyright__link {
+  display: block;
+}
+
+.copyright__icon {
+  fill: #d22856;
+}
+
+.copyright__icon:hover {
+  fill: #283645;
+}
+
+.copyright__icon:active {
+  fill: rgba(40, 54, 69, 0.3);
+}
 
 @media (min-width: @tablet-width) {/*>660px*/
   margin-right: 15px;
 }
 
-
 @media (min-width: @desktop-width) {/*>1200px*/
-
-  .copyright {
-    &__text {
-      /*флекс элемент*/
-      margin-right: 10px;
-      font-size: 18px;
-      line-height: 18px;
-    }
+  .copyright__text {
+    /*флекс элемент*/
+    margin-right: 10px;
+    font-size: 18px;
+    line-height: 18px;
   }
 }

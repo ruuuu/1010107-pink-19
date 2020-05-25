@@ -1,74 +1,58 @@
 .panorama {
-
   position: relative;/*для  розовой иконки Панорама дня*/
-
-  &__image {
-    width: 100%;
-    height: 137px;
-    /*размеры картинки*/
-    display: block;
-    object-fit: cover;
-  }
-
-  &::before {
-    content: "Панорама дня";
-    position: absolute;
-
-    top: 0;
-    right: 20px;
-
-
-    padding-left: 20px;
-    padding-right: 20px;
-
-
-    padding-top: 7px;
-    padding-bottom: 7px;
-    margin: 0;
-
-    background-color: #d22856;
-    color: #ffffff;
-
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 24px;
-    text-transform: uppercase;
-  }
 }
 
+.panorama__image {
+  width: 100%;
+  height: 137px;
+  /*размеры картинки*/
+  display: block;
+  object-fit: cover;
+}
+
+.panorama::before {
+  content: "Панорама дня";
+  position: absolute;
+  top: 0;
+  right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin: 0;
+  background-color: #d22856;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
 
 @media (min-width: @tablet-width) { /*>660*/
+  .panorama__image {
+    /*размеры картинки*/
+    height: 509px;
+  }
 
-  .panorama {
-    &__image {
-      /*размеры картинки*/
-      height: 509px;
-    }
-
-    &::before {
-      top: 57px;
-    }
+  .panorama::before {
+    top: 57px;
   }
 }
-
 
 @media (min-width: @desktop-width) {
   /*>960*/
+  .panorama__descrip {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
-  .panorama {
-    &__descrip {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
+  .panorama__image {
+    /*размеры картинки*/
+    /*height:506px;*/
+  }
 
-    &__image {
-      /*размеры картинки*/
-      /*height:506px;*/
-    }
-
-    &::before {
-      top: 54px;
-      right: 130px;
-    }
+  .panorama::before {
+    top: 54px;
+    right: 130px;
   }
 }

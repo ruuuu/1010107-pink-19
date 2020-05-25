@@ -13,7 +13,8 @@ var csso = require("gulp-csso");
 var webp = require("gulp-webp");
 var server = require("browser-sync").create();
 var del = require("del");
-
+var svgstore = require("gulp-svgstore");
+var include = require("posthtml-include");
 
 
 gulp.task("css", function () {
@@ -32,10 +33,19 @@ gulp.task("css", function () {
 });
 
 
+
+
+
 gulp.task("html", function () {
   return gulp.src("source/*.html")
+    .pipe(posthtml([//добавила
+      include()//добавила
+    ])) //добавила
     .pipe(gulp.dest("build"));
 });
+
+
+
 
 
 gulp.task("images", function () {
@@ -56,6 +66,25 @@ gulp.task("webp", function () {
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("source/img"));
 });
+
+
+
+
+//-------------------
+
+gulp.task("sprite", function () {//задачу добавила
+  return gulp.src("source/img/*.svg")// icon-*.svg
+    .pipe(svgstore({
+      inlineSvg: true //превращает икоки в спрайт и убирет комментарив  них ненужный мусор
+     }))
+    .pipe(rename("sprite.svg"))//собрет все ионки в один файл с названием sprite.svg
+    .pipe(gulp.dest("build/img"));//build
+});
+
+
+
+
+
 
 
 gulp.task("clean", function () {
@@ -90,7 +119,8 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
-  gulp.watch("source/*.html", gulp.series("html", "refresh"));//заменить на refresh  on("change", server.reload)
+  gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));  //добавила, как только изменятся svg шки, так запустится задача sprite, потмо html и перезгаружает станицу("refresh")
+  gulp.watch("source/*.html", gulp.series("html", "refresh"));//заменила этим вот это   refresh  on("change", server.reload)
 });
 
 
@@ -104,12 +134,13 @@ gulp.task("build", gulp.series(//запускает последовательн
   "clean",//чистит папку build
   "copy",//копируе все файлы в папку build
   "css",//создает style.min.css с префиксами
+  "sprite",//добавила задачу
   "html"
 ));
 
 
 
-//gulp.task("build", gulp.series("css", "html"));//build запускает таски  "css" потом  "html"
+//gulp.task("build", gulp.series("css", "sprite", html"));//build запускает таски  "css" потом  "html"
 
 
-gulp.task("start", gulp.series("build", "server"));//сперва запустится здача build потом  задача server
+gulp.task("start", gulp.series("build", "server"));//команда npm run start сперва запустит  здачу build потом  задача server

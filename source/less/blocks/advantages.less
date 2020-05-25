@@ -1,76 +1,65 @@
-.advantages {
-  &__list {
-
-    position: relative;
-    /*треугоьник позиционируем*/
-    margin: 0;
-    //margin-top: 50px;
-
-    padding: 0;
-    padding-left: 20px;
-    padding-right: 20px;
-
-    padding-top: 25px;
-  }
-
-
-  &__item {
-
-    margin-bottom: 30px;//40
-    text-align: center;
-    margin-right: 0;
-  }
-
-
-  &__item:first-child {
-    padding-top: 14px; //20
-  }
-
-
-  &__item:last-child {
-    padding-bottom: 322px;/*чтобы вставить телеофн*/
-    background-image: url("../img/iphone-screen-mobile@1x.png");
-    background-repeat: no-repeat;
-    background-position: bottom -43px center;
-  }
-
-
-  &__item img {
-    display: none;
-  }
-
-
-  &__title {
-    margin: 0;
-    margin-bottom: 10px;
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  &__description {
-    margin: 0;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 24px;
-    color: #283645;
-  }
-
-
-  &__image {
-    margin: 0 auto;
-    /*центруем телефон*/
-    margin-bottom: 0;
-    width: 153px;
-    /*рмерв картинки*/
-    height: 280px;
-  }
+.advantages__list {
+  position: relative;
+  /*треугоьник позиционируем*/
+  margin: 0;
+  //margin-top: 50px;
+  padding: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 25px;
 }
 
+.advantages__item {
+  margin-bottom: 30px; //40
+  text-align: center;
+  margin-right: 0;
+}
+
+.advantages__item:first-child {
+  padding-top: 14px; //20
+}
+
+.advantages__item:last-child {
+  padding-bottom: 322px;
+  /*чтобы вставить телеофн*/
+  background-image: url("../img/iphone-screen-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: bottom -43px center;
+}
+
+.advantages__item img {
+  display: none;
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.advantages__description {
+  margin: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  color: #283645;
+}
+
+.advantages__image {
+  margin: 0 auto;
+  /*центруем телефон*/
+  margin-bottom: 0;
+  width: 153px;
+  /*рмерв картинки*/
+  height: 280px;
+}
 //ретинизация телефона для мобилки :
 @media (min-resolution: @retina-dpi),
   (min-resolution: @retina-dppx) {
   .advantages__item:last-child {
-    padding-bottom: 292px;/*чтобы вставить телеофн*/
+    padding-bottom: 292px;
+    /*чтобы вставить телеофн*/
     background-image: url("../img/iphone-screen-mobile@2x.png");
     background-repeat: no-repeat;
     background-size: 157px 300px;
@@ -78,13 +67,11 @@
   }
 }
 
-
-@media (min-width: @tablet-width) {/*>660px*/
-
-
-  .advantages {/*флексбокс*/
+@media (min-width: @tablet-width) {
+  /*>660px*/
+  .advantages {
+    /*флексбокс*/
     /*ширину не задаем*/
-
     max-width: 660px;
     margin: 0 auto;
     box-sizing: border-box;
@@ -93,38 +80,32 @@
     padding-right: 0;
   }
 
-
   .advantages__list {
     /*флекс элемент*/
     /*width: 293px;*/
     //max-width: 660px;
     //margin: 0 auto;
-
-
-    position: relative;//телеофн будет позиицонировать относительно этого элемента
+    position: relative; //телеофн будет позиицонировать относительно этого элемента
     display: flex;
-    flex-direction: column;/*главная ось направлена сверху вниз*/
-    align-items: flex-end; /*элементы списка будут справа*/
+    flex-direction: column;
+    /*главная ось направлена сверху вниз*/
+    align-items: flex-end;
+    /*элементы списка будут справа*/
   }
 
-
-  .advantages__list::after {/*для телефона псевдоэлемент*/
+  .advantages__list::after {
+    /*для телефона псевдоэлемент*/
     content: "";
     position: absolute;
     //bottom: 0;
-
-    top: -25px;//-1
-
+    top: -25px; //-1
     left: 20px;
-
     width: 268px;
-    height: 481px;//481
+    height: 481px; //481
     background-image: url("../img/iphone-screen-3-tablet@1x.png");
     background-repeat: no-repeat;
-
     margin-right: 40px;
   }
-
   //ретинизация телефона для планшета :
   @media (min-resolution: @retina-dpi),
     (min-resolution: @retina-dppx) {
@@ -132,37 +113,33 @@
       content: "";
       position: absolute;
       bottom: 0;
-
       top: -25px;
-
       left: 20px;
       width: 268px;
       height: 481px;
       background-image: url("../img/iphone-screen-3-tablet@2x.png");
-      background-size: contain;//268px 500px;
+      background-size: contain; //268px 500px;
       //background-position: bottom 90px;
       background-repeat: no-repeat;
     }
   }
 
-
-  .advantages__item {/*флекс элемент*/
+  .advantages__item {
+    /*флекс элемент*/
     width: 320px;
     //flex-basis:auto;
     margin-bottom: 38px;
     flex-grow: 1;
     flex-shrink: 1;
     padding: 0;
-    padding-left: 20px;//10
+    padding-left: 20px; //10
     text-align: left;
     box-sizing: border-box;
   }
 
-
   .advantages__item:first-child {
-    padding-top: 15px;//50
+    padding-top: 15px; //50
   }
-
 
   .advantages__item:last-child {
     padding-bottom: 0;
@@ -171,10 +148,8 @@
   }
 }
 
-
-@media (min-width: @desktop-width) {/*>960*/
-
-
+@media (min-width: @desktop-width) {
+  /*>960*/
   .advantages {
     max-width: 960px;
     padding-left: 40px;
@@ -183,54 +158,37 @@
     /*если экран будет больше, то будет центроваться*/
   }
 
-
   .advantages__list {
     //флексбокс,
-
-
     /*940 = 1200-130(гориз. паддинги)*2 */
     //position: relative;
-
     display: flex;
     flex-direction: row;
-    justify-content: space-between;//flex-start
+    justify-content: space-between;
     align-items: flex-start;
     /*расстояние между телеофнами по 20 px*/
     flex-wrap: nowrap;
     text-align: center;
-
     margin-bottom: 0;
-
-
     margin-top: 75px;
-
-
-    //padding: 0;
-
-
-    //padding-left: 130px;
-    //padding-right: 130px;
   }
 
-
-  .advantages__list::after {/*для телефона псевдоэлемент*/
+  .advantages__list::after {
+    /*для телефона псевдоэлемент*/
     display: none;
   }
 
   .advantages__item {
-    position: relative;//позиционируем телефонs отноисельно этого
+    position: relative; //позиционируем телефонs отноисельно этого
     width: 240px;
     padding: 0;
-    padding-top: 340px;//300
+    padding-top: 340px; //300
     //box-sizing: border-box;
     flex-grow: 0;
   }
 
-
   .advantages__item:nth-child(1) {
-    padding-top: 340px;//300
-    //padding-right: 68px;
-    //padding-left: 0;
+    padding-top: 340px; //300
   }
 
   .advantages__item:nth-child(2) {
@@ -243,105 +201,83 @@
     //padding-right: 0;
   }
 
-
-  .advantages__item::before {// псевдоэлемент для телефонов
+  .advantages__item::before {
+    // псевдоэлемент для телефонов
     content: "";
     position: absolute;
-
-    top: -35px;//0
+    top: -35px; //0
     left: 0;
-
     width: 240px;
     height: 300px;
-
     background-repeat: no-repeat;
     background-position: center;
   }
-
 
   .advantages__item:nth-child(1)::before {
     background-image: url("../img/iphone-screen-2-desktop@1x.png");
   }
 
-
   .advantages__item:nth-child(2)::before {
     background-image: url("../img/iphone-screen-1-desktop@1x.png");
   }
 
-
   .advantages__item:nth-child(3)::before {
     background-image: url("../img/iphone-screen-3-desktop@1x.png");
   }
-
-
-  //ретинизация телефона для декстопа:
+  //ретинизация телефона1 для декстопа:
   @media (min-resolution: @retina-dpi),
     (min-resolution: @retina-dppx) {
     .advantages__item:nth-child(1)::before {
       content: "";
       position: absolute;
-
       top: 0;
       left: 0;
-
       width: 240px;
       height: 300px;
-
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
       background-image: url("../img/iphone-screen-2-desktop@2x.png");
     }
   }
-  //ретинизация телефона для декстопа:
+  //ретинизация телефона2 для декстопа:
   @media (min-resolution: @retina-dpi),
     (min-resolution: @retina-dppx) {
     .advantages__item:nth-child(2)::before {
       content: "";
       position: absolute;
-
       top: 0;
       left: 0;
-
       width: 240px;
       height: 300px;
-
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
       background-image: url("../img/iphone-screen-1-desktop@2x.png");
     }
   }
-
-  //ретинизация телефона для декстопа:
+  //ретинизация телефона3 для декстопа:
   @media (min-resolution: @retina-dpi),
     (min-resolution: @retina-dppx) {
     .advantages__item:nth-child(3)::before {
       content: "";
       position: absolute;
-
       top: 0;
       left: 0;
-
       width: 240px;
       height: 300px;
-
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
       background-image: url("../img/iphone-screen-3-desktop@2x.png");
     }
   }
-
-
   /*.advantages__item img {
         display: block;
         margin-bottom: 55px;
         width: 292px;
         height: 302px;
     }*/
-
-
   .advantages__title {
     //width: 222px;
     /*чтобы тексn не разъзжался*/
@@ -353,27 +289,22 @@
     letter-spacing: normal;
     padding: 0;
     margin: 0;
-
-    margin-top: -20px;//20
+    margin-top: -20px; //20
     margin-bottom: 20px;
     color: var(--black);
   }
 
-
   .advantages__description {
-
-    width: 238px;//231
+    width: 238px; //231
     margin-right: 0;
     text-align: center;
     font-size: 18px;
     line-height: 30px;
   }
 
-
   .advantages__image {
     display: none;
   }
-
 
   .advantages__phone {
     display: none;

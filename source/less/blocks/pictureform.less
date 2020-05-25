@@ -1,205 +1,203 @@
-.pictureform {
-  &__wrapper {
-    background-color: #f2f2f2;
-    padding-top: 20px;
-    padding-bottom: 40px;
-    //margin-bottom: 30px;
+.pictureform__wrapper {
+  background-color: #f2f2f2;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  //margin-bottom: 30px;
+}
+
+.pictureform__form {
+  margin: 0;
+  padding: 0;
+}
+
+.pictureform__wrapper-picture {
+  //margin-bottom: 40px;
+  width: 100%;
+}
+
+.pictureform__image {
+  width: 100%;// чтобтянулась на всю ширину экарна
+  height: 100%;//чтоб прилегал к границе контейнера
+}
+
+.pictureform__buttons-list {//кнопки филтров флексбокс
+  //max-width: 500px;//чтобы кнпоки не растягивались по щширине экрна
+  margin: 40px auto;//чтоб ценровалось при увеличнеее экрана
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pictureform__button {//кнопка фильтра флекс элемент
+  width: 48px;//размеры кнопки
+  height: 48px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-style: none;//рамку убираем
+  outline: none;
+  cursor: pointer;
+}
+
+.pictureform__button--crop {
+  background-image: url("../img/icon-editor-crop.svg");
+  background-position: center;
+  background-size: 48px 48px;
+  padding-left: 3px;
+
+  &:hover {
+    background-image: url("../img/icon-editor-crop-hover.svg");
   }
 
-
-  &__form {
-    margin: 0;
-    padding: 0;
-  }
-
-
-  &__wrapper-picture {
-    //margin-bottom: 40px;
-    width: 100%;
-  }
-
-  &__image {
-    width: 100%;// чтобтянулась на всю ширину экарна
-    height: 100%;//чтоб прилегал к границе контейнера
-  }
-
-
-  &__buttons-list {//кнопки филтров флексбокс
-
-    //max-width: 500px;//чтобы кнпоки не растягивались по щширине экрна
-    margin: 40px auto;//чтоб ценровалось при увеличнеее экрана
-
-
-    display: flex;
-    justify-content: space-around;
-
-    align-items: center;
-  }
-
-
-  &__button {//кнопка фильтра флекс элемент
-    width: 48px;//размеры кнопки
-    height: 48px;
-
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: transparent;
-    border-style: none;//рамку убираем
-    outline: none;
-    cursor: pointer;
-  }
-
-
-  &__button-image {
-    width: 48px;
-    height: 48px;
-
-    &:hover {
-      fill: rgba(40, 54, 69, 0.5);
-    }
-
-    &:active {
-      fill: #d22856;
-    }
-  }
-
-  &__button-image--contrast {
-    width: 32px;
-    height: 32px;
-  }
-
-  &__button-image--crop {
-    padding-left: 3px;
-  }
-
-  &__button--active {//выбранная кнопка
-    color: #d22856;
-  }
-
-  &__ranges-list {//список ползунков
-    margin: 0 20px;
-    padding: 0;
-    padding-bottom: 24px;
-  }
-
-
-  &__ranges-item {// ползунок
-    position: relative;//чтобы серкю полоску горизотальную чертить с помощью псевдоэлемента
-    display: none;
-  }
-
-
-  &__ranges-item:nth-child(2) {
-    display: none;
-  }
-
-  &__ranges-item:nth-child(3) {
-    display: none;
-  }
-
-  &__ranges-item::after {//песвдоэлемент гор серая полоска под ползунком
-    content: "";
-    position: absolute;
-
-    top: 45px;
-    left: -40px;
-
-    width: calc(100% + 80px);//100%
-    height: 1px;
-    background-color: rgba(40, 54, 69, 0.1);
-  }
-
-
-  &__ranges-item--active {
-    display: flex;
-  }
-
-  &__ranges-item--crop .range__toggle {
-    left: 80%;
-    top: -5px;
-  }
-
-  &__ranges-item--fill .range__toggle {
-    left: 30%;
-  }
-
-  &__ranges-item--contrast .range__toggle {
-    left: 60%;
-  }
-
-
-  &__wrapper-buttons {//контейнер для двух кнопок
-    margin: 0;
-    padding: 0;
-    padding-top: 50px;
-  }
-
-
-  &__btn-upload {//кнопка Запостить
-    width: 100%;
-    //width: 260px;
-    background-color: transparent;
-    color: #d22856;
-    border: 3px solid #d22856;
-    margin-bottom: 20px;
-
-    &:hover {
-      background-color: #d22856;
-      color: #ffffff;
-    }
-
-    &:active {
-      background-color: #d22856;
-      color: rgba(255, 255, 255, 0.3);
-    }
-  }
-
-
-  &__btn-round {
-    display: inline-block;
-    padding: 17px 16px;
-    box-sizing: border-box;
-    vertical-align: middle;
-
-    font-size: 18px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1;
-    letter-spacing: normal;
-    text-align: center;
-    border-radius: 30px;
-
-    cursor: pointer;
-    outline: none;
-  }
-
-
-  &__btn-reset {
-    //кнопка Отмнить
-    //width: 260px;
-    width: 100%;
-    background-color: transparent;
-    color: rgba(40, 54, 69, 0.1);
-    border: 3px solid rgba(40, 54, 69, 0.1);
-
-
-    &:hover {
-      border: 3px solid rgba(40, 54, 69, 0.3);
-      color: rgba(40, 54, 69, 0.3);
-    }
-
-    &:active {
-      background-color: rgba(40, 54, 69, 0.3);
-      color: rgba(255, 255, 255, 0.3);
-    }
+  &:active {
+    background-image: url("../img/icon-editor-crop-active.svg");
   }
 }
 
+.pictureform__button--fill {
+  background-image: url("../img/icon-editor-fill.svg");
+  background-position: center;
+  background-size: 48px 48px;
+  padding-left: 3px;
+
+  &:hover {
+    background-image: url("../img/icon-editor-fill-hover.svg");
+  }
+
+  &:active {
+    background-image: url("../img/icon-editor-fill-active.svg");
+  }
+}
+
+.pictureform__button--contrast {
+  background-image: url("../img/icon-editor-contrast.svg");
+  background-position: center;
+  background-size: 32px 32px;
+  background-repeat: no-repeat;
+  padding-left: 3px;
+
+  &:hover {
+    background-image: url("../img/icon-editor-contrast-hover.svg");
+  }
+
+  &:active {
+    background-image: url("../img/icon-editor-contrast-active.svg");
+  }
+}
+
+.pictureform__button--active {//выбранная кнопка
+  color: #d22856;
+}
+//ШКАЛЫ:
+.pictureform__ranges-list {//список ползунков
+  margin: 0 20px;
+  padding: 0;
+  padding-bottom: 24px;
+}
+
+.pictureform__ranges-item {// ползунок
+  position: relative;//чтобы серкю полоску горизотальную чертить с помощью псевдоэлемента
+  display: none;
+}
+
+.pictureform__ranges-item:nth-child(2) {
+  display: none;
+}
+
+.pictureform__ranges-item:nth-child(3) {
+  display: none;
+}
+
+.pictureform__ranges-item::after {//песвдоэлемент гор серая полоска под ползунком
+  content: "";
+  position: absolute;
+  top: 45px;
+  left: -40px;
+  width: calc(100% + 80px);//100%
+  height: 1px;
+  background-color: rgba(40, 54, 69, 0.1);
+}
+
+.pictureform__ranges-item--active {
+  display: flex;
+}
+
+.pictureform__ranges-item--crop .range__toggle {
+  left: 80%;
+  top: -5px;
+}
+
+.pictureform__ranges-item--fill .range__toggle {
+  left: 30%;
+}
+
+.pictureform__ranges-item--contrast .range__toggle {
+  left: 60%;
+}
+
+.pictureform__wrapper-buttons {//контейнер для двух кнопок
+  margin: 0;
+  padding: 0;
+  padding-top: 50px;
+}
+
+.pictureform__btn-upload {//кнопка Запостить
+  width: 100%;
+  //width: 260px;
+  background-color: transparent;
+  color: #d22856;
+  border: 3px solid #d22856;
+  margin-bottom: 20px;
+
+  &:hover {
+    background-color: #d22856;
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: #d22856;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.pictureform__btn-round {
+  display: inline-block;
+  padding: 17px 16px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+}
+
+.pictureform__btn-reset {
+  //кнопка Отмнить
+  //width: 260px;
+  width: 100%;
+  background-color: transparent;
+  color: rgba(40, 54, 69, 0.1);
+  border: 3px solid rgba(40, 54, 69, 0.1);
+
+  &:hover {
+    border: 3px solid rgba(40, 54, 69, 0.3);
+    color: rgba(40, 54, 69, 0.3);
+  }
+
+  &:active {
+    background-color: rgba(40, 54, 69, 0.3);
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
 
 @media (min-width: @tablet-width) { /*>660*/
-
   .pictureform__wrapper {
     padding-top: 54px;
     padding-bottom: 54px;
@@ -207,7 +205,6 @@
   }
 
   .pictureform__form {
-
     display: flex;
     //justify-content: space-between;
   }
@@ -221,18 +218,14 @@
     box-sizing: border-box;
   }
 
-
   .pictureform__controls {//флекс эелмент сам флексбокс
     //width: 275px;
     max-width: 400px;//при растягивании ширину будет макси 300 и больше не будет тянутся
     margin: 0 auto;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     flex-grow: 1;
-
     //margin: 0;
     margin-left: 10px;
     padding: 0;
@@ -252,36 +245,37 @@
     padding: 0;
   }
 
-
-  .pictureform__button {
-    width: 22px;
-    height: 22px;
-
+  .pictureform__button {//кнопка фильтра
+    width: 24px;
+    height: 24px;
     margin-top: 10px;
     margin-bottom: 35px;
+    box-sizing: border-box;
     margin-left: 0;
     margin-right: 0;
   }
 
-  .pictureform__button-image {
-    width: 24px;
-    height: 24px;
-  }
-
-  .pictureform__button-image--crop {
+  .pictureform__button--crop {
     padding-left: 3px;
+    background-image: url("../img/icon-editor-crop.svg");
+    background-size: 24px 24px;
   }
 
-  .pictureform__button-image--fill {
+  .pictureform__button--fill {
     padding-left: 3px;
     padding-top: 4px;
+    background-image: url("../img/icon-editor-fill.svg");
+    background-size: 24px 24px;
+    //background-position: top 3px left 3px;
   }
 
-
-  .pictureform__button-image--contrast {
-    width: 16px;
+  .pictureform__button--contrast {
+    //width: 16px;
     padding-left: 5px;
     padding-top: 5px;
+    background-image: url("../img/icon-editor-contrast.svg");
+    background-size: 16px 16px;
+    //background-position: bottom right;
   }
 
   .pictureform__ranges-list {//ползунки
@@ -291,41 +285,31 @@
     margin-right: 6px;
     margin-bottom: 0;
     margin-left: 31px;
-
-
     width: 100%;//для шкалы черной
     padding: 0;
   }
-
 
   .pictureform__ranges-item {
     //position: relative;
     display: flex;
     width: 100%;
-
     height: 24px;
-
     margin: 0;
     margin-top: 11px;
     margin-bottom: 35px;
-
     padding: 0;
   }
-
 
   .pictureform__ranges-item::after {//песвдоэлемент гор серая полоска под ползунком
     content: "";
     position: absolute;
-
     top: auto;//auto 45px
     left: -40px;
     bottom: -24px;
-
     width: calc(100% + 54px);//74
     height: 1px;
     background-color: rgba(40, 54, 69, 0.1);
   }
-
 
   .pictureform__ranges-item--crop .range__toggle {
     left: 75%;
@@ -342,7 +326,6 @@
     top: 4px;
   }
 
-
   .pictureform__ranges-item:nth-child(2) {
     display: block;
   }
@@ -350,39 +333,28 @@
   .pictureform__ranges-item:nth-child(3) {
     display: block;
   }
-
   //.application__ranges-item::after{//песвдоэлемент гор серая полоска под ползунком
   //  top: auto;
   // bottom: -24px;
   // left: -56px;
   // width: calc(100% + 74px);
-
-
   //}
-
-
   &__btn-upload {
     margin-bottom: 20px;
   }
 }
 
-
 @media (min-width: @desktop-width) {/*для >960*/
-
   .pictureform {
     padding-left: 10px;
     padding-right: 10px;
   }
 
-
   .pictureform__wrapper {
     //max-width: 940px;
     margin: 0 auto;
-
     //margin-bottom: 57px;
-
     box-sizing: border-box;//чтобы падинги входили  контент тем самыс в размере уменьшается контенйер
-
     //padding-left: 10px;
     //padding-right: 10px;
     //margin-left: 10px;
@@ -403,7 +375,6 @@
     padding: 0;
   }
 
-
   .pictureform__button {
     width: 48px;
     height: 48px;
@@ -411,28 +382,26 @@
     margin-bottom: 20px;
   }
 
-
-  .pictureform__button-image {
-    width: 44px;
-    height: 44px;
-  }
-
-  .pictureform__button-image--crop {
+  .pictureform__button--crop {
     padding-left: 0;
-    width: 44px;
-    height: 44px;
+    background-image: url("../img/icon-editor-crop.svg");
+    background-position: center;
+    background-size: 48px 48px;
   }
 
-  .pictureform__button-image--fill {
+  .pictureform__button--fill {
     padding-left: 0;
+    background-image: url("../img/icon-editor-fill.svg");
+    background-position: center;
+    background-size: 48px 48px;
   }
 
-
-  .pictureform__button-image--contrast {
+  .pictureform__button--contrast {
     padding-top: 11px;
     padding-left: 0;
-    width: 32px;
-    height: 32px;
+    background-image: url("../img/icon-editor-contrast.svg");
+    background-position: center;
+    background-size: 32px 32px;
   }
 
   .pictureform__ranges-list {
@@ -440,26 +409,21 @@
     margin-left: 44px;
   }
 
-
   .pictureform__ranges-item::after {//песвдоэлемент гор серая полоска под ползунком
     content: "";
     position: absolute;
-
     top: auto;//auto 45px
     left: -80px;
     bottom: -24px;
-
     width: calc(100% + 70px);//74
     height: 1px;
     background-color: rgba(40, 54, 69, 0.1);
   }
 
-
   .pictureform__wrapper-buttons {
     display: flex;
     margin-right: 25px;
   }
-
 
   .pictureform__btn-upload {
     margin: 0;

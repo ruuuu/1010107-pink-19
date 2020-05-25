@@ -4,133 +4,133 @@
   width: auto; /*тянется на всю ширину*/
 
   background-color: #283645;
+}
 
 
-  &--closed &__toggle {/*бургер кнопка*/
+.main-nav--closed .main-nav__toggle {/*бургер кнопка*/
 
-    position: absolute;
+  position: absolute;
 
-    display: block;
+  display: block;
 
-    top: -47px; /*  50% как отцентровать  по высоте на планшете??*/
-    right: 22px;/*расстояние от правой границы родителя до правой границы иконки*/
-    left: auto;
-
-
-    z-index: 10;
-
-    background-color: transparent;/*прозрачный  у бургера*/
-
-    width: 50px;/*размеры кнопки бургера*/
-    height: 25px;
+  top: -47px;
+  right: 22px;/*расстояние от правой границы родителя до правой границы иконки*/
+  left: auto;
 
 
-    cursor: pointer;
-    border: none;
-    outline: none; /*чтобы синим не выделлялась кнопка переключения*/
-    /*&:hover,
+  z-index: 10;
+
+  background-color: transparent;/*прозрачный  у бургера*/
+
+  width: 50px;/*размеры кнопки бургера*/
+  height: 25px;
+
+
+  cursor: pointer;
+  border: none;
+  outline: none; /*чтобы синим не выделлялась кнопка переключения*/
+  /*&:hover,
     &:active {
 
     }*/
-  }
+}
 
 
-  &--closed &__toggle::before { /*3 гориз полоски у бургера*/
+.main-nav--closed .main-nav__toggle::before { /*3 гориз полоски у бургера*/
+  content: "";
+
+  position: absolute;
+  width: 50px;/*размер одной гори полосы*/
+  height: 4px;
+
+  top: 0;
+  left: 0;
+
+  right: 8px;//22
+
+
+  background-color: #ffffff;
+  box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;/*чтобы две горизонт полосы еще добавиилсь*/
+}
+
+
+.main-nav--closed .main-nav__toggle:hover::before { /*гориз полоски на бургере при ховере*/
+  background-color: #d22856;
+  box-shadow: 0 8px 0 0 #d22856, 0 16px 0 0 #d22856;
+}
+
+
+.main-nav--closed .main-nav__toggle:active::before {/*гориз полоски на бургере при нажатии*/
+  background-color: rgba(210, 40, 86, 0.3);
+  box-shadow: 0 8px 0 0 rgba(210, 40, 86, 0.3), 0 16px 0 0 rgba(210, 40, 86, 0.3);
+}
+
+
+.main-nav--opened .main-nav__toggle {/*кнпока крестик(меню открыто)*/
+
+  position: absolute;
+
+  top: -47px;
+  right: 22px;
+
+  width: 30px;
+  height: 30px;
+
+  background: transparent;
+  border: 0;
+
+  &::before,
+  &::after { /*полоски для крестика*/
     content: "";
 
     position: absolute;
-    width: 50px;/*размер одной гори полосы*/
-    height: 4px;
-
-    top: 0;
+    top: 12px;
     left: 0;
 
-    right: 8px;//22
-
+    width: 30px;
+    height: 4px;
 
     background-color: #ffffff;
-    box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;/*чтобы две горизонт полосы еще добавиилсь*/
+    outline: none;
   }
 
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
 
-  &--closed &__toggle:hover::before { /*гориз полоски на бургере при ховере*/
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
     background-color: #d22856;
-    box-shadow: 0 8px 0 0 #d22856, 0 16px 0 0 #d22856;
   }
 
-
-  &--closed &__toggle:active::before {/*гориз полоски на бургере при нажатии*/
+  &:active::before,
+  &:active::after {
     background-color: rgba(210, 40, 86, 0.3);
-    box-shadow: 0 8px 0 0 rgba(210, 40, 86, 0.3), 0 16px 0 0 rgba(210, 40, 86, 0.3);
   }
+}
 
 
-  &--opened &__toggle {/*кнпока крестик(меню открыто)*/
+.main-nav--nojs .main-nav__toggle {/*при выключенных скриптах бургер не отображаем*/
+  display: none;
+}
 
-    position: absolute;
+.main-nav__wrapper {
+  width: auto;/*займет всю возможную ширину*/
+  margin: 0 auto;/*центровка*/
+}
 
-    top: -47px;
-    right: 22px;
+.main-nav__list {
+  width: auto;
+  padding-left: 0;
 
-    width: 30px;
-    height: 30px;
-
-    background: transparent;
-    border: 0;
-
-    &::before,
-    &::after { /*полоски для крестика*/
-      content: "";
-
-      position: absolute;
-      top: 12px;
-      left: 0;
-
-      width: 30px;
-      height: 4px;
-
-      background-color: #ffffff;
-      outline: none;
-    }
-
-    &::before {
-      transform: rotate(45deg);
-      box-shadow: none;
-    }
-
-    &::after {
-      transform: rotate(-45deg);
-    }
-
-    &:hover::before,
-    &:hover::after {
-      background-color: #d22856;
-    }
-
-    &:active::before,
-    &:active::after {
-      background-color: rgba(210, 40, 86, 0.3);
-    }
-  }
-
-
-  &--nojs &__toggle {/*при выключенных скриптах бургер не отображаем*/
-    display: none;
-  }
-
-  &__wrapper {
-    width: auto;/*займет всю возможную ширину*/
-    margin: 0 auto;/*центровка*/
-  }
-
-  &__list {
-    width: auto;
-    padding-left: 0;
-
-    list-style: none;
-    text-transform: uppercase;
-    text-align: center;
-  }
+  list-style: none;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 

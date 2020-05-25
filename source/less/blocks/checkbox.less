@@ -1,59 +1,59 @@
-.checkbox {
-  &__value {
-    display: none;
-  }
 
-  &__label {
-    position: relative;//позиуионируем чекбокс отнсительно этого
-    padding-left: 70px;
+.checkbox__value {
+  display: none;
+}
 
-    &::before {
-      //для чекбокса псевдоэлемент
-      content: "";
-      position: absolute;
-
-      top: -8px;
-      left: 0;
-
-      width: 39px; //размеры чекбокса
-      height: 39px;
-
-      box-sizing: border-box;
-      border: 2px solid #e5e5e5;
-      background-color: #ffffff;
-    }
-  }
-
-
-  &__label:hover::before {//наведение на чекбокс
-    border-color: #283645;
-  }
-
-
-  &__label:active::before {//нажатие на чекбокс
-    border-color: #d22856;
-  }
-
-
-  &__value:checked + .checkbox__label::after { //для галочки в чекбоксе псевдоэлемент
+.checkbox__label {
+  position: relative;//позиуионируем чекбокс отнсительно этого
+  padding-left: 70px;
+  display: inline-block;
+  max-width: 280px;//для того чтобы большой текст не расползался за гранинцы экрана
+  &::before {
+    //для чекбокса псевдоэлемент
     content: "";
     position: absolute;
-    top: 3px;
-    left: 9px;
 
-    min-width: 20px;
-    max-width: 21px;
-    min-height: 9px;
-    max-height: 10px;
-    border-bottom: 2px solid #d22856;
-    border-left: 2px solid #d22856;
+    top: -8px;
+    left: 0;
 
-    transform: rotate(-45deg);
+    width: 39px; //размеры чекбокса
+    height: 39px;
+
+    box-sizing: border-box;
+    border: 2px solid #e5e5e5;
+    background-color: #ffffff;
   }
+}
 
-  &__value:focus + .checkbox__label::before {
-    box-shadow: 0 0 4px 0 #d22856;
-  }
+
+.checkbox__label:hover::before {//наведение на чекбокс
+  border-color: #283645;
+}
+
+
+.checkbox__label:active::before {//нажатие на чекбокс
+  border-color: #d22856;
+}
+
+
+.checkbox__value:checked + .checkbox__label::after { //для галочки в чекбоксе псевдоэлемент
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 9px;
+
+  min-width: 20px;
+  max-width: 21px;
+  min-height: 9px;
+  max-height: 10px;
+  border-bottom: 2px solid #d22856;
+  border-left: 2px solid #d22856;
+
+  transform: rotate(-45deg);
+}
+
+.checkbox__value:focus + .checkbox__label::before {
+  box-shadow: 0 0 4px 0 #d22856;
 }
 
 
